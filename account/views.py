@@ -124,10 +124,10 @@ def  reset_password_email(request):
 #add admin
 
 class addadmin(APIView):
+    renderer_class =  [userrenderer]
+    permission_classes = [IsAuthenticated]
     def post(self,request):
-        token=request.COOKIES.get('jwt')
-        if not token:
-            raise AuthenticationFailed('not authenticated')
+
         serializer=UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()

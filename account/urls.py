@@ -8,6 +8,6 @@ urlpatterns =[
     path ('profile/',views.userprofile,name = "profile"),
     path ('changepassword/',views.change_password,name= "chpassword"),
     path ('sendrestpasswordemail/',views.reset_password_email,name =  "resetpasswordemail"),
-    path('addadmin',addadmin.as_view()),
+    path('addadmin/',addadmin.as_view()),
 
 ]
