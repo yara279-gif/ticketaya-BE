@@ -9,8 +9,10 @@ from . renderers import userrenderer
 from rest_framework_simplejwt.tokens import RefreshToken
 from . permissions import  IsAuthOrReadOnly
 from rest_framework.permissions import IsAuthenticated
-
-
+from rest_framework.views import APIView
+from rest_framework.exceptions import AuthenticationFailed
+from rest_framework.exceptions import ValidationError
+from .serializers import UserSerializer
 # Create your views here.
 # ----------------------(jwt_tokens)-------------------------------------------------
 def get_tokens_for_user(user):
@@ -119,7 +121,18 @@ def  reset_password_email(request):
 #----------------------------------------------------------------------------------
 
 
+#add admin
 
+class addadmin(APIView):
+    def post(self,request):
+        token=request.COOKIES.get('jwt')
+        if not token:
+            raise AuthenticationFailed('not authenticated')
+        serializer=UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data,status=status.HTTP_201_CREATED)
+        raise ValidationError(serializer.errors)
 
 # -------------------------------------------------------------------------------------
 
