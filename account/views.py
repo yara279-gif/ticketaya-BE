@@ -1,3 +1,4 @@
+from urllib import request
 from django.shortcuts import render
 from rest_framework import  status
 from rest_framework.decorators import api_view
@@ -12,7 +13,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.exceptions import ValidationError
-from .serializers import UserSerializer
+from .serializers import UserSerializer,AdminSerializer,userProfileSerializer
+from .models import User
 # Create your views here.
 # ----------------------(jwt_tokens)-------------------------------------------------
 def get_tokens_for_user(user):
@@ -71,28 +73,6 @@ def userprofile(request):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-# @api_view(['POST'])
-# def  change_password(request):
-#     if request.method == 'POST':
-#         renderer_class =  [userrenderer]
-#         serializer = serializers.changepasswordserializers(data=request.data, context={'request': request})
-
-#         if serializer.is_valid(raise_exception=True):
-#             old_password = serializer.data.get('old_password')
-#             user = authenticate(password=old_password) 
-#             if user is not None:
-#                 new_password = serializer.data.get('new_password')
-#                 user.set_password(new_password)
-#                 user.save()
-#                 return Response({'msg':"password changed successfull"}, status=status.HTTP_200_OK)
-#             else:
-#                 return Response ({'msg':"old_password invalid"}, status=status.HTTP_401_UNAUTHORIZED)
-        
-#         else:
-#             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-#     else:
-#         return Response({'msg':"invalid request"}, status=status.HTTP_400_BAD_REQUEST)
-
 
             
 # ----------------------(change_password_view)-------------------------------------------------
@@ -121,14 +101,15 @@ def  reset_password_email(request):
 #----------------------------------------------------------------------------------
 
 
-#add admin
+
+# ----------------------(addadmin)-------------------------------------------------
 
 class addadmin(APIView):
+    renderer_class =  [userrenderer]
+    permission_classes = [IsAuthenticated]
     def post(self,request):
-        token=request.COOKIES.get('jwt')
-        if not token:
-            raise AuthenticationFailed('not authenticated')
-        serializer=UserSerializer(data=request.data)
+        
+        serializer=AdminSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data,status=status.HTTP_201_CREATED)
@@ -136,19 +117,81 @@ class addadmin(APIView):
 
 # -------------------------------------------------------------------------------------
 
-# @api_view(['post'])
-# def forgotpassword(request):
-#     if request.method == 'POST':
-#         renderer_class =  [userrenderer]
-#         serializer = forgotpasswordSerializer(data=request.data)
-#         if serializer.is_valid(raise_exception=True):
-#             serializer.save()
-#             return Response({'msg':"password reset link sent to your email"}, status=status.HTTP_200_OK)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# ----------------------(adduser)-------------------------------------------------
+class adduser(APIView):
+    renderer_class =  [userrenderer]
+    permission_classes = [IsAuthenticated]
     
+    def post(self,request):
+        serializerr=userProfileSerializer(request.user)
+        if serializerr.data['is_admin'] == False:
+            return Response({"message":"Don't have access"})
+        serializer=UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data,status=status.HTTP_201_CREATED)
+        raise ValidationError(serializer.errors)
+#----------------------------------------------------------------------------------
 
+# ----------------------(retrieveuser)-------------------------------------------------
+class retrieveeuser(APIView):
+        renderer_class =  [userrenderer]
+        permission_classes = [IsAuthenticated]
+        def get(self,request):
+            serializerr=userProfileSerializer(request.user)
+            if serializerr.data['is_admin'] == False:
+                return Response({"message":"Don't have access"})
+            id=request.data['id']
+            user=User.objects.filter(id=id).first()
+            if not user is None:
+                serializer=UserSerializer(user)
+                return Response(serializer.data)
+            return Response({"message":"user not found"})
+                
+#----------------------------------------------------------------------------------
+# ----------------------(searchuserbyname)-------------------------------------------------
+class searchuser(APIView):
+        renderer_class =  [userrenderer]
+        permission_classes = [IsAuthenticated]
+        def get(self,request):
+            serializerr=userProfileSerializer(request.user)
+            if serializerr.data['is_admin'] == False:
+                return Response({"message":"Don't have access"})
+            
+            user=User.objects.filter(username__contains=request.data['username']) 
+            if user.exists():
+                serializer=UserSerializer(user,many=True)
+                return Response(serializer.data)
+            return Response({"message":"user not found"})
+                
+#----------------------------------------------------------------------------------
+# ----------------------(deleteuser)-------------------------------------------------
+class deleteuser(APIView):
+    renderer_class =  [userrenderer]
+    permission_classes = [IsAuthenticated]
+    def post(self,request):
+        serializerr=userProfileSerializer(request.user)
+        if serializerr.data['is_admin'] == False:
+                return Response({"message":"Don't have access"})
+        user=User.objects.filter(username=request.data['username']).first()
+        if user:
+            user.delete()
+            return Response({"message":"deleted succesfully"})
+        return Response({"message":"user not found"})
+#----------------------------------------------------------------------------------
+# ----------------------(updateuser)-------------------------------------------------
+class updateuser(APIView):
+    renderer_class =  [userrenderer]
+    permission_classes = [IsAuthenticated]
+    def patch(self,request):
+        serializerr=userProfileSerializer(request.user)
+        if serializerr.data['is_admin'] == False:
+                return Response({"message":"Don't have access"})
+        user=User.objects.filter(id=request.data['id']).first()
+        if user:
+            serializer=UserSerializer()
+            serializer.update(user,request.data)
+            return Response( {"message":"updated succesfully"})
+        return Response( {"message":"user not found"})
+#----------------------------------------------------------------------------------   
         
-
-
-
-

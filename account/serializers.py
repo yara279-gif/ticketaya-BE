@@ -19,7 +19,7 @@ class userRegisterSerializer (serializers.ModelSerializer):
 
     class Meta :
         model = User
-        fields = ['email','username','first_name','last_name','password','password2','is_admin']
+        fields = ['email','username','first_name','last_name','password','password2']
         extra_kwargs = {
             'password':{'write_only':True}
         }
@@ -47,7 +47,7 @@ class userLoginSerializer (serializers.ModelSerializer):
 class userProfileSerializer (serializers.ModelSerializer):
     class Meta :
         model = User
-        fields = ['id','email','username','first_name','last_name']
+        fields = ['id','email','username','is_admin','first_name','last_name']
 
 # ---------------------------------(change-password)-------------------------------------
 class ChangePasswordSerializer(serializers.ModelSerializer):
@@ -109,7 +109,7 @@ class reset_password_email_serializer (serializers.ModelSerializer):
 
 # ---------------------------------(addadmin)-------------------------------------
 
-class UserSerializer(serializers.ModelSerializer):
+class AdminSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
         fields=['id','username','first_name','last_name','is_admin','email','password']
@@ -128,8 +128,27 @@ class UserSerializer(serializers.ModelSerializer):
             instance.set_password(password)
         instance.save()
         return instance
-
-
+    
+# ---------------------------------(adduser)-------------------------------------
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=User
+        fields=['id','username','first_name','last_name','is_admin','email','password']
+        
+# password myzhr4
+        extra_kwargs={
+            'password':{'write_only':True},
+            
+        }
+        #to hash the password
+    def create(self, validated_data):
+        validated_data['is_admin']=False
+        password=validated_data.pop('password',None)
+        instance=self.Meta.model(**validated_data)
+        if password is not None:
+            instance.set_password(password)
+        instance.save()
+        return instance
 
 # class changepasswordserializers (serializers.ModelSerializer):
 #     old_password = serializers.CharField(style ={'input_type':'password'}, write_only=True)
