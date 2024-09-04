@@ -5,6 +5,8 @@ from  django.contrib.auth.password_validation import validate_password
 from django.utils.encoding import smart_str,force_bytes,DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_decode,urlsafe_base64_encode
 from  django.contrib.auth.tokens import PasswordResetTokenGenerator
+from .utils import Util
+from django.conf import settings
 
 #make instance (object) from the class User
 user = User()
@@ -85,26 +87,35 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
 # ---------------------------------(reset-password-email)-------------------------------------
 
 
-class reset_password_email_serializer (serializers.ModelSerializer):
-    email = serializers.EmailField(max_length = 255)
-    class Meta :
+class ResetPasswordEmailSerializer(serializers.ModelSerializer):
+    email = serializers.EmailField(max_length=255)
+
+    class Meta:
         model = User
-        fields = ['id','email']
-    
+        fields = ['email']
+
     def validate(self, attrs):
-        if User.objects.filter(email = attrs['email']).exists():
-            user = User.objects.get (email = attrs['email'])
-        
-            uid = urlsafe_base64_encode(force_bytes(user.id))
-            print("'uid",uid)
-            token = PasswordResetTokenGenerator().make_token(user)
-            print("token",token)
-            link = 'http://127.0.0.1:8000/api/user/reset/'+uid+'/'+token
-            print("link",link)
-            return attrs
-        else:
-            raise serializers.ValidationError({'email':'user not found'})
-        
+        email = attrs.get('email')
+        if not User.objects.filter(email=email).exists():
+            raise serializers.ValidationError({'email': 'User not found'})
+
+        user = User.objects.get(email=email)
+        uid = urlsafe_base64_encode(force_bytes(user.id))
+        token = PasswordResetTokenGenerator().make_token(user)
+        link = f'http://127.0.0.1:8000/api/user/reset/{uid}/{token}'
+
+        # Log the link for debugging (can be removed in production)
+        print(f"Password reset link: {link}")
+
+        # Send the email
+        data = {
+            'subject': 'Reset your password',
+            'body': f"Click the following link to reset your password: {link}",
+            'to_email': user.email
+        }
+        Util.send_email(data)
+
+        return attrs
         
 
 # ---------------------------------(addadmin)-------------------------------------
@@ -128,6 +139,49 @@ class UserSerializer(serializers.ModelSerializer):
             instance.set_password(password)
         instance.save()
         return instance
+    
+#----------------------------(reset_password_serializer)---------------------------------------
+
+class ResetPasswordSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
+    confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
+
+    class Meta:
+        model = User
+        fields = ['password', 'confirm_password']
+
+    def validate(self, attrs):
+        password = attrs.get('password')
+        confirm_password = attrs.get('confirm_password')
+        uid = self.context.get('uid')
+        token = self.context.get('token')
+
+        if password != confirm_password:
+            raise serializers.ValidationError({"password": "Passwords do not match"})
+
+        try:
+            # Decode the user ID from the UID and retrieve the user
+            user_id = smart_str(urlsafe_base64_decode(uid))
+            user = User.objects.get(id=user_id)
+
+            # Check if the provided token is valid for the user
+            if not PasswordResetTokenGenerator().check_token(user, token):
+                raise serializers.ValidationError({'token': 'Token is invalid or has expired'})
+
+            # Set the new password and save the user
+            user.set_password(password)
+            user.save()
+
+            return attrs
+
+        except (DjangoUnicodeDecodeError, User.DoesNotExist) as e:
+            raise serializers.ValidationError({'token': 'Token is invalid or has expired'})
+            
+
+
+#---------------------------------------------------------------------------------------------------
+ 
+        
 
 
 

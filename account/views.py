@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from rest_framework import  status
 from rest_framework.decorators import api_view
+
+from account.utils import Util
 from .  import serializers
 from rest_framework.response import Response
 from django.http import Http404
@@ -100,7 +102,6 @@ def userprofile(request):
 @api_view(['POST'])
 def change_password(request):
     serializer = serializers.ChangePasswordSerializer(data=request.data, context={'request': request})
-
     if serializer.is_valid():
         serializer.save()
         return Response({'msg': "Password changed successfully"}, status=status.HTTP_200_OK)
@@ -112,7 +113,7 @@ def change_password(request):
 @api_view(['POST'])
 def  reset_password_email(request):
     renderer_classes = [userrenderer]
-    serializer = serializers.reset_password_email_serializer(data=request.data)
+    serializer = serializers.ResetPasswordEmailSerializer(data=request.data)
     if serializer.is_valid(raise_exception = True):
         return Response({'msg':'password resert link was send .please check your email'},status = status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -134,7 +135,16 @@ class addadmin(APIView):
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         raise ValidationError(serializer.errors)
 
-# -------------------------------------------------------------------------------------
+# -------------------------------(resert_password)------------------------------------------------------
+@api_view(['POST'])
+def reset_password (request,uid,token):
+    renderer_class =  [userrenderer]
+    serializer = serializers.reset_password_serializer(data=request.data,context = {'uid':uid,'token':token})
+    if serializer.is_valid(raise_exception = True):
+        return Response({'msg': 'Password has been reset successfully'}, status=status.HTTP_200_OK)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    
 
 # @api_view(['post'])
 # def forgotpassword(request):
