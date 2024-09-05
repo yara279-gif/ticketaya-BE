@@ -15,6 +15,9 @@ from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.exceptions import ValidationError
 from .serializers import UserSerializer,AdminSerializer,userProfileSerializer
 from .models import User
+#----------------
+from django.core.mail import message, send_mail,EmailMessage
+from ticketaya.settings import EMAIL_HOST_USER
 # Create your views here.
 # ----------------------(jwt_tokens)-------------------------------------------------
 def get_tokens_for_user(user):
@@ -80,8 +83,9 @@ def userprofile(request):
 @api_view(['POST'])
 def change_password(request):
     serializer = serializers.ChangePasswordSerializer(data=request.data, context={'request': request})
-
+    
     if serializer.is_valid():
+    
         serializer.save()
         return Response({'msg': "Password changed successfully"}, status=status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -108,12 +112,18 @@ class addadmin(APIView):
     renderer_class =  [userrenderer]
     permission_classes = [IsAuthenticated]
     def post(self,request):
-        
-        serializer=AdminSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data,status=status.HTTP_201_CREATED)
-        raise ValidationError(serializer.errors)
+            serializerr=userProfileSerializer(request.user)
+            if serializerr.data['is_admin'] == False:
+                return Response({"message":"Don't have access"})
+
+            serializer=AdminSerializer(data=request.data)
+            if serializer.is_valid():
+                subject="NEW Admin"
+                message="You have been added as new admin in ticketaya" 
+                send_mail(subject,message,EMAIL_HOST_USER,[request.data['email']],fail_silently=False)
+                serializer.save()
+                return Response(serializer.data,status=status.HTTP_201_CREATED)
+            raise ValidationError(serializer.errors)
 
 # -------------------------------------------------------------------------------------
 
@@ -194,4 +204,3 @@ class updateuser(APIView):
             return Response( {"message":"updated succesfully"})
         return Response( {"message":"user not found"})
 #----------------------------------------------------------------------------------   
-        
