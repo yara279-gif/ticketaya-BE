@@ -1,5 +1,5 @@
-"# ticketaya-BE" 
-"## users branch"
+# ticketaya-BE
+## users branch
 ### Methods and their urls
 "1. adduser
  2. deleteuser
@@ -19,4 +19,4 @@
 ### NOTE
 i have added functionality in add admin to send email to the added admin
     
-    "
+    
