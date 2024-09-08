@@ -1,3 +1,4 @@
+from tokenize import TokenError
 from rest_framework import serializers
 from . models import User
 from django.contrib.auth import get_user_model
@@ -42,7 +43,12 @@ class userLoginSerializer (serializers.ModelSerializer):
     username = serializers.CharField(max_length = 255)
     class Meta :
         model = User
-        fields = ['username','password']
+        fields = ['username','password','is_admin']
+    # try:
+    #     user = User.objects.get(username = username)
+    #     print ("user-------",user.is_admin)
+    # except  User.DoesNotExist:
+    #     raise serializers.ValidationError({'username':'User not found'})
 
 # ---------------------------------(user-profile)-------------------------------------
 
@@ -177,10 +183,25 @@ class ResetPasswordSerializer(serializers.ModelSerializer):
         except (DjangoUnicodeDecodeError, User.DoesNotExist) as e:
             raise serializers.ValidationError({'token': 'Token is invalid or has expired'})
             
+#---------------------------------------(delete_account)------------------------------------------------------------
+
+# class delete_account (serializers.ModelSerializer):
+#     class Meta :
+#         model = User
+#         fields = '__all__'
+#---------------------------------------(logout)------------------------------------------------------------
+# class logout_serializer (serializers.Serializer):
+#     refresh = serializers.CharField(max_length=500)
+#     def validate(self, attrs):
+#         self.token = attrs ['refresh']
+#         return attrs
+#     def save (self, **kwargs):
+#         try:
+#             RefreshToken(self.token).blacklist()
+#         except TokenError:
+#             raise serializers.ValidationError({'refresh': 'Refresh token is invalid'})
 
 
-#---------------------------------------------------------------------------------------------------
- 
         
 
 
