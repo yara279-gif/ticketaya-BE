@@ -23,7 +23,7 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self,email, username, first_name,last_name , password=None,is_admin = False):
+    def create_superuser(self,email, username, first_name,last_name , password=None):
         """
         Creates and saves a superuser with the given email,username,  first/last name
          and password.
@@ -34,12 +34,12 @@ class UserManager(BaseUserManager):
             password=password,
             first_name= first_name,
             last_name = last_name,
-            is_admin =  False
+            # is_admin =  False
 
 
 
         )
-        user.is_admin = True
+        #user.is_admin = True
         user.save(using=self._db)
         return user
 
@@ -62,7 +62,7 @@ class User(AbstractBaseUser):
     USERNAME_FIELD = "username"
     REQUIRED_FIELDS = ["email","first_name","last_name"]
 
-    def __str__(self):
+    def str(self):
         return self.username
 
     def has_perm(self, perm, obj=None):
@@ -71,7 +71,7 @@ class User(AbstractBaseUser):
         return self.is_authenticated
 
     def has_module_perms(self, app_label):
-        "Does the user have permissions to view the app `app_label`?"
+        "Does the user have permissions to view the app app_label?"
         # Simplest possible answer: Yes, always
         return True
 
@@ -79,4 +79,4 @@ class User(AbstractBaseUser):
     def is_staff(self):
         "Is the user a member of staff?"
         # Simplest possible answer: All admins are staff
-        return self.is_admin 
+        return self.is_admin

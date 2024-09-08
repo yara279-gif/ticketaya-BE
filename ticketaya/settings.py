@@ -26,6 +26,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly , AllowAny , Is
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -51,7 +52,7 @@ INSTALLED_APPS = [
     'account',
     'rest_framework_simplejwt',
     "corsheaders",
-    
+    'post',
 ]
 
 REST_FRAMEWORK={
@@ -150,10 +151,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'account/static')]
+# Directory where static files are stored during development
+STATIC_URL = '/static/'
 
+# List of directories where Django will look for additional static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # Your static files directory
+]
+
+# Directory where collected static files will be placed for deployment
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -166,7 +173,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'          
 
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=120),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
     "ROTATE_REFRESH_TOKENS": False,
     "BLACKLIST_AFTER_ROTATION": False,

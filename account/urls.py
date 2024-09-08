@@ -10,5 +10,6 @@ urlpatterns =[
     path ('sendrestpasswordemail/',views.reset_password_email,name =  "resetpasswordemail"),
     path ('addadmin/',views.addadmin.as_view()),
     path ('resetpassword/<uid>/<token>/',views.reset_password,name = 'resetpassword'),
+ 
 
 ]
