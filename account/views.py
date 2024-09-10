@@ -212,7 +212,7 @@ class updateuser(APIView):
 @api_view(['POST'])
 def reset_password (request,uid,token):
     renderer_class =  [userrenderer]
-    serializer = serializers.reset_password_serializer(data=request.data,context = {'uid':uid,'token':token})
+    serializer = serializers.ResetPasswordSerializer(data=request.data,context = {'uid':uid,'token':token})
     if serializer.is_valid(raise_exception = True):
         return Response({'msg': 'Password has been reset successfully'}, status=status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
