@@ -7,21 +7,28 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Match',
+            name="Match",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255)),
-                ('team1', models.CharField(max_length=255)),
-                ('team2', models.CharField(max_length=255)),
-                ('date', models.DateTimeField()),
-                ('time', models.TimeField()),
-                ('stadium', models.CharField(max_length=255)),
-                ('description', models.TextField(blank=True, null=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255)),
+                ("team1", models.CharField(max_length=255)),
+                ("team2", models.CharField(max_length=255)),
+                ("date", models.DateTimeField()),
+                ("time", models.TimeField()),
+                ("stadium", models.CharField(max_length=255)),
+                ("description", models.TextField(blank=True, null=True)),
             ],
         ),
     ]

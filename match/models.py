@@ -2,8 +2,9 @@ from django.db import models
 
 # Create your models here.
 
-class Match (models.Model):
-    #attributes
+
+class Match(models.Model):
+    # attributes
     name = models.CharField(max_length=255, unique=True)
     team1 = models.CharField(max_length=255)
     team2 = models.CharField(max_length=255)
@@ -14,4 +15,3 @@ class Match (models.Model):
 
     def __str__(self):
         return self.name + " - " + self.team1 + " vs " + self.team2
-    

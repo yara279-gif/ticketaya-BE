@@ -195,7 +195,7 @@ SIMPLE_JWT = {
     "TOKEN_USER_CLASS": "rest_framework_simplejwt.models.TokenUser",
     "JTI_CLAIM": "jti",
     "SLIDING_TOKEN_REFRESH_EXP_CLAIM": "refresh_exp",
-    "SLIDING_TOKEN_LIFETIME": timedelta(days= 5),
+    "SLIDING_TOKEN_LIFETIME": timedelta(days=5),
     "SLIDING_TOKEN_REFRESH_LIFETIME": timedelta(days=15),
     "TOKEN_OBTAIN_SERIALIZER": "rest_framework_simplejwt.serializers.TokenObtainPairSerializer",
     "TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt.serializers.TokenRefreshSerializer",
@@ -209,22 +209,21 @@ PASSWORD_RESET_TIMEOUT = 900  # 900 sec = 15 min
 # email configuration
 # settings.py
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "yaraharby9@gmail.com"
-EMAIL_HOST_PASSWORD = "nmri bbqg ynxj oieg"
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = "yaraharby9@gmail.com"
+# EMAIL_HOST_PASSWORD = "nmri bbqg ynxj oieg"
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 AUTH_USER_MODEL = "account.User"
-EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT=587
-EMAIL_HOST_USER='mkinzy71@gmail.com' #da 2lly hb3t mno
-EMAIL_HOST_PASSWORD='bihm twtf otrd ndph' #da 2lly hb3t mno
-EMAIL_USE_TLS=True
-EMAIL_USE_SSL=False
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "mkinzy71@gmail.com"  # da 2lly hb3t mno
+EMAIL_HOST_PASSWORD = "bihm twtf otrd ndph"  # da 2lly hb3t mno
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

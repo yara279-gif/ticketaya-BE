@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from . models import Match
+from .models import Match
 
 # class add_match (serializers.ModelSerializer):
 
@@ -7,15 +7,14 @@ from . models import Match
 #         model = Match
 #         fields = '__all__'
 
-class match (serializers.ModelSerializer):
-    class Meta :
+
+class match(serializers.ModelSerializer):
+    class Meta:
         model = Match
-        fields = '__all__'
+        fields = "__all__"
 
 
-class search_match (serializers.ModelSerializer):
-    class Meta :
+class search_match(serializers.ModelSerializer):
+    class Meta:
         model = Match
-        fields = ['name','team1','team2']
-
-
+        fields = ["name", "team1", "team2"]

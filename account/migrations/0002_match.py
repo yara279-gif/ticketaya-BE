@@ -6,21 +6,29 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('account', '0001_initial'),
+        ("account", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Match',
+            name="Match",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255)),
-                ('team1', models.CharField(max_length=255)),
-                ('team2', models.CharField(max_length=255)),
-                ('date', models.DateTimeField()),
-                ('time', models.TimeField()),
-                ('stadium', models.CharField(max_length=255)),
-                ('description', models.TextField(blank=True, null=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255)),
+                ("team1", models.CharField(max_length=255)),
+                ("team2", models.CharField(max_length=255)),
+                ("date", models.DateTimeField()),
+                ("time", models.TimeField()),
+                ("stadium", models.CharField(max_length=255)),
+                ("description", models.TextField(blank=True, null=True)),
             ],
         ),
     ]
