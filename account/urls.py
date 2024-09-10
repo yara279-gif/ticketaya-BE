@@ -15,5 +15,9 @@ urlpatterns =[
     path('searchuser/',searchuser.as_view()),
     path('deleteuser/',deleteuser.as_view()),
     path('updateuser/',updateuser.as_view()),
+    path ('resetpassword/<uid>/<token>/',views.reset_password,name = 'resetpassword'),
+    path ('logout/',views.user_logout,name = "logout"), 
+    path ('deleteaccount/',views.delete_account,name='deleteaccount'),
+    
 
 ]

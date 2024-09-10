@@ -1,11 +1,14 @@
 from urllib import request
+from sys import exception
 from django.shortcuts import render
-from rest_framework import  status
+from rest_framework import  status,generics
 from rest_framework.decorators import api_view
+
+from account.utils import Util
 from .  import serializers
 from rest_framework.response import Response
 from django.http import Http404
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate,logout
 from . renderers import userrenderer
 from rest_framework_simplejwt.tokens import RefreshToken
 from . permissions import  IsAuthOrReadOnly
@@ -54,11 +57,13 @@ def  login (request):
         if serializer.is_valid(raise_exception=True):
             username = serializer.data.get('username')
             password = serializer.data.get('password')
+            # usr = serializer.data.get('user')
             user = authenticate(username=username, password=password) 
-
+            is_admin =user.is_admin
             if user is not None:
+
                 token = get_tokens_for_user(user)
-                return Response({'token':token ,'msg':"login successfull"}, status=status.HTTP_200_OK)
+                return Response({'is_admin':is_admin,'token':token ,'msg':"login successfull"}, status=status.HTTP_200_OK)
             else:
                 return Response({'msg':"invalid username or password"}, status=status.HTTP_401_UNAUTHORIZED)
         else:
@@ -83,7 +88,6 @@ def userprofile(request):
 @api_view(['POST'])
 def change_password(request):
     serializer = serializers.ChangePasswordSerializer(data=request.data, context={'request': request})
-    
     if serializer.is_valid():
     
         serializer.save()
@@ -96,7 +100,7 @@ def change_password(request):
 @api_view(['POST'])
 def  reset_password_email(request):
     renderer_classes = [userrenderer]
-    serializer = serializers.reset_password_email_serializer(data=request.data)
+    serializer = serializers.ResetPasswordEmailSerializer(data=request.data)
     if serializer.is_valid(raise_exception = True):
         return Response({'msg':'password resert link was send .please check your email'},status = status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -204,3 +208,62 @@ class updateuser(APIView):
             return Response( {"message":"updated succesfully"})
         return Response( {"message":"user not found"})
 #----------------------------------------------------------------------------------   
+# -------------------------------(resert_password)------------------------------------------------------
+@api_view(['POST'])
+def reset_password (request,uid,token):
+    renderer_class =  [userrenderer]
+    serializer = serializers.reset_password_serializer(data=request.data,context = {'uid':uid,'token':token})
+    if serializer.is_valid(raise_exception = True):
+        return Response({'msg': 'Password has been reset successfully'}, status=status.HTTP_200_OK)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# -------------------------------(logout)------------------------------------------------------
+@api_view(['GET','POST'])
+def user_logout(request):
+    renderer_class =  [userrenderer]
+    permission_classes = [IsAuthenticated]
+    try:
+        refresh_token = request.data['refresh_token']
+        token = RefreshToken(refresh_token)
+        token.blacklist()
+        return Response({'msg': 'Logged out successfully'}, status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({'msg': 'Invalid token'}, status=status.HTTP_400_BAD_REQUEST)
+#--------------------------------------(user_delete_account)-----------------------------------------------------------
+
+@api_view(['DELETE'])
+def delete_account(request):
+    renderer_class = [userrenderer]
+    permission_classes = [IsAuthenticated]
+    try:
+        user = request.user
+        user.delete()
+        return Response({'msg': 'Account deleted successfully'}, status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({'msg': 'Failed to delete account'}, status=status.HTTP_400_BAD_REQUEST)
+        
+    
+    
+
+    
+
+#-------------------------------------------------------------------------------------------
+
+
+    
+
+# @api_view(['post'])
+# def forgotpassword(request):
+#     if request.method == 'POST':
+#         renderer_class =  [userrenderer]
+#         serializer = forgotpasswordSerializer(data=request.data)
+#         if serializer.is_valid(raise_exception=True):
+#             serializer.save()
+#             return Response({'msg':"password reset link sent to your email"}, status=status.HTTP_200_OK)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+
+        
+
+
+
+

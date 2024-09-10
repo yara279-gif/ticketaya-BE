@@ -23,7 +23,7 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self,email, username, first_name,last_name , password=None):
+    def create_superuser(self,email, username, first_name,last_name , password=None,is_admin = False):
         """
         Creates and saves a superuser with the given email,username,  first/last name
          and password.
@@ -80,3 +80,19 @@ class User(AbstractBaseUser):
         "Is the user a member of staff?"
         # Simplest possible answer: All admins are staff
         return self.is_admin 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
