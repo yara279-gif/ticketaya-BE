@@ -1,4 +1,3 @@
-from sys import exception
 from django.shortcuts import render
 from rest_framework import  status,generics
 from rest_framework.decorators import api_view
