@@ -21,9 +21,22 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
     TokenBlacklistView,
 )
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
+<<<<<<< HEAD
+    path('admin/', admin.site.urls),
+    path('api_auth/',include('rest_framework.urls')),
+    path ('account/',include('account.urls')),
+    
+] 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+=======
     path("admin/", admin.site.urls),
     path("api_auth/", include("rest_framework.urls")),
     path("account/", include("account.urls")),
@@ -34,3 +47,4 @@ urlpatterns = [
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/logout/", TokenBlacklistView.as_view(), name="token_blacklist"),
 ]
+>>>>>>> 3eb3389ce0834a7119dba8591e66c53b2d42b2b5

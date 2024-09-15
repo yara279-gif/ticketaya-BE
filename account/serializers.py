@@ -18,7 +18,45 @@ user = User()
 
 class userRegisterSerializer(serializers.ModelSerializer):
 
-    password2 = serializers.CharField(style={"input_type": "password"})
+    class Meta :
+        model = User
+        fields = ['email','username','first_name','last_name','password','password2']
+        extra_kwargs = {
+            'password':{'write_only':True}
+        }
+    
+    def validate(self, attrs):
+        if attrs['password'] != attrs['password2']:
+            raise serializers.ValidationError({'password2':'password dont match'})
+        return super().validate(attrs)
+    
+    def create (self, validated_data):
+        validated_data.pop('password2')
+        return User.objects.create_user(**validated_data)
+    
+
+# ---------------------------------(login)-------------------------------------
+    
+class userLoginSerializer (serializers.ModelSerializer):
+    username = serializers.CharField(max_length = 255)
+    class Meta :
+        model = User
+        fields = ['username','password']
+
+# ---------------------------------(user-profile)-------------------------------------
+
+class userProfileSerializer (serializers.ModelSerializer):
+    class Meta :
+        model = User
+        fields = ['id','email','username','is_admin','first_name','last_name','image']
+
+# ---------------------------------(change-password)-------------------------------------
+class ChangePasswordSerializer(serializers.ModelSerializer):
+    #make fields i want to enter it  in the form
+
+    old_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
+    new_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
+    confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
 
     class Meta:
         model = User
@@ -207,6 +245,11 @@ class UserSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
+
+class ListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=User
+        fields=['id','username','first_name','last_name','image','is_admin']
 
 # ----------------------------(reset_password_serializer)---------------------------------------
 

@@ -1,3 +1,5 @@
+from http import server
+from urllib import request
 from django.shortcuts import render
 from rest_framework import status, generics
 from rest_framework.decorators import api_view
@@ -14,7 +16,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.exceptions import ValidationError
-from .serializers import UserSerializer, AdminSerializer, userProfileSerializer
+from .serializers import ListSerializer, UserSerializer,AdminSerializer,userProfileSerializer
 from .models import User
 
 # ----------------
@@ -241,14 +243,30 @@ class updateuser(APIView):
             return Response({"message": "Don't have access"})
         user = User.objects.filter(id=request.data["id"]).first()
         if user:
-            serializer = UserSerializer()
-            serializer.update(user, request.data)
-            return Response({"message": "updated succesfully"})
-        return Response({"message": "user not found"})
+            serializer=UserSerializer()
+            serializer.update(user,request.data)
+            return Response( {"message":"updated succesfully"})
+        return Response( {"message":"user not found"})
+#----------------------------------------------------------------------------------   
+# ----------------------(listuser)-------------------------------------------------
+class listusers(APIView):
+    renderer_class =  [userrenderer]
+    permission_classes = [IsAuthenticated]
+    def get(self,request):
+        serializerr=userProfileSerializer(request.user)
+        if serializerr.data['is_admin'] == False:
+                return Response({"message":"Don't have access"})
+    
+        user=User.objects.all()
+        if not user:
+            return Response( {"message":"There is no users"})
+
+        serializer=ListSerializer(user,many=True)
+        return Response(serializer.data)
 
 
 # ----------------------------------------------------------------------------------
-# -------------------------------(resert_password)------------------------------------------------------
+# -------------------------------(resert_password)----------------------------------
 @api_view(["POST"])
 def reset_password(request, uid, token):
     renderer_class = [userrenderer]

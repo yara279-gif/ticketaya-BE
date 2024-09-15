@@ -40,6 +40,134 @@
         "documentation": {}
     },
     {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -393,6 +521,14 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -414,6 +550,22 @@
         "description": "re",
         "isExtraImport": true,
         "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -494,6 +646,22 @@
         "description": "django.core.mail",
         "isExtraImport": true,
         "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "server",
+        "importPath": "http",
+        "description": "http",
+        "isExtraImport": true,
+        "detail": "http",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "urllib",
+        "description": "urllib",
+        "isExtraImport": true,
+        "detail": "urllib",
         "documentation": {}
     },
     {
@@ -754,6 +922,14 @@
         "documentation": {}
     },
     {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -791,10 +967,37 @@
     {
         "label": "Migration",
         "kind": 6,
+        "importPath": "account.migrations.0002_user_image",
+        "description": "account.migrations.0002_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='static\\x07dmin\\\\img\\\\download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0002_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0003_alter_user_image",
+        "description": "account.migrations.0003_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0002_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='static/admin/img/download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0003_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
         "importPath": "account.migrations.0003_delete_match",
         "description": "account.migrations.0003_delete_match",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0002_match\"),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name=\"Match\",\n        ),\n    ]",
         "detail": "account.migrations.0003_delete_match",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0004_alter_user_image",
+        "description": "account.migrations.0004_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0003_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='admin/img/download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0004_alter_user_image",
         "documentation": {}
     },
     {
@@ -807,11 +1010,56 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0005_alter_user_image",
+        "description": "account.migrations.0005_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0004_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0005_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0006_alter_user_image",
+        "description": "account.migrations.0006_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0005_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='download.jpg', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0006_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0007_alter_user_image",
+        "description": "account.migrations.0007_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0006_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='admin/img/download.jpg', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0007_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0008_alter_user_image",
+        "description": "account.migrations.0008_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0007_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='images/24/9/12/download.jpg', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0008_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0009_alter_user_image",
+        "description": "account.migrations.0009_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0008_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='images/24/9/12/profile.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0009_alter_user_image",
+        "documentation": {}
+    },
+    {
         "label": "UserAdmin",
         "kind": 6,
         "importPath": "account.admin",
         "description": "account.admin",
-        "peekOfCode": "class UserAdmin(BaseUserAdmin):\n    # The forms to add and change user instances\n    # The fields to be used in displaying the User model.\n    # These override the definitions on the base UserAdmin\n    # that reference specific fields on auth.User.\n    list_display = [\"email\", \"username\", \"first_name\", \"last_name\", \"is_admin\"]\n    list_filter = [\"is_admin\"]\n    fieldsets = [\n        (None, {\"fields\": [\"email\", \"password\"]}),\n        (\"Personal info\", {\"fields\": [\"username\", \"first_name\", \"last_name\"]}),",
+        "peekOfCode": "class UserAdmin(BaseUserAdmin):\n    # The forms to add and change user instances\n    # The fields to be used in displaying the User model.\n    # These override the definitions on the base UserAdmin\n    # that reference specific fields on auth.User.\n<<<<<<< HEAD\n    list_display = [\"email\",\"username\", \"first_name\",\"last_name\", \"is_admin\",\"image\"]\n    list_filter = [\"is_admin\"]\n    fieldsets = [\n        (None, {\"fields\": [\"email\", \"password\"]}),",
         "detail": "account.admin",
         "documentation": {}
     },
@@ -865,7 +1113,34 @@
         "kind": 6,
         "importPath": "account.serializers",
         "description": "account.serializers",
-        "peekOfCode": "class userRegisterSerializer(serializers.ModelSerializer):\n    password2 = serializers.CharField(style={\"input_type\": \"password\"})\n    class Meta:\n        model = User\n        fields = [\n            \"email\",\n            \"username\",\n            \"first_name\",\n            \"last_name\",\n            \"password\",",
+        "peekOfCode": "class userRegisterSerializer(serializers.ModelSerializer):\n<<<<<<< HEAD\n    class Meta :\n        model = User\n        fields = ['email','username','first_name','last_name','password','password2']\n        extra_kwargs = {\n            'password':{'write_only':True}\n        }\n    def validate(self, attrs):\n        if attrs['password'] != attrs['password2']:",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "userLoginSerialize",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class userLoginSerializer (serializers.ModelSerializer):\n    username = serializers.CharField(max_length = 255)\n    class Meta :\n        model = User\n        fields = ['username','password']\n# ---------------------------------(user-profile)-------------------------------------\nclass userProfileSerializer (serializers.ModelSerializer):\n    class Meta :\n        model = User\n        fields = ['id','email','username','is_admin','first_name','last_name','image']",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "userProfileSerialize",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class userProfileSerializer (serializers.ModelSerializer):\n    class Meta :\n        model = User\n        fields = ['id','email','username','is_admin','first_name','last_name','image']\n# ---------------------------------(change-password)-------------------------------------\nclass ChangePasswordSerializer(serializers.ModelSerializer):\n    #make fields i want to enter it  in the form\n    old_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    new_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ChangePasswordSerializer",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class ChangePasswordSerializer(serializers.ModelSerializer):\n    #make fields i want to enter it  in the form\n    old_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    new_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n=======\n    password2 = serializers.CharField(style={\"input_type\": \"password\"})\n>>>>>>> 3eb3389ce0834a7119dba8591e66c53b2d42b2b5\n    class Meta:\n        model = User",
         "detail": "account.serializers",
         "documentation": {}
     },
@@ -910,7 +1185,7 @@
         "kind": 6,
         "importPath": "account.serializers",
         "description": "account.serializers",
-        "peekOfCode": "class AdminSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = [\n            \"id\",\n            \"username\",\n            \"first_name\",\n            \"last_name\",\n            \"is_admin\",\n            \"email\",",
+        "peekOfCode": "class AdminSerializer(serializers.ModelSerializer):\n    class Meta:\n<<<<<<< HEAD\n        model=User\n        fields=['id','username','first_name','last_name','is_admin','email','password','image']\n# password myzhr4\n        extra_kwargs={\n            'password':{'write_only':True},\n=======\n        model = User",
         "detail": "account.serializers",
         "documentation": {}
     },
@@ -919,7 +1194,16 @@
         "kind": 6,
         "importPath": "account.serializers",
         "description": "account.serializers",
-        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = [\n            \"id\",\n            \"username\",\n            \"first_name\",\n            \"last_name\",\n            \"is_admin\",\n            \"email\",",
+        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n<<<<<<< HEAD\n        model=User\n        fields=['id','username','first_name','last_name','is_admin','email','password','image']\n# password myzhr4\n        extra_kwargs={\n            'password':{'write_only':True},\n=======\n        model = User",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ListSerializer",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class ListSerializer(serializers.ModelSerializer):\n    class Meta:\n        model=User\n        fields=['id','username','first_name','last_name','image','is_admin']\n=======\n# ----------------------------(reset_password_serializer)---------------------------------------\nclass ResetPasswordSerializer(serializers.ModelSerializer):\n    password = serializers.CharField(style={\"input_type\": \"password\"}, write_only=True)\n    confirm_password = serializers.CharField(\n        style={\"input_type\": \"password\"}, write_only=True",
         "detail": "account.serializers",
         "documentation": {}
     },
@@ -937,7 +1221,7 @@
         "kind": 5,
         "importPath": "account.serializers",
         "description": "account.serializers",
-        "peekOfCode": "user = User()\n# ---------------------------------(register)-------------------------------------\nclass userRegisterSerializer(serializers.ModelSerializer):\n    password2 = serializers.CharField(style={\"input_type\": \"password\"})\n    class Meta:\n        model = User\n        fields = [\n            \"email\",\n            \"username\",\n            \"first_name\",",
+        "peekOfCode": "user = User()\n# ---------------------------------(register)-------------------------------------\nclass userRegisterSerializer(serializers.ModelSerializer):\n<<<<<<< HEAD\n    class Meta :\n        model = User\n        fields = ['email','username','first_name','last_name','password','password2']\n        extra_kwargs = {\n            'password':{'write_only':True}\n        }",
         "detail": "account.serializers",
         "documentation": {}
     },
@@ -1009,7 +1293,16 @@
         "kind": 6,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "class updateuser(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def patch(self, request):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.filter(id=request.data[\"id\"]).first()\n        if user:\n            serializer = UserSerializer()",
+        "peekOfCode": "class updateuser(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def patch(self, request):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.filter(id=request.data[\"id\"]).first()\n        if user:\n<<<<<<< HEAD",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "listusers",
+        "kind": 6,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "class listusers(APIView):\n    renderer_class =  [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def get(self,request):\n        serializerr=userProfileSerializer(request.user)\n        if serializerr.data['is_admin'] == False:\n                return Response({\"message\":\"Don't have access\"})\n        user=User.objects.all()\n        if not user:\n            return Response( {\"message\":\"There is no users\"})",
         "detail": "account.views",
         "documentation": {}
     },
@@ -1486,16 +1779,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "AUTH_USER_MODEL = \"account.User\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"mkinzy71@gmail.com\"  # da 2lly hb3t mno\nEMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False",
-        "detail": "ticketaya.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_BACKEND",
-        "kind": 5,
-        "importPath": "ticketaya.settings",
-        "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"mkinzy71@gmail.com\"  # da 2lly hb3t mno\nEMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False",
+        "peekOfCode": "AUTH_USER_MODEL = \"account.User\"\n<<<<<<< HEAD\nEMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT=587\nEMAIL_HOST_USER='mkinzy71@gmail.com' #da 2lly hb3t mno\nEMAIL_HOST_PASSWORD='bihm twtf otrd ndph' #da 2lly hb3t mno\nEMAIL_USE_TLS=True\nEMAIL_USE_SSL=False\n=======",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -1504,7 +1788,25 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"mkinzy71@gmail.com\"  # da 2lly hb3t mno\nEMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False",
+        "peekOfCode": "EMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT=587\nEMAIL_HOST_USER='mkinzy71@gmail.com' #da 2lly hb3t mno\nEMAIL_HOST_PASSWORD='bihm twtf otrd ndph' #da 2lly hb3t mno\nEMAIL_USE_TLS=True\nEMAIL_USE_SSL=False\n=======\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"mkinzy71@gmail.com\"  # da 2lly hb3t mno\nEMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\n>>>>>>> 3eb3389ce0834a7119dba8591e66c53b2d42b2b5",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"mkinzy71@gmail.com\"  # da 2lly hb3t mno\nEMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\n>>>>>>> 3eb3389ce0834a7119dba8591e66c53b2d42b2b5",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -1513,7 +1815,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_HOST_USER = \"mkinzy71@gmail.com\"  # da 2lly hb3t mno\nEMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False",
+        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_HOST_USER = \"mkinzy71@gmail.com\"  # da 2lly hb3t mno\nEMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\n>>>>>>> 3eb3389ce0834a7119dba8591e66c53b2d42b2b5",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -1522,7 +1824,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_HOST_USER = \"mkinzy71@gmail.com\"  # da 2lly hb3t mno\nEMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False",
+        "peekOfCode": "EMAIL_HOST_USER = \"mkinzy71@gmail.com\"  # da 2lly hb3t mno\nEMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\n>>>>>>> 3eb3389ce0834a7119dba8591e66c53b2d42b2b5",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -1531,7 +1833,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = \"bihm twtf otrd ndph\"  # da 2lly hb3t mno\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\n>>>>>>> 3eb3389ce0834a7119dba8591e66c53b2d42b2b5",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -1540,7 +1842,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_USE_SSL = False",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\n>>>>>>> 3eb3389ce0834a7119dba8591e66c53b2d42b2b5",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -1549,7 +1851,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_USE_SSL = False",
+        "peekOfCode": "EMAIL_USE_SSL = False\n>>>>>>> 3eb3389ce0834a7119dba8591e66c53b2d42b2b5",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -1558,7 +1860,7 @@
         "kind": 5,
         "importPath": "ticketaya.urls",
         "description": "ticketaya.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api_auth/\", include(\"rest_framework.urls\")),\n    path(\"account/\", include(\"account.urls\")),\n    path(\"match/\", include(\"match.urls\")),\n    # Obtain a pair of access and refresh tokens\n    path(\"api/token/\", TokenObtainPairView.as_view(), name=\"token_obtain_pair\"),\n    # Use the refresh token to get a new access token\n    path(\"api/token/refresh/\", TokenRefreshView.as_view(), name=\"token_refresh\"),\n    path(\"api/logout/\", TokenBlacklistView.as_view(), name=\"token_blacklist\"),",
+        "peekOfCode": "urlpatterns = [\n<<<<<<< HEAD\n    path('admin/', admin.site.urls),\n    path('api_auth/',include('rest_framework.urls')),\n    path ('account/',include('account.urls')),\n] \nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\n    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\n=======",
         "detail": "ticketaya.urls",
         "documentation": {}
     },
