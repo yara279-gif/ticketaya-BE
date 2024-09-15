@@ -47,7 +47,7 @@ class userLoginSerializer (serializers.ModelSerializer):
 class userProfileSerializer (serializers.ModelSerializer):
     class Meta :
         model = User
-        fields = ['id','email','username','is_admin','first_name','last_name']
+        fields = ['id','email','username','is_admin','first_name','last_name','image']
 
 # ---------------------------------(change-password)-------------------------------------
 class ChangePasswordSerializer(serializers.ModelSerializer):
@@ -112,7 +112,7 @@ class reset_password_email_serializer (serializers.ModelSerializer):
 class AdminSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
-        fields=['id','username','first_name','last_name','is_admin','email','password']
+        fields=['id','username','first_name','last_name','is_admin','email','password','image']
         
 # password myzhr4
         extra_kwargs={
@@ -133,7 +133,7 @@ class AdminSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
-        fields=['id','username','first_name','last_name','is_admin','email','password']
+        fields=['id','username','first_name','last_name','is_admin','email','password','image']
         
 # password myzhr4
         extra_kwargs={
@@ -150,55 +150,9 @@ class UserSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
-# class changepasswordserializers (serializers.ModelSerializer):
-#     old_password = serializers.CharField(style ={'input_type':'password'}, write_only=True)
-#     new_password = serializers.CharField(style ={'input_type':'password'}, write_only=True)
-#     confirm_password = serializers.CharField(style ={'input_type':'password'}, write_only=True)
-#     class Meta :
-#         model = User
-#         fields = ['old_password','new_password','confirm_password']
-        
-#         def validate (self,attrs):
 
-#             user = self.context['user']
-#             if attrs['new_password'] != attrs['confirm_password']:
-#                 raise serializers.ValidationError({'confirm_password':'new_password doesn\'t match confirm_password'})
-#             return 
-            
-            
-            
-
-            
-
-       
-
-# ------------------------------------------------------------------------------------------------------------
-# class ChangePasswordSerializer(serializers.Serializer):
-#     old_password = serializers.CharField(style={'input_type': 'password'}, max_length=255, write_only=True)
-#     password = serializers.CharField(style={'input_type': 'password'}, max_length=255, write_only=True)
-#     password2 = serializers.CharField(style={'input_type': 'password'}, max_length=255, write_only=True)
-
-#     def validate(self, attrs):
-#         user = self.context['user']
-
-#         # Check if old password is correct
-#         if not user.check_password(attrs['old_password']):
-#             raise serializers.ValidationError({"old_password": "Old password is incorrect."})
-
-#         # Check if new passwords match
-#         if attrs['password'] != attrs['password2']:
-#             raise serializers.ValidationError({"password2": "Passwords do not match."})
-
-#         return attrs
-
-#     def save(self):
-#         user = self.context['user']
-#         user.set_password(self.validated_data['password'])
-#         user.save()
-#         return user
-
-        
-
-
-
+class ListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=User
+        fields=['id','username','first_name','last_name','image','is_admin']
 

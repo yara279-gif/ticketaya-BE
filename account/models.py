@@ -10,7 +10,7 @@ class UserManager(BaseUserManager):
         
         if not email:
             raise ValueError("Users must have an email address")
-       
+
         user = self.model(
             email=self.normalize_email(email),
             username = username,
@@ -56,7 +56,7 @@ class User(AbstractBaseUser):
     
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False,null=True,blank= True)
-
+    image = models.ImageField(upload_to='images/%y/%m/%d',default='images/24/9/12/profile.png')
     objects = UserManager()
 
     USERNAME_FIELD = "username"

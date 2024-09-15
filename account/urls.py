@@ -1,7 +1,7 @@
 from re import search
 from django.urls import path,include
 from .  import views
-from .views import addadmin,adduser, retrieveeuser, searchuser,deleteuser, updateuser
+from .views import addadmin,adduser, listusers, retrieveeuser, searchuser,deleteuser, updateuser
 
 urlpatterns =[
     path ('register/',views.register,name =  'register'),
@@ -15,5 +15,6 @@ urlpatterns =[
     path('searchuser/',searchuser.as_view()),
     path('deleteuser/',deleteuser.as_view()),
     path('updateuser/',updateuser.as_view()),
+    path('listusers/',listusers.as_view()),
 
 ]
