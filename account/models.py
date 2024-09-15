@@ -1,43 +1,44 @@
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
+
 # Create your models here.
 class UserManager(BaseUserManager):
-    def create_user(self, email,username,first_name,last_name ,  password=None,password2= None):
+    def create_user(
+        self, email, username, first_name, last_name, password=None, password2=None
+    ):
         """
         Creates and saves a User with the given email, date of
         birth and password.
         """
-        
+
         if not email:
             raise ValueError("Users must have an email address")
 
         user = self.model(
             email=self.normalize_email(email),
-            username = username,
-            first_name =first_name,
-            last_name =last_name
-
+            username=username,
+            first_name=first_name,
+            last_name=last_name,
         )
 
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self,email, username, first_name,last_name , password=None):
+    def create_superuser(
+        self, email, username, first_name, last_name, password=None, is_admin=False
+    ):
         """
         Creates and saves a superuser with the given email,username,  first/last name
          and password.
         """
         user = self.create_user(
             email,
-            username= username, 
+            username=username,
             password=password,
-            first_name= first_name,
-            last_name = last_name,
-            is_admin =  False
-
-
-
+            first_name=first_name,
+            last_name=last_name,
+            is_admin=False,
         )
         user.is_admin = True
         user.save(using=self._db)
@@ -51,16 +52,16 @@ class User(AbstractBaseUser):
         unique=True,
     )
     username = models.CharField(max_length=255, unique=True)
-    first_name =  models.CharField(max_length=255)
-    last_name =  models.CharField(max_length=255)
-    
-    is_active = models.BooleanField(default=True)
-    is_admin = models.BooleanField(default=False,null=True,blank= True)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
     image = models.ImageField(upload_to='images/%y/%m/%d',default='images/24/9/12/profile.png')
+    is_active = models.BooleanField(default=True)
+    is_admin = models.BooleanField(default=False, null=True, blank=True)
+
     objects = UserManager()
 
     USERNAME_FIELD = "username"
-    REQUIRED_FIELDS = ["email","first_name","last_name"]
+    REQUIRED_FIELDS = ["email", "first_name", "last_name"]
 
     def __str__(self):
         return self.username
@@ -79,4 +80,4 @@ class User(AbstractBaseUser):
     def is_staff(self):
         "Is the user a member of staff?"
         # Simplest possible answer: All admins are staff
-        return self.is_admin 
+        return self.is_admin

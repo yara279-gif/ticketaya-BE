@@ -1,11 +1,12 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .models import User
+
 # Register your models here.
+
 
 class UserAdmin(BaseUserAdmin):
     # The forms to add and change user instances
-
 
     # The fields to be used in displaying the User model.
     # These override the definitions on the base UserAdmin
@@ -29,7 +30,7 @@ class UserAdmin(BaseUserAdmin):
         ),
     ]
     search_fields = ["username"]
-    ordering = ["email","username","id"]
+    ordering = ["email", "username", "id"]
     filter_horizontal = []
 
 
@@ -37,5 +38,3 @@ class UserAdmin(BaseUserAdmin):
 admin.site.register(User, UserAdmin)
 # ... and, since we're not using Django's built-in permissions,
 # unregister the Group model from admin.
-
-
