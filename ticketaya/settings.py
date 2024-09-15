@@ -90,6 +90,8 @@ CORS_ALLOW_METHODS = (
     "PUT",
 )
 
+CORS_ALLOW_ALL_ORIGINS = True
+
 ROOT_URLCONF = "ticketaya.urls"
 
 TEMPLATES = [
