@@ -1,0 +1,1228 @@
+[
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "importPath": "django.contrib.auth.admin",
+        "description": "django.contrib.auth.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "BaseUserManager",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractBaseUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "permissions",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "renderers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "validate_password",
+        "importPath": "django.contrib.auth.password_validation",
+        "description": "django.contrib.auth.password_validation",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.password_validation",
+        "documentation": {}
+    },
+    {
+        "label": "smart_str",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "force_bytes",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoUnicodeDecodeError",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_decode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_encode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetTokenGenerator",
+        "importPath": "django.contrib.auth.tokens",
+        "description": "django.contrib.auth.tokens",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.tokens",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "search",
+        "importPath": "re",
+        "description": "re",
+        "isExtraImport": true,
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "server",
+        "importPath": "http",
+        "description": "http",
+        "isExtraImport": true,
+        "detail": "http",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "urllib",
+        "description": "urllib",
+        "isExtraImport": true,
+        "detail": "urllib",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "RefreshToken",
+        "importPath": "rest_framework_simplejwt.tokens",
+        "description": "rest_framework_simplejwt.tokens",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.tokens",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticatedOrReadOnly",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "AllowAny",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAdminUser",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoModelPermissions",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoModelPermissionsOrAnonReadOnly",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticationFailed",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "message",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "isExtraImport": true,
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "TokenObtainPairView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenRefreshView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0001_initial",
+        "description": "account.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('password', models.CharField(max_length=128, verbose_name='password')),",
+        "detail": "account.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0002_user_image",
+        "description": "account.migrations.0002_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='static\\x07dmin\\\\img\\\\download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0002_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0003_alter_user_image",
+        "description": "account.migrations.0003_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0002_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='static/admin/img/download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0003_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0004_alter_user_image",
+        "description": "account.migrations.0004_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0003_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='admin/img/download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0004_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0005_alter_user_image",
+        "description": "account.migrations.0005_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0004_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0005_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0006_alter_user_image",
+        "description": "account.migrations.0006_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0005_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='download.jpg', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0006_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0007_alter_user_image",
+        "description": "account.migrations.0007_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0006_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='admin/img/download.jpg', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0007_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0008_alter_user_image",
+        "description": "account.migrations.0008_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0007_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='images/24/9/12/download.jpg', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0008_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0009_alter_user_image",
+        "description": "account.migrations.0009_alter_user_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0008_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='images/24/9/12/profile.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "detail": "account.migrations.0009_alter_user_image",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "kind": 6,
+        "importPath": "account.admin",
+        "description": "account.admin",
+        "peekOfCode": "class UserAdmin(BaseUserAdmin):\n    # The forms to add and change user instances\n    # The fields to be used in displaying the User model.\n    # These override the definitions on the base UserAdmin\n    # that reference specific fields on auth.User.\n    list_display = [\"email\",\"username\", \"first_name\",\"last_name\", \"is_admin\",\"image\"]\n    list_filter = [\"is_admin\"]\n    fieldsets = [\n        (None, {\"fields\": [\"email\", \"password\"]}),\n        (\"Personal info\", {\"fields\": [\"username\",\"first_name\",\"last_name\",\"image\"]}),",
+        "detail": "account.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AccountConfig",
+        "kind": 6,
+        "importPath": "account.apps",
+        "description": "account.apps",
+        "peekOfCode": "class AccountConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'account'",
+        "detail": "account.apps",
+        "documentation": {}
+    },
+    {
+        "label": "UserManager",
+        "kind": 6,
+        "importPath": "account.models",
+        "description": "account.models",
+        "peekOfCode": "class UserManager(BaseUserManager):\n    def create_user(self, email,username,first_name,last_name ,  password=None,password2= None):\n        \"\"\"\n        Creates and saves a User with the given email, date of\n        birth and password.\n        \"\"\"\n        if not email:\n            raise ValueError(\"Users must have an email address\")\n        user = self.model(\n            email=self.normalize_email(email),",
+        "detail": "account.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "account.models",
+        "description": "account.models",
+        "peekOfCode": "class User(AbstractBaseUser):\n    email = models.EmailField(\n        verbose_name=\"Email\",\n        max_length=255,\n        unique=True,\n    )\n    username = models.CharField(max_length=255, unique=True)\n    first_name =  models.CharField(max_length=255)\n    last_name =  models.CharField(max_length=255)\n    is_active = models.BooleanField(default=True)",
+        "detail": "account.models",
+        "documentation": {}
+    },
+    {
+        "label": {
+            "name": "",
+            "kind": 6,
+            "peekOfCode": "class  IsAuthOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view,obj):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        return obj.username ==  request.user"
+        },
+        "kind": 6,
+        "importPath": "account.permissions",
+        "description": "account.permissions",
+        "peekOfCode": "class  IsAuthOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view,obj):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        return obj.username ==  request.user",
+        "detail": "account.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "userrendere",
+        "kind": 6,
+        "importPath": "account.renderers",
+        "description": "account.renderers",
+        "peekOfCode": "class userrenderer (renderers.JSONRenderer):\n    charset = 'utf-8'\n    def render (self,data,accepted_media_type =None,renderer_context=None):\n        response = ''\n        if 'ErrorDetail' in str (data) :\n            response =  json.dumps({'errors':data})\n        else:\n            response = json.dumps(data)\n        return response",
+        "detail": "account.renderers",
+        "documentation": {}
+    },
+    {
+        "label": "userRegisterSerialize",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class userRegisterSerializer (serializers.ModelSerializer):\n    password2 = serializers.CharField(style ={'input_type':'password'})\n    class Meta :\n        model = User\n        fields = ['email','username','first_name','last_name','password','password2']\n        extra_kwargs = {\n            'password':{'write_only':True}\n        }\n    def validate(self, attrs):\n        if attrs['password'] != attrs['password2']:",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "userLoginSerialize",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class userLoginSerializer (serializers.ModelSerializer):\n    username = serializers.CharField(max_length = 255)\n    class Meta :\n        model = User\n        fields = ['username','password']\n# ---------------------------------(user-profile)-------------------------------------\nclass userProfileSerializer (serializers.ModelSerializer):\n    class Meta :\n        model = User\n        fields = ['id','email','username','is_admin','first_name','last_name','image']",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "userProfileSerialize",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class userProfileSerializer (serializers.ModelSerializer):\n    class Meta :\n        model = User\n        fields = ['id','email','username','is_admin','first_name','last_name','image']\n# ---------------------------------(change-password)-------------------------------------\nclass ChangePasswordSerializer(serializers.ModelSerializer):\n    #make fields i want to enter it  in the form\n    old_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    new_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ChangePasswordSerializer",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class ChangePasswordSerializer(serializers.ModelSerializer):\n    #make fields i want to enter it  in the form\n    old_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    new_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    class Meta:\n        model = User\n        fields = ['old_password', 'new_password', 'confirm_password']\n    def validate(self, attrs):\n        #get the user from the request",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "reset_password_email_serialize",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class reset_password_email_serializer (serializers.ModelSerializer):\n    email = serializers.EmailField(max_length = 255)\n    class Meta :\n        model = User\n        fields = ['id','email']\n    def validate(self, attrs):\n        if User.objects.filter(email = attrs['email']).exists():\n            user = User.objects.get (email = attrs['email'])\n            uid = urlsafe_base64_encode(force_bytes(user.id))\n            print(\"'uid\",uid)",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AdminSerializer",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class AdminSerializer(serializers.ModelSerializer):\n    class Meta:\n        model=User\n        fields=['id','username','first_name','last_name','is_admin','email','password','image']\n# password myzhr4\n        extra_kwargs={\n            'password':{'write_only':True},\n        }\n        #to hash the password\n    def create(self, validated_data):",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model=User\n        fields=['id','username','first_name','last_name','is_admin','email','password','image']\n# password myzhr4\n        extra_kwargs={\n            'password':{'write_only':True},\n        }\n        #to hash the password\n    def create(self, validated_data):",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ListSerializer",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class ListSerializer(serializers.ModelSerializer):\n    class Meta:\n        model=User\n        fields=['id','username','first_name','last_name','image','is_admin']",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 5,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "user = User()\n# ---------------------------------(register)-------------------------------------\nclass userRegisterSerializer (serializers.ModelSerializer):\n    password2 = serializers.CharField(style ={'input_type':'password'})\n    class Meta :\n        model = User\n        fields = ['email','username','first_name','last_name','password','password2']\n        extra_kwargs = {\n            'password':{'write_only':True}\n        }",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "addadmin",
+        "kind": 6,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "class addadmin(APIView):\n    renderer_class =  [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def post(self,request):\n            serializerr=userProfileSerializer(request.user)\n            if serializerr.data['is_admin'] == False:\n                return Response({\"message\":\"Don't have access\"})\n            serializer=AdminSerializer(data=request.data)\n            if serializer.is_valid():\n                subject=\"NEW Admin\"",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "adduser",
+        "kind": 6,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "class adduser(APIView):\n    renderer_class =  [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def post(self,request):\n        serializerr=userProfileSerializer(request.user)\n        if serializerr.data['is_admin'] == False:\n            return Response({\"message\":\"Don't have access\"})\n        serializer=UserSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "retrieveeuser",
+        "kind": 6,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "class retrieveeuser(APIView):\n        renderer_class =  [userrenderer]\n        permission_classes = [IsAuthenticated]\n        def get(self,request):\n            serializerr=userProfileSerializer(request.user)\n            if serializerr.data['is_admin'] == False:\n                return Response({\"message\":\"Don't have access\"})\n            id=request.data['id']\n            user=User.objects.filter(id=id).first()\n            if not user is None:",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "searchuser",
+        "kind": 6,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "class searchuser(APIView):\n        renderer_class =  [userrenderer]\n        permission_classes = [IsAuthenticated]\n        def get(self,request):\n            serializerr=userProfileSerializer(request.user)\n            if serializerr.data['is_admin'] == False:\n                return Response({\"message\":\"Don't have access\"})\n            user=User.objects.filter(username__contains=request.data['username']) \n            if user.exists():\n                serializer=UserSerializer(user,many=True)",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "deleteuser",
+        "kind": 6,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "class deleteuser(APIView):\n    renderer_class =  [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def post(self,request):\n        serializerr=userProfileSerializer(request.user)\n        if serializerr.data['is_admin'] == False:\n                return Response({\"message\":\"Don't have access\"})\n        user=User.objects.filter(username=request.data['username']).first()\n        if user:\n            user.delete()",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "updateuser",
+        "kind": 6,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "class updateuser(APIView):\n    renderer_class =  [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def patch(self,request):\n        serializerr=userProfileSerializer(request.user)\n        if serializerr.data['is_admin'] == False:\n                return Response({\"message\":\"Don't have access\"})\n        user=User.objects.filter(id=request.data['id']).first()\n        if user:\n            serializer=UserSerializer()",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "listusers",
+        "kind": 6,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "class listusers(APIView):\n    renderer_class =  [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def get(self,request):\n        serializerr=userProfileSerializer(request.user)\n        if serializerr.data['is_admin'] == False:\n                return Response({\"message\":\"Don't have access\"})\n        user=User.objects.all()\n        if not user:\n            return Response( {\"message\":\"There is no users\"})",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_tokens_for_user",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def get_tokens_for_user(user):\n    refresh = RefreshToken.for_user(user)\n    return {\n        'refresh': str(refresh),\n        'access': str(refresh.access_token),\n    }\n# ----------------------(register_view)-------------------------------------------------\n@api_view(['POST'])\ndef register (request):\n    if request.method == 'POST':",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "registe",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def register (request):\n    if request.method == 'POST':\n        renderer_class =  [userrenderer]\n        serializer = serializers.userRegisterSerializer(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            user = serializer.save()\n            token = get_tokens_for_user(user)\n            return Response({'token':token ,'msg':\"register successfull\"}, status=status.HTTP_201_CREATED)\n        return Response (serializer.errors, status=status.HTTP_400_BAD_REQUEST)\n# ----------------------(login_view)-------------------------------------------------",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": {
+            "name": "",
+            "kind": 2,
+            "peekOfCode": "def  login (request):\n    if request.method == 'POST':\n        renderer_class =  [userrenderer]\n        serializer = serializers.userLoginSerializer(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            username = serializer.data.get('username')\n            password = serializer.data.get('password')\n            user = authenticate(username=username, password=password) \n            if user is not None:\n                token = get_tokens_for_user(user)"
+        },
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def  login (request):\n    if request.method == 'POST':\n        renderer_class =  [userrenderer]\n        serializer = serializers.userLoginSerializer(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            username = serializer.data.get('username')\n            password = serializer.data.get('password')\n            user = authenticate(username=username, password=password) \n            if user is not None:\n                token = get_tokens_for_user(user)",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "userprofile",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def userprofile(request):\n    if request.method == 'GET':\n        renderer_class =  [userrenderer]\n        permission_classes = [IsAuthOrReadOnly]\n        serializer = serializers.userProfileSerializer(request.user)\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# ----------------------(change_password_view)-------------------------------------------------\n@api_view(['POST'])\ndef change_password(request):\n    serializer = serializers.ChangePasswordSerializer(data=request.data, context={'request': request})",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "change_password",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def change_password(request):\n    serializer = serializers.ChangePasswordSerializer(data=request.data, context={'request': request})\n    if serializer.is_valid():\n        serializer.save()\n        return Response({'msg': \"Password changed successfully\"}, status=status.HTTP_200_OK)\n    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)\n# ----------------------(reset_password_email_view)-------------------------------------------------\n@api_view(['POST'])\ndef  reset_password_email(request):\n    renderer_classes = [userrenderer]",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": {
+            "name": "",
+            "kind": 2,
+            "peekOfCode": "def  reset_password_email(request):\n    renderer_classes = [userrenderer]\n    serializer = serializers.reset_password_email_serializer(data=request.data)\n    if serializer.is_valid(raise_exception = True):\n        return Response({'msg':'password resert link was send .please check your email'},status = status.HTTP_200_OK)\n    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)\n#----------------------------------------------------------------------------------\n# ----------------------(addadmin)-------------------------------------------------\nclass addadmin(APIView):\n    renderer_class =  [userrenderer]"
+        },
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def  reset_password_email(request):\n    renderer_classes = [userrenderer]\n    serializer = serializers.reset_password_email_serializer(data=request.data)\n    if serializer.is_valid(raise_exception = True):\n        return Response({'msg':'password resert link was send .please check your email'},status = status.HTTP_200_OK)\n    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)\n#----------------------------------------------------------------------------------\n# ----------------------(addadmin)-------------------------------------------------\nclass addadmin(APIView):\n    renderer_class =  [userrenderer]",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "ticketaya.asgi",
+        "description": "ticketaya.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "ticketaya.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-udb)6_g5z5^_)ekm3eztu8xq33)^cb6-06qm2l23xrb)(dixrj'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-udb)6_g5z5^_)ekm3eztu8xq33)^cb6-06qm2l23xrb)(dixrj'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'account',\n    'rest_framework_simplejwt',",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    \"corsheaders.middleware.CorsMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    \"http://127.0.0.1:8000\",\n]\nCORS_ALLOW_METHODS = (\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",\n    \"POST\",\n    \"PUT\",",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_METHODS",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "CORS_ALLOW_METHODS = (\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",\n    \"POST\",\n    \"PUT\",\n)\nROOT_URLCONF = 'ticketaya.urls'\nTEMPLATES = [",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "ROOT_URLCONF = 'ticketaya.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR,'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR,'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'ticketaya.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR,'static')\nSTATICFILES_DIRS = [os.path.join(BASE_DIR,'account/static')]\n# Default primary key field type",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR,'static')\nSTATICFILES_DIRS = [os.path.join(BASE_DIR,'account/static')]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR,'static')\nSTATICFILES_DIRS = [os.path.join(BASE_DIR,'account/static')]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR,'static')\nSTATICFILES_DIRS = [os.path.join(BASE_DIR,'account/static')]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# URL and directory for media files",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR,'static')\nSTATICFILES_DIRS = [os.path.join(BASE_DIR,'account/static')]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# URL and directory for media files\nMEDIA_ROOT = os.path.join(BASE_DIR,'media')\nMEDIA_URL = '/media/'          \nSIMPLE_JWT = {",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR,'static')\nSTATICFILES_DIRS = [os.path.join(BASE_DIR,'account/static')]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# URL and directory for media files\nMEDIA_ROOT = os.path.join(BASE_DIR,'media')\nMEDIA_URL = '/media/'          \nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=5),",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR,'account/static')]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# URL and directory for media files\nMEDIA_ROOT = os.path.join(BASE_DIR,'media')\nMEDIA_URL = '/media/'          \nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=5),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=1),",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# URL and directory for media files\nMEDIA_ROOT = os.path.join(BASE_DIR,'media')\nMEDIA_URL = '/media/'          \nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=5),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=1),\n    \"ROTATE_REFRESH_TOKENS\": False,\n    \"BLACKLIST_AFTER_ROTATION\": False,\n    \"UPDATE_LAST_LOGIN\": False,",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR,'media')\nMEDIA_URL = '/media/'          \nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=5),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=1),\n    \"ROTATE_REFRESH_TOKENS\": False,\n    \"BLACKLIST_AFTER_ROTATION\": False,\n    \"UPDATE_LAST_LOGIN\": False,\n    \"ALGORITHM\": \"HS256\",\n    \"SIGNING_KEY\": settings.SECRET_KEY,",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'          \nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=5),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=1),\n    \"ROTATE_REFRESH_TOKENS\": False,\n    \"BLACKLIST_AFTER_ROTATION\": False,\n    \"UPDATE_LAST_LOGIN\": False,\n    \"ALGORITHM\": \"HS256\",\n    \"SIGNING_KEY\": settings.SECRET_KEY,\n    \"VERIFYING_KEY\": \"\",",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "SIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=5),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=1),\n    \"ROTATE_REFRESH_TOKENS\": False,\n    \"BLACKLIST_AFTER_ROTATION\": False,\n    \"UPDATE_LAST_LOGIN\": False,\n    \"ALGORITHM\": \"HS256\",\n    \"SIGNING_KEY\": settings.SECRET_KEY,\n    \"VERIFYING_KEY\": \"\",\n    \"AUDIENCE\": None,",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "AUTH_USER_MODEL = \"account.User\"\nEMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT=587\nEMAIL_HOST_USER='mkinzy71@gmail.com' #da 2lly hb3t mno\nEMAIL_HOST_PASSWORD='bihm twtf otrd ndph' #da 2lly hb3t mno\nEMAIL_USE_TLS=True\nEMAIL_USE_SSL=False",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "ticketaya.settings",
+        "description": "ticketaya.settings",
+        "peekOfCode": "EMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT=587\nEMAIL_HOST_USER='mkinzy71@gmail.com' #da 2lly hb3t mno\nEMAIL_HOST_PASSWORD='bihm twtf otrd ndph' #da 2lly hb3t mno\nEMAIL_USE_TLS=True\nEMAIL_USE_SSL=False",
+        "detail": "ticketaya.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "ticketaya.urls",
+        "description": "ticketaya.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api_auth/',include('rest_framework.urls')),\n    path ('account/',include('account.urls')),\n] \nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\n    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
+        "detail": "ticketaya.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "ticketaya.wsgi",
+        "description": "ticketaya.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "ticketaya.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ticketaya.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]
