@@ -35,6 +35,8 @@ urlpatterns = [
     # Use the refresh token to get a new access token
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/logout/", TokenBlacklistView.as_view(), name="token_blacklist"),
+    path('api/', include("party.urls")),
+
 ] 
 
 if settings.DEBUG:
