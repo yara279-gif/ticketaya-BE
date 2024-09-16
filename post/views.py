@@ -19,7 +19,7 @@ class CreatePosts(APIView):
         data = request.data.copy()
         data['author_id'] = request.user.id
         data['author_name'] = request.user.username
-        serializer = PostSerializer(data=data)
+        serializer = PostSerializer(data=data, context={"request": request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -33,7 +33,7 @@ class ShowPosts(APIView):
 
     def get(self, request):
         posts = Post.objects.all() 
-        serializer = ShowPostSerializer(posts, many=True)
+        serializer = ShowPostSerializer(posts, many=True, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 # ----------------------(PostDetail)-------------------------------------------------
@@ -50,14 +50,14 @@ class PostDetail(APIView):
 
     def get(self, request, pk):
         post = self.get_object(pk) 
-        serializer = ShowPostSerializer(post)
+        serializer = ShowPostSerializer(post, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def patch(self, request, pk):
         post = self.get_object(pk)
         if post.author_id != request.user:
             raise PermissionDenied("You are not the author of this post.")
-        serializer = UpdatePostSerializer(post, data=request.data, partial=True) 
+        serializer = UpdatePostSerializer(post, data=request.data, partial=True, context={"request": request}) 
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -91,5 +91,5 @@ class DoLike(APIView):
              post.likes.remove(user)
         else:
             post.likes.add(user)
-        serializer = ShowPostSerializer(post)
+        serializer = ShowPostSerializer(post, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
