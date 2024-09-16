@@ -67,9 +67,9 @@ def login(request):
             password = serializer.data.get("password")
             # usr = serializer.data.get('user')
             user = authenticate(username=username, password=password)
-            is_admin = user.is_admin
+            
             if user is not None:
-
+                is_admin = user.is_admin
                 token = get_tokens_for_user(user)
                 return Response(
                     {"is_admin": is_admin, "token": token, "msg": "login successfull"},
@@ -311,6 +311,59 @@ def delete_account(request):
         return Response(
             {"msg": "Failed to delete account"}, status=status.HTTP_400_BAD_REQUEST
         )
+#------------------------------------------------------------------------------------------
+# -------------------------------(user_update_profile)-------------------------------------------
+# @api_view(["GET","PATCH"])
+# def update_profile (request):
+#     renderer_class = [userrenderer]
+#     permission_classes = [IsAuthenticated]
+#     if  request.method == "GET":
+#         serializer = serializers.userProfileSerializer(request.user)
+        
+#         return Response(serializer.data, status=status.HTTP_200_OK)
+#     elif request.method == "PATCH":
+#         existing_data = serializers.userProfileSerializer(request.user).data
+#         serializer = serializers.userProfileSerializer(request.user, data=request.data)
+#         if serializer.is_valid():
+#             if request.data == existing_data:
+#                 return Response({"msg": "No changes made"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+#             serializer.save()
+#             return Response({'msg':'user profile updated successfully'}, status=status.HTTP_200_OK)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+#------------------------------------------------------------------------------------------
+
+# @api_view(["GET", "PATCH"])
+
+# def update_profile(request):
+#     renderer_class = [userrenderer]
+#     Permission_class
+#     # GET request - Fetch user profile data
+#     if request.method == "GET":
+#         serializer = serializers.userProfileSerializer(request.user)
+#         return Response(serializer.data, status=status.HTTP_200_OK)
+    
+#     # PATCH request - Update user profile data
+#     elif request.method == "PATCH":
+#         serializer = serializers.userProfileSerializer(request.user, data=request.data, partial=True)  # Allow partial updates
+#         if serializer.is_valid():
+#             # Compare validated data with current instance data
+#             existing_data = serializers.userProfileSerializer(request.user).data
+            
+#             # Remove fields from validated_data that haven't changed
+#             updated_data = {key: value for key, value in serializer.validated_data.items() if existing_data[key] != value}
+            
+#             # If no data has changed, return "No changes made" message
+#             if not updated_data:
+#                 return Response({"msg": "No changes made, data is the same"}, status=status.HTTP_200_OK)
+            
+#             # If there are changes, save the updated data
+#             serializer.save()
+#             return Response({'msg': 'User profile updated successfully'}, status=status.HTTP_200_OK)
+        
+#         # Return validation errors if the data is invalid
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 
 # -------------------------------------------------------------------------------------------
