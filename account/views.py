@@ -313,57 +313,44 @@ def delete_account(request):
         )
 #------------------------------------------------------------------------------------------
 # -------------------------------(user_update_profile)-------------------------------------------
-# @api_view(["GET","PATCH"])
-# def update_profile (request):
-#     renderer_class = [userrenderer]
-#     permission_classes = [IsAuthenticated]
-#     if  request.method == "GET":
-#         serializer = serializers.userProfileSerializer(request.user)
+@api_view(["GET","PUT"])
+def update_profile (request):
+    renderer_class = [userrenderer]
+    permission_classes = [IsAuthenticated]
+    if  request.method == "GET":
+        serializer = serializers.updateuserprofileserializer(request.user)
         
-#         return Response(serializer.data, status=status.HTTP_200_OK)
-#     elif request.method == "PATCH":
-#         existing_data = serializers.userProfileSerializer(request.user).data
-#         serializer = serializers.userProfileSerializer(request.user, data=request.data)
-#         if serializer.is_valid():
-#             if request.data == existing_data:
-#                 return Response({"msg": "No changes made"}, status=status.HTTP_406_NOT_ACCEPTABLE)
-#             serializer.save()
-#             return Response({'msg':'user profile updated successfully'}, status=status.HTTP_200_OK)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
-#------------------------------------------------------------------------------------------
-
-# @api_view(["GET", "PATCH"])
-
-# def update_profile(request):
-#     renderer_class = [userrenderer]
-#     Permission_class
-#     # GET request - Fetch user profile data
-#     if request.method == "GET":
-#         serializer = serializers.userProfileSerializer(request.user)
-#         return Response(serializer.data, status=status.HTTP_200_OK)
-    
-#     # PATCH request - Update user profile data
-#     elif request.method == "PATCH":
-#         serializer = serializers.userProfileSerializer(request.user, data=request.data, partial=True)  # Allow partial updates
-#         if serializer.is_valid():
-#             # Compare validated data with current instance data
-#             existing_data = serializers.userProfileSerializer(request.user).data
-            
-#             # Remove fields from validated_data that haven't changed
-#             updated_data = {key: value for key, value in serializer.validated_data.items() if existing_data[key] != value}
-            
-#             # If no data has changed, return "No changes made" message
-#             if not updated_data:
-#                 return Response({"msg": "No changes made, data is the same"}, status=status.HTTP_200_OK)
-            
-#             # If there are changes, save the updated data
-#             serializer.save()
-#             return Response({'msg': 'User profile updated successfully'}, status=status.HTTP_200_OK)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    elif request.method == "PUT":
+        count =0
+        existing_data = serializers.updateuserprofileserializer(request.user).data
+        y=existing_data.values()
+        y=list(y)
+        print (type(y))
+        print (y)
         
-#         # Return validation errors if the data is invalid
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
+        serializer = serializers.updateuserprofileserializer(request.user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            x=serializer.data.values()
+            keys = serializer.data.keys()
+            keys= list(keys)
+            x=list(x)
+            print(type(x))
+            print(x)
+            ls = []
+            for i in range(5):
+                if y[i] == x[i]:
+                    continue
+                else:
+                    ls.append(f'{keys[i]} updated successfully')
+                    count+=1
+            if count ==0:  
+                return Response({"msg": "No changes made"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+            return Response({'msg':ls}, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+#-----------------------------------------------------------------------------------------
 
 
 # -------------------------------------------------------------------------------------------

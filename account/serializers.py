@@ -18,7 +18,7 @@ user = User()
 
 class userRegisterSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(style ={'input_type':'password'})
-
+    
     class Meta :
         model = User
         fields = ['email','username','first_name','last_name','password','password2']
@@ -49,8 +49,13 @@ class userLoginSerializer (serializers.ModelSerializer):
 class userProfileSerializer (serializers.ModelSerializer):
     class Meta :
         model = User
-        fields = ['email','username','is_admin','first_name','last_name','image']
+        fields = ['id','email','username','is_admin','first_name','last_name','image']
 
+#---------------------------------(update)----------------------------------------------
+class updateuserprofileserializer (serializers.ModelSerializer):
+    class Meta :
+        model = User
+        fields = ['email','username','first_name','last_name','image']
 # ---------------------------------(change-password)-------------------------------------
 class ChangePasswordSerializer(serializers.ModelSerializer):
     #make fields i want to enter it  in the form
