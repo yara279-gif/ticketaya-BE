@@ -17,6 +17,7 @@ user = User()
 
 
 class userRegisterSerializer(serializers.ModelSerializer):
+    password2 = serializers.CharField(style ={'input_type':'password'})
 
     class Meta :
         model = User
@@ -48,7 +49,7 @@ class userLoginSerializer (serializers.ModelSerializer):
 class userProfileSerializer (serializers.ModelSerializer):
     class Meta :
         model = User
-        fields = ['id','email','username','is_admin','first_name','last_name','image']
+        fields = ['email','username','is_admin','first_name','last_name','image']
 
 # ---------------------------------(change-password)-------------------------------------
 class ChangePasswordSerializer(serializers.ModelSerializer):
@@ -103,7 +104,7 @@ class userLoginSerializer(serializers.ModelSerializer):
 class userProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ["id", "email", "username", "is_admin", "first_name", "last_name"]
+        fields = ["id", "email", "username", "is_admin", "first_name", "last_name","image"]
 
 
 # ---------------------------------(change-password)-------------------------------------
