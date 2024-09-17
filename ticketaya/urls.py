@@ -25,7 +25,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    
     path("admin/", admin.site.urls),
     path("api_auth/", include("rest_framework.urls")),
     path("account/", include("account.urls")),
@@ -35,6 +34,7 @@ urlpatterns = [
     # Use the refresh token to get a new access token
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/logout/", TokenBlacklistView.as_view(), name="token_blacklist"),
+    path ('Post/',include('post.urls'))
 ] 
 
 if settings.DEBUG:
