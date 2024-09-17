@@ -60,10 +60,10 @@ class PartyRetrieveView(APIView):
 class PartyUpdateView(APIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAdminPermission]
-
-    def put(self, request, pk, *args, **kwargs):
+    
+    def patch(self, request, pk, *args, **kwargs):
         party = get_object_or_404(Party, pk=pk)
-        serializer = PartySerializer(party, data=request.data, partial=False)
+        serializer = PartySerializer(party, data=request.data, partial=True)  # Partial update
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
