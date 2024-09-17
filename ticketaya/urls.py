@@ -35,12 +35,9 @@ urlpatterns = [
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),#url to get new access token by refresh token
     path("api/logout/", TokenBlacklistView.as_view(), name="token_blacklist"),
     path('Post/',include('post.urls')),
-<<<<<<< HEAD
     path('reservation/',include('reservation.urls')),
-=======
     path('parties/', include("party.urls")),
 
->>>>>>> e1a78757303b17040036545089bcb15b389f655d
 ] 
 
 
