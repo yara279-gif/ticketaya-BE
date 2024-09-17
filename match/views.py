@@ -41,6 +41,7 @@ def retrieve_all_match(request):
         renderer_class = [userrenderer]
         permission_classes = [IsAuthenticated]
         match = Match.objects.all()
+
         serializer = serializers.match(match, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     return Response({"msg": "not allowed"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
@@ -55,6 +56,11 @@ def retrieve_one_match(request, pk):
         try:
             match = Match.objects.get(pk=pk)
             serializer = serializers.match(match)
+            if match.no_tickets==0:
+                match.avilable =  False
+
+                return Response({"msg": "This match is not available because all tickets have been sold out"},
+                                 status=status.HTTP_404_NOT_FOUND)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Match.DoesNotExist:
             return Response({"msg": "Not found"}, status=status.HTTP_404_NOT_FOUND)
@@ -65,9 +71,9 @@ def retrieve_one_match(request, pk):
 # ++++++++++++++++++++++++++++++++++++(update_match)+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-@api_view(["PUT"])
+@api_view(["PATCH"])
 def update_match(request, pk):
-    if request.method == "PUT":
+    if request.method == "PATCH":
         renderer_class = [userrenderer]
         permission_classes = [IsAuthenticated]
         try:

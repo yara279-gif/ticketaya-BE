@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     "match",
     "account",
+    "reservation",
 ]
 
 REST_FRAMEWORK = {
