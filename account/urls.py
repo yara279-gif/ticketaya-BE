@@ -30,4 +30,6 @@ urlpatterns =[
     path("resetpassword/<uid>/<token>/", reset_password, name="resetpassword"),
     path("logout/", user_logout, name="logout"),
     path("deleteaccount/", delete_account, name="deleteaccount"),
+    path("updateprofile/",views.update_profile,name="updateprofile")
+    
 ]

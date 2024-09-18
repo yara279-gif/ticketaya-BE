@@ -67,9 +67,9 @@ def login(request):
             password = serializer.data.get("password")
             # usr = serializer.data.get('user')
             user = authenticate(username=username, password=password)
-            is_admin = user.is_admin
+            
             if user is not None:
-
+                is_admin = user.is_admin
                 token = get_tokens_for_user(user)
                 return Response(
                     {"is_admin": is_admin, "token": token, "msg": "login successfull"},
@@ -311,6 +311,46 @@ def delete_account(request):
         return Response(
             {"msg": "Failed to delete account"}, status=status.HTTP_400_BAD_REQUEST
         )
+#------------------------------------------------------------------------------------------
+# -------------------------------(user_update_profile)-------------------------------------------
+@api_view(["GET","PUT"])
+def update_profile (request):
+    renderer_class = [userrenderer]
+    permission_classes = [IsAuthenticated]
+    if  request.method == "GET":
+        serializer = serializers.updateuserprofileserializer(request.user)
+        
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    elif request.method == "PUT":
+        count =0
+        existing_data = serializers.updateuserprofileserializer(request.user).data
+        y=existing_data.values()
+        y=list(y)
+        print (type(y))
+        print (y)
+        
+        serializer = serializers.updateuserprofileserializer(request.user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            x=serializer.data.values()
+            keys = serializer.data.keys()
+            keys= list(keys)
+            x=list(x)
+            print(type(x))
+            print(x)
+            ls = []
+            for i in range(5):
+                if y[i] == x[i]:
+                    continue
+                else:
+                    ls.append(f'{keys[i]} updated successfully')
+                    count+=1
+            if count ==0:  
+                return Response({"msg": "No changes made"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+            return Response({'msg':ls}, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+#-----------------------------------------------------------------------------------------
 
 
 # -------------------------------------------------------------------------------------------
