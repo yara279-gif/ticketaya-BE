@@ -36,6 +36,8 @@ urlpatterns = [
     path("api/logout/", TokenBlacklistView.as_view(), name="token_blacklist"),
     path('Post/',include('post.urls')),
     path('reservation/',include('reservation.urls')),
+    path('parties/', include("party.urls")),
+
 ] 
 
 

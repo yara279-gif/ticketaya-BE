@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     "match",
     "account",
     "reservation",
+    'party',
 ]
 
 REST_FRAMEWORK = {
