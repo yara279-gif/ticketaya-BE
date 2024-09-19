@@ -22,12 +22,14 @@ urlpatterns =[
     path ('sendrestpasswordemail/',views.reset_password_email,name =  "resetpasswordemail"),
     path('addadmin/',addadmin.as_view()),
     path('adduser/',adduser.as_view()),
-    path('retrieveuser/',retrieveeuser.as_view()),
-    path('searchuser/',searchuser.as_view()),
-    path('deleteuser/',deleteuser.as_view()),
-    path('updateuser/',updateuser.as_view()),
+    path('retrieveuser/<int:id>/',retrieveeuser.as_view()),
+    path('searchuser/<str:username>/',searchuser.as_view()),
+    path('deleteuser/<int:id>/',deleteuser.as_view()),
+    path('updateuser/<int:id>/',updateuser.as_view()),
     path('listusers/',listusers.as_view()),
     path("resetpassword/<uid>/<token>/", reset_password, name="resetpassword"),
     path("logout/", user_logout, name="logout"),
     path("deleteaccount/", delete_account, name="deleteaccount"),
+    path("updateprofile/",views.update_profile,name="updateprofile")
+    
 ]
