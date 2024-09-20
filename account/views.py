@@ -184,11 +184,11 @@ class retrieveeuser(APIView):
     renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
+    def get(self, request,id):
         serializerr = userProfileSerializer(request.user)
         if serializerr.data["is_admin"] == False:
             return Response({"message": "Don't have access"})
-        id = request.data["id"]
+        
         user = User.objects.filter(id=id).first()
         if not user is None:
             serializer = UserSerializer(user)
@@ -202,12 +202,12 @@ class searchuser(APIView):
     renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
+    def get(self, request,username):
         serializerr = userProfileSerializer(request.user)
         if serializerr.data["is_admin"] == False:
             return Response({"message": "Don't have access"})
 
-        user = User.objects.filter(username__contains=request.data["username"])
+        user = User.objects.filter(username__contains=username)
         if user.exists():
             serializer = UserSerializer(user, many=True)
             return Response(serializer.data)
@@ -220,11 +220,11 @@ class deleteuser(APIView):
     renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
 
-    def post(self, request):
+    def post(self,request,id):
         serializerr = userProfileSerializer(request.user)
         if serializerr.data["is_admin"] == False:
             return Response({"message": "Don't have access"})
-        user = User.objects.filter(username=request.data["username"]).first()
+        user = User.objects.filter(id=id).first()
         if user:
             user.delete()
             return Response({"message": "deleted succesfully"})
@@ -237,11 +237,11 @@ class updateuser(APIView):
     renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
 
-    def patch(self, request):
+    def patch(self,request,id):
         serializerr = userProfileSerializer(request.user)
         if serializerr.data["is_admin"] == False:
             return Response({"message": "Don't have access"})
-        user = User.objects.filter(id=request.data["id"]).first()
+        user = User.objects.filter(id=id).first()
         if user:
             serializer=UserSerializer()
             serializer.update(user,request.data)

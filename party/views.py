@@ -1,13 +1,18 @@
+from turtle import isvisible
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 from .models import Party
-from .serializer import PartySerializer
+from .serializer import PartySerializer,User_partySerializer,show
 from .permissions import IsAdminPermission
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
+from account.renderers import userrenderer
+from rest_framework.permissions import IsAuthenticated
+from decimal import Decimal
+
 
 # -------------------------------(List_Parties)------------------------------------------------------
 
@@ -80,3 +85,48 @@ class PartySearchView(APIView):
         parties = Party.objects.filter(name__icontains=search_query)
         serializer = PartySerializer(parties, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+    
+# -------------------------------------------------------------------------------------
+
+# -------------------------------(BuyParty Ticket)------------------------------------------------------
+class Buyticket(APIView): 
+    renderer_class =  [userrenderer]
+    permission_classes = [IsAuthenticated]
+    def patch(self,request):
+        party=Party.objects.filter(name=request.data['name']).first()
+        if party.number_of_tickets == 0:
+            return Response({"message":"SoldOut"})
+        if party.number_of_tickets < int(request.data['number_of_tickets']):
+            return Response({"message":"Not available quantity"})
+        total=Decimal(request.data['number_of_tickets'])*party.price
+        party.number_of_tickets-=int(request.data['number_of_tickets'])
+        data={
+            "party":party.id,
+            "user":request.user.id,
+            "total":total
+        }
+        data2={
+            "number_of_tickets":party.number_of_tickets,
+        
+        }
+        data3={
+            "name":party.name,
+            "username":request.user.username,
+            "total":total
+        }
+        serializerrrr=show(data=data3)
+        
+        serializer=User_partySerializer(data=data)
+        
+        if serializer.is_valid():
+            serializer.save()
+        else:
+            return Response({"message":"couldn't buy","errors": serializer.errors})
+        
+        serializerr=PartySerializer()
+        serializerr.update(party,data2)
+        if serializerrrr.is_valid():
+            
+            return Response(serializerrrr.data)
+        else:
+            return Response({"message":"couldn't buy","errors": serializerrrr.errors})
