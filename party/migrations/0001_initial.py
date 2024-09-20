@@ -26,13 +26,5 @@ class Migration(migrations.Migration):
                 ('price', models.DecimalField(blank=True, decimal_places=2, max_digits=10, null=True)),
             ],
         ),
-        migrations.CreateModel(
-            name='Party_user',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('total', models.DecimalField(decimal_places=2, default=0, max_digits=10)),
-                ('party', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='party.party')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-            ],
-        ),
+        
     ]
