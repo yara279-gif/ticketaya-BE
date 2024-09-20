@@ -7,7 +7,7 @@ class Post (models.Model):
     author_id = models.ForeignKey(User, related_name= "Posts", on_delete=models.CASCADE)
     author_name = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)  
-    image = models.ImageField(null=True, blank=True , default=0 )
+    image = models.ImageField(default=0 )
     likes = models.ManyToManyField(User, related_name="liked_posts", blank=True , default=False)
 
     def __str__(self):
