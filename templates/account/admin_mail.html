@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Ticketaya!</title>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+    background-color: #9dc1a4;
+}
+.main-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+}
+.logo {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.logo img {
+    width: 150px;
+}
+h1 {
+    text-align: center;
+    color: #000;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.banner-image {
+    text-align: center;
+    margin-top: 10px;
+}
+.banner-image img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+.welcome-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #000;
+    line-height: 1.8;
+}
+.welcome-section p {
+    margin: 15px 0;
+}
+ul {
+    margin-left: 20px;
+    padding: 0;
+}
+ul li {
+    list-style-type: disc;
+}
+
+.middle-text {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #4d774e;
+    margin-top: 60px !important;
+}
+.sub-middle-text {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #4d774e;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #4d774e;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #4d774e;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+.cta-button:hover {
+    background-color: #4d774e;
+    color: #ffffff;
+}
+.footer {
+    background-color: #4d774e;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+.footer p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+.social-icons {
+    margin-top: 30px;
+    text-align: center; 
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 33px; 
+    height: 33px;
+    transition: transform 0.3s; 
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); 
+}
+</style>
+</head>
+<body>
+
+    <!-- Main Section: Logo, Heading, Banner Image, Welcome Mail and CTA Button -->
+    <div class="main-container">
+        <div class="container">
+            <div class="logo">
+                <img src="https://i.ibb.co/tq5Dxr7/green-logo.png" alt="green-logo" border="0">
+            </div>
+            <h1>Welcome to Ticketaya!</h1>
+            <div class="banner-image">
+                <img src="https://i.ibb.co/GChwtJn/welcome.png" alt="welcome" border="0">            
+            </div>
+            <div class="welcome-section">
+                <p>Dear {{ user.first_name }},</p>
+                <p>Welcome to Ticketaya! We're excited to be part of your journey for unforgettable experiences and delightful events.</p>
+                <p>As a Ticketaya member, you'll have access to:</p>
+                <ul>
+                    <li>Exclusive Ticket Booking: Book tickets for a variety of events.</li>
+                    <li>Event Sharing: Share your experiences in our event blogs.</li>
+                    <li>Personal Wishlist: Create and manage a wishlist of upcoming events.</li>
+                    <li>Memory Preservation: Save your event highlights in your personal memories section.</li>
+                </ul>
+                <p class="middle-text">Experience the best in Ticket Booking</p>
+                <p class="sub-middle-text">Discover everything Ticketaya offers!</p>
+                <div class="cta-button-container" style="text-align: center;">
+                    <a href="#" class="cta-button">Get Started Now</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Footer Section: Footer and Social Icons -->
+    <div class="footer container">
+    <p>Warm regards,</p>
+    <p>The Ticketaya Team</p>
+      <div class="social-icons">
+        <a href="#"><img src="https://i.ibb.co/YcPhKHB/Twitter-X-icon.png" alt="Twitter-X-icon" border="0"></a>
+        <a href="#"><img src="https://i.ibb.co/JH0kKHL/Instagram-icon.png" alt="Instagram-icon" border="0"></a>
+        <a href="#"><img src="https://i.ibb.co/yQ89KKN/Facebook-icon.png" alt="Facebook-icon" border="0"></a>
+      </div>
+    </div>
+
+    </div>
+</body>
+</html>

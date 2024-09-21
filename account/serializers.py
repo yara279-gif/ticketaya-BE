@@ -1,6 +1,7 @@
 from tokenize import TokenError
 from rest_framework import serializers
-from .models import User
+import urllib
+from .models import Profile, User
 from django.contrib.auth import get_user_model
 from django.contrib.auth.password_validation import validate_password
 from django.utils.encoding import smart_str, force_bytes, DjangoUnicodeDecodeError
@@ -169,7 +170,10 @@ class ResetPasswordEmailSerializer(serializers.ModelSerializer):
         user = User.objects.get(email=email)
         uid = urlsafe_base64_encode(force_bytes(user.id))
         token = PasswordResetTokenGenerator().make_token(user)
-        link = f"http://127.0.0.1:8000/api/user/reset/{uid}/{token}/"
+        user_confrim = Profile.objects.get(user=user)
+        user_confrim.reset_password_token = token
+        user_confrim.save()
+        link = f"{self.context['request'].scheme}://{self.context['request'].get_host()}/account/resetpasswordPage/{uid}/{token}"
 
         # Log the link for debugging (can be removed in production)
         print(f"Password reset link: {link}")

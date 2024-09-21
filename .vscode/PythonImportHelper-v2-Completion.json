@@ -232,110 +232,6 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -361,30 +257,6 @@
     },
     {
         "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -528,6 +400,102 @@
         "documentation": {}
     },
     {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -549,6 +517,167 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
         "documentation": {}
     },
     {
@@ -857,6 +986,23 @@
         "documentation": {}
     },
     {
+        "label": "urllib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib",
+        "description": "urllib",
+        "detail": "urllib",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "urllib",
+        "description": "urllib",
+        "isExtraImport": true,
+        "detail": "urllib",
+        "documentation": {}
+    },
+    {
         "label": "get_user_model",
         "importPath": "django.contrib.auth",
         "description": "django.contrib.auth",
@@ -993,99 +1139,11 @@
         "documentation": {}
     },
     {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
         "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
+        "detail": "django.template.loader",
         "documentation": {}
     },
     {
@@ -1102,6 +1160,22 @@
         "description": "django.template.loader",
         "isExtraImport": true,
         "detail": "django.template.loader",
+        "documentation": {}
+    },
+    {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
         "documentation": {}
     },
     {
@@ -1297,14 +1371,6 @@
         "documentation": {}
     },
     {
-        "label": "request",
-        "importPath": "urllib",
-        "description": "urllib",
-        "isExtraImport": true,
-        "detail": "urllib",
-        "documentation": {}
-    },
-    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -1418,6 +1484,14 @@
     },
     {
         "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
         "importPath": "django.http",
         "description": "django.http",
         "isExtraImport": true,
@@ -1694,15 +1768,6 @@
         "description": "account.models",
         "isExtraImport": true,
         "detail": "account.models",
-        "documentation": {}
-    },
-    {
-        "label": "django.db.models.deletion",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.db.models.deletion",
-        "description": "django.db.models.deletion",
-        "detail": "django.db.models.deletion",
         "documentation": {}
     },
     {
@@ -1996,6 +2061,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0012_profile",
+        "description": "account.migrations.0012_profile",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0011_merge_20240916_2234\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Profile\",\n            fields=[\n                (\n                    \"id\",",
+        "detail": "account.migrations.0012_profile",
+        "documentation": {}
+    },
+    {
         "label": "UserAdmin",
         "kind": 6,
         "importPath": "account.admin",
@@ -2009,7 +2083,7 @@
         "kind": 6,
         "importPath": "account.apps",
         "description": "account.apps",
-        "peekOfCode": "class AccountConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"account\"",
+        "peekOfCode": "class AccountConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"account\"\n    def ready(self):\n        import account.signals",
         "detail": "account.apps",
         "documentation": {}
     },
@@ -2028,6 +2102,15 @@
         "importPath": "account.models",
         "description": "account.models",
         "peekOfCode": "class User(AbstractBaseUser):\n    email = models.EmailField(\n        verbose_name=\"Email\",\n        max_length=255,\n        unique=True,\n    )\n    username = models.CharField(max_length=255, unique=True)\n    first_name = models.CharField(max_length=255)\n    last_name = models.CharField(max_length=255)\n    image = models.ImageField(upload_to='images/%y/%m/%d',default='images/24/9/12/profile.png')",
+        "detail": "account.models",
+        "documentation": {}
+    },
+    {
+        "label": "Profile",
+        "kind": 6,
+        "importPath": "account.models",
+        "description": "account.models",
+        "peekOfCode": "class Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    reset_password_token = models.CharField(max_length=50, blank=True, null=True)\n    def __str__(self):\n        return self.user.username",
         "detail": "account.models",
         "documentation": {}
     },
@@ -2167,6 +2250,15 @@
         "documentation": {}
     },
     {
+        "label": "create_or_save_user_profile",
+        "kind": 2,
+        "importPath": "account.signals",
+        "description": "account.signals",
+        "peekOfCode": "def create_or_save_user_profile(sender, instance, created, **kwargs):\n    if created:  # Only create a profile when a new user is created\n        Profile.objects.create(user=instance)  # Assuming Profile has a OneToOne field to User\n    else:  # Save the existing profile if the user is being updated\n        instance.profile.save()",
+        "detail": "account.signals",
+        "documentation": {}
+    },
+    {
         "label": "Util",
         "kind": 6,
         "importPath": "account.utils",
@@ -2180,7 +2272,7 @@
         "kind": 6,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "class addadmin(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def post(self, request):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        serializer = AdminSerializer(data=request.data)\n        if serializer.is_valid():\n            subject = \"NEW Admin\"",
+        "peekOfCode": "class addadmin(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def post(self, request):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        serializer = AdminSerializer(data=request.data)\n        if serializer.is_valid():\n            user = serializer.save()",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2252,7 +2344,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def register(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        serializer = serializers.userRegisterSerializer(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            user = serializer.save()\n            token = get_tokens_for_user(user)\n            return Response(\n                {\"token\": token, \"msg\": \"register successfull\"},\n                status=status.HTTP_201_CREATED,",
+        "peekOfCode": "def register(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        serializer = serializers.userRegisterSerializer(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            user = serializer.save()\n            # Render email template\n            body = render_to_string('account/wellcome_mail.html', {\n                'user': user\n            })",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2284,24 +2376,6 @@
         "documentation": {}
     },
     {
-        "label": "reset_password_email",
-        "kind": 2,
-        "importPath": "account.views",
-        "description": "account.views",
-        "peekOfCode": "def reset_password_email(request):\n    renderer_classes = [userrenderer]\n    serializer = serializers.ResetPasswordEmailSerializer(data=request.data)\n    if serializer.is_valid(raise_exception=True):\n        return Response(\n            {\"msg\": \"password resert link was send .please check your email\"},\n            status=status.HTTP_200_OK,\n        )\n    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)\n# ----------------------------------------------------------------------------------",
-        "detail": "account.views",
-        "documentation": {}
-    },
-    {
-        "label": "reset_password",
-        "kind": 2,
-        "importPath": "account.views",
-        "description": "account.views",
-        "peekOfCode": "def reset_password(request, uid, token):\n    renderer_class = [userrenderer]\n    serializer = serializers.ResetPasswordSerializer(\n        data=request.data, context={\"uid\": uid, \"token\": token}\n    )\n    if serializer.is_valid(raise_exception=True):\n        return Response(\n            {\"msg\": \"Password has been reset successfully\"}, status=status.HTTP_200_OK\n        )\n    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)",
-        "detail": "account.views",
-        "documentation": {}
-    },
-    {
         "label": "user_logout",
         "kind": 2,
         "importPath": "account.views",
@@ -2325,6 +2399,33 @@
         "importPath": "account.views",
         "description": "account.views",
         "peekOfCode": "def update_profile (request):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    if  request.method == \"GET\":\n        serializer = serializers.updateuserprofileserializer(request.user)\n        return Response(serializer.data, status=status.HTTP_200_OK)\n    elif request.method == \"PUT\":\n        count =0\n        existing_data = serializers.updateuserprofileserializer(request.user).data\n        y=existing_data.values()",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "sendResetPasswordPage",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def sendResetPasswordPage(request, uid ,token):\n    renderer_class = [userrenderer]\n    try:\n        profile = Profile.objects.get(reset_password_token=token)\n        user = profile.user\n    except Profile.DoesNotExist:\n        user = None\n    if user is not None and profile.reset_password_token == token:\n        return render(request, \"account/reset_password.html\", {\"token\": token, \"uid\": uid})\n    else:",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "reset_password",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def reset_password(request, uid, token):\n    renderer_class = [userrenderer]\n    serializer = serializers.ResetPasswordSerializer(\n        data=request.data, context={\"uid\": uid, \"token\": token}\n    )\n    try:\n        if serializer.is_valid(raise_exception=True):\n            return render(request, 'account/reset_password.html', {'success_message': 'Password has been reset successfully. go to login page'})\n    except Exception as e:\n        return render(request, 'account/reset_password.html',{'error_message': 'Expired link of Rest Password \\n please go to forget password page.'})",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "reset_password_email",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def reset_password_email(request):\n    renderer_classes = [userrenderer]\n    serializer = serializers.ResetPasswordEmailSerializer(data=request.data, context={'request': request})\n    if serializer.is_valid(raise_exception=True):\n        return Response(\n            {\"msg\": \"password resert link was send .please check your email\"},\n            status=status.HTTP_200_OK,\n        )\n    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2783,7 +2884,7 @@
         "kind": 6,
         "importPath": "post.serializers",
         "description": "post.serializers",
-        "peekOfCode": "class ShowPostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = ['id','title', 'content','author_name','created_at','image','likes']\nclass UpdatePostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = ['id','title', 'content','author_name','image']",
+        "peekOfCode": "class ShowPostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = ['id','title', 'content','author_id' ,'author_name','created_at','image','likes']\nclass UpdatePostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = ['id','title', 'content','author_name','image']",
         "detail": "post.serializers",
         "documentation": {}
     },
@@ -3188,7 +3289,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "PASSWORD_RESET_TIMEOUT = 900  # 900 sec = 15 min\n# email configuration\n# settings.py\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"yaraharby9@gmail.com\"\nEMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False",
+        "peekOfCode": "PASSWORD_RESET_TIMEOUT = 900  # 900 sec = 15 min\n# email configuration\n# settings.py\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"minders.hr@gmail.com\"\n# EMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_HOST_PASSWORD = \"ukci jokj kopt vezf\"\nEMAIL_USE_TLS = True",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3197,7 +3298,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"yaraharby9@gmail.com\"\nEMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\nAUTH_USER_MODEL = \"account.User\"\n# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"minders.hr@gmail.com\"\n# EMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_HOST_PASSWORD = \"ukci jokj kopt vezf\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\nAUTH_USER_MODEL = \"account.User\"",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3206,7 +3307,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"yaraharby9@gmail.com\"\nEMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\nAUTH_USER_MODEL = \"account.User\"\n# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'\n# EMAIL_HOST = 'smtp.gmail.com'",
+        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"minders.hr@gmail.com\"\n# EMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_HOST_PASSWORD = \"ukci jokj kopt vezf\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\nAUTH_USER_MODEL = \"account.User\"\n# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3215,7 +3316,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_HOST_USER = \"yaraharby9@gmail.com\"\nEMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\nAUTH_USER_MODEL = \"account.User\"\n# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'\n# EMAIL_HOST = 'smtp.gmail.com'\n# EMAIL_PORT=587",
+        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_HOST_USER = \"minders.hr@gmail.com\"\n# EMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_HOST_PASSWORD = \"ukci jokj kopt vezf\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\nAUTH_USER_MODEL = \"account.User\"\n# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'\n# EMAIL_HOST = 'smtp.gmail.com'",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3224,7 +3325,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_HOST_USER = \"yaraharby9@gmail.com\"\nEMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\nAUTH_USER_MODEL = \"account.User\"\n# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'\n# EMAIL_HOST = 'smtp.gmail.com'\n# EMAIL_PORT=587\n# EMAIL_HOST_USER='mkinzy71@gmail.com' #da 2lly hb3t mno",
+        "peekOfCode": "EMAIL_HOST_USER = \"minders.hr@gmail.com\"\n# EMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_HOST_PASSWORD = \"ukci jokj kopt vezf\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\nAUTH_USER_MODEL = \"account.User\"\n# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'\n# EMAIL_HOST = 'smtp.gmail.com'\n# EMAIL_PORT=587",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3233,7 +3334,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "EMAIL_HOST_PASSWORD = \"nmri bbqg ynxj oieg\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\nAUTH_USER_MODEL = \"account.User\"\n# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'\n# EMAIL_HOST = 'smtp.gmail.com'\n# EMAIL_PORT=587\n# EMAIL_HOST_USER='mkinzy71@gmail.com' #da 2lly hb3t mno\n# EMAIL_HOST_PASSWORD='bihm twtf otrd ndph' #da 2lly hb3t mno",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = \"ukci jokj kopt vezf\"\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\nAUTH_USER_MODEL = \"account.User\"\n# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'\n# EMAIL_HOST = 'smtp.gmail.com'\n# EMAIL_PORT=587\n# EMAIL_HOST_USER='mkinzy71@gmail.com' #da 2lly hb3t mno\n# EMAIL_HOST_PASSWORD='bihm twtf otrd ndph' #da 2lly hb3t mno",
         "detail": "ticketaya.settings",
         "documentation": {}
     },

@@ -18,6 +18,7 @@ from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.exceptions import ValidationError
 from .serializers import ListSerializer, UserSerializer,AdminSerializer,userProfileSerializer
 from .models import User
+from django.template.loader import render_to_string
 
 # ----------------
 from django.core.mail import message, send_mail, EmailMessage
@@ -45,6 +46,18 @@ def register(request):
         serializer = serializers.userRegisterSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
             user = serializer.save()
+            # Render email template
+            body = render_to_string('account/wellcome_mail.html', {
+                'user': user
+            })
+
+            # Send the email
+            data = {
+                "subject": f"Wellcome {user.username} to Ticketaya",
+                "body": body,  # Rendered HTML content
+                "to_email": user.email,
+            }
+            Util.send_email(data)
             token = get_tokens_for_user(user)
             return Response(
                 {"token": token, "msg": "register successfull"},
@@ -113,19 +126,6 @@ def change_password(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# ----------------------(reset_password_email_view)-------------------------------------------------
-
-
-@api_view(["POST"])
-def reset_password_email(request):
-    renderer_classes = [userrenderer]
-    serializer = serializers.ResetPasswordEmailSerializer(data=request.data)
-    if serializer.is_valid(raise_exception=True):
-        return Response(
-            {"msg": "password resert link was send .please check your email"},
-            status=status.HTTP_200_OK,
-        )
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 # ----------------------------------------------------------------------------------
@@ -145,16 +145,19 @@ class addadmin(APIView):
 
         serializer = AdminSerializer(data=request.data)
         if serializer.is_valid():
-            subject = "NEW Admin"
-            message = "You have been added as new admin in ticketaya"
-            send_mail(
-                subject,
-                message,
-                EMAIL_HOST_USER,
-                [request.data["email"]],
-                fail_silently=False,
-            )
-            serializer.save()
+            user = serializer.save()
+            # Render email template
+            body = render_to_string('account/admin_mail.html', {
+                'user': user
+            })
+
+            # Send the email
+            data = {
+                "subject": f"New Admin: Wellcome {user.username} to Ticketaya",
+                "body": body,  # Rendered HTML content
+                "to_email": user.email,
+            }
+            Util.send_email(data)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         raise ValidationError(serializer.errors)
 
@@ -265,21 +268,6 @@ class listusers(APIView):
         return Response(serializer.data)
 
 
-# ----------------------------------------------------------------------------------
-# -------------------------------(resert_password)----------------------------------
-@api_view(["POST"])
-def reset_password(request, uid, token):
-    renderer_class = [userrenderer]
-    serializer = serializers.ResetPasswordSerializer(
-        data=request.data, context={"uid": uid, "token": token}
-    )
-    if serializer.is_valid(raise_exception=True):
-        return Response(
-            {"msg": "Password has been reset successfully"}, status=status.HTTP_200_OK
-        )
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 # -------------------------------(logout)------------------------------------------------------
 @api_view(["GET", "POST"])
 def user_logout(request):
@@ -353,15 +341,53 @@ def update_profile (request):
 #-----------------------------------------------------------------------------------------
 
 
-# -------------------------------------------------------------------------------------------
+# -------------------------------(sendResetPasswordPage)-------------------------------------------
+
+from .models import Profile
+from django.http import HttpResponse
+
+@api_view(["GET"])
+def sendResetPasswordPage(request, uid ,token):
+    renderer_class = [userrenderer]
+    
+    try:
+        profile = Profile.objects.get(reset_password_token=token)
+        user = profile.user
+    except Profile.DoesNotExist:
+        user = None
+
+    if user is not None and profile.reset_password_token == token:
+      
+        return render(request, "account/reset_password.html", {"token": token, "uid": uid})
+    else:
+       return HttpResponse('Password reset link is invalid or has expired.') 
 
 
-# @api_view(['post'])
-# def forgotpassword(request):
-#     if request.method == 'POST':
-#         renderer_class =  [userrenderer]
-#         serializer = forgotpasswordSerializer(data=request.data)
-#         if serializer.is_valid(raise_exception=True):
-#             serializer.save()
-#             return Response({'msg':"password reset link sent to your email"}, status=status.HTTP_200_OK)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# ----------------------------------------------------------------------------------
+# -------------------------------(resert_password)----------------------------------
+@api_view(["POST"])
+def reset_password(request, uid, token):
+    renderer_class = [userrenderer]
+    serializer = serializers.ResetPasswordSerializer(
+        data=request.data, context={"uid": uid, "token": token}
+    )
+    try:
+        if serializer.is_valid(raise_exception=True):
+            return render(request, 'account/reset_password.html', {'success_message': 'Password has been reset successfully. go to login page'})
+    except Exception as e:
+        return render(request, 'account/reset_password.html',{'error_message': 'Expired link of Rest Password \n please go to forget password page.'})
+  
+  
+# ----------------------------------------------------------------------------------
+# ----------------------(reset_password_email_view)-------------------------------------------------
+
+@api_view(["POST"])
+def reset_password_email(request):
+    renderer_classes = [userrenderer]
+    serializer = serializers.ResetPasswordEmailSerializer(data=request.data, context={'request': request})
+    if serializer.is_valid(raise_exception=True):
+        return Response(
+            {"msg": "password resert link was send .please check your email"},
+            status=status.HTTP_200_OK,
+        )
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
