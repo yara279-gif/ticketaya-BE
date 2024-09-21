@@ -36,6 +36,17 @@ class ShowPosts(APIView):
         serializer = ShowPostSerializer(posts, many=True, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+# ----------------------(ShowPosts)-------------------------------------------------
+
+    class ShowMyPosts(APIView):
+        renderer_classes = [UserRenderer]
+        permission_classes = [IsAuthOrReadOnly]
+
+        def get(self, request):
+            posts = Post.objects.all() 
+            serializer = ShowPostSerializer(posts, many=True, context={"request": request})
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
 # ----------------------(PostDetail)-------------------------------------------------
 
 class PostDetail(APIView):

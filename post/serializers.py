@@ -16,3 +16,5 @@ class UpdatePostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ['id','title', 'content','author_name','image']
+        
+        
