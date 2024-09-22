@@ -80,3 +80,26 @@ class PartySearchView(APIView):
         parties = Party.objects.filter(name__icontains=search_query)
         serializer = PartySerializer(parties, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+    
+
+# -------------------------------(Book_Ticket)------------------------------------------------------
+
+class BookTicketView(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAdminPermission]
+
+    def post(self, request, pk, *args, **kwargs):
+        
+        party = get_object_or_404(Party, pk=pk)
+        tickets_to_book = request.data.get("tickets", 0)
+        
+        if tickets_to_book <= 0:
+            return Response({"error": "You must book at least one ticket."}, status=status.HTTP_400_BAD_REQUEST)
+        if party.number_of_tickets < tickets_to_book:
+            return Response({"error": "Not enough tickets available."}, status=status.HTTP_400_BAD_REQUEST)
+        
+        party.number_of_tickets -= tickets_to_book
+        party.save()
+
+        serializer = PartySerializer(party)
+        return Response(serializer.data, status=status.HTTP_200_OK)
