@@ -11,6 +11,17 @@ class ShowPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ['id','title', 'content','author_name','author_image','created_at','image','likes']
+    
+    # if image is not provided, set it to default image
+    def validate(self, data):
+        if 'image' not in self.initial_data:
+            data['image'] = "0" # media/0
+        return data
+      
+class ShowPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = ['id','title', 'content','author_id' ,'author_name','created_at','image','likes']
         
 class UpdatePostSerializer(serializers.ModelSerializer):
     class Meta:
