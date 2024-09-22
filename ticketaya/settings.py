@@ -61,6 +61,8 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     "match",
     "account",
+    "reservation",
+    'party',
 ]
 
 REST_FRAMEWORK = {
@@ -162,7 +164,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static/files")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "account/static")]
 
 # List of directories where Django will look for additional static files
 STATICFILES_DIRS = [
@@ -220,24 +222,25 @@ PASSWORD_RESET_TIMEOUT = 900  # 900 sec = 15 min
 # email configuration
 # settings.py
 
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_HOST = "smtp.gmail.com"
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = "yaraharby9@gmail.com"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "minders.hr@gmail.com"
 # EMAIL_HOST_PASSWORD = "nmri bbqg ynxj oieg"
-# EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = False
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = "ukci jokj kopt vezf"
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 AUTH_USER_MODEL = "account.User"
-EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT=587
-EMAIL_HOST_USER='mkinzy71@gmail.com' #da 2lly hb3t mno
-EMAIL_HOST_PASSWORD='bihm twtf otrd ndph' #da 2lly hb3t mno
-EMAIL_USE_TLS=True
-EMAIL_USE_SSL=False
+# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT=587
+# EMAIL_HOST_USER='mkinzy71@gmail.com' #da 2lly hb3t mno
+# EMAIL_HOST_PASSWORD='bihm twtf otrd ndph' #da 2lly hb3t mno
+# EMAIL_USE_TLS=True
+# EMAIL_USE_SSL=False
 
 # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 # EMAIL_HOST = "smtp.gmail.com"
