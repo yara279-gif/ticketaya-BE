@@ -11,6 +11,7 @@ from .utils import Util
 from django.conf import settings
 from django.template.loader import render_to_string
 from .models import User  # Adjust to your User model
+
 # make instance (object) from the class User
 user = User()
 
@@ -19,54 +20,7 @@ user = User()
 
 
 class userRegisterSerializer(serializers.ModelSerializer):
-    password2 = serializers.CharField(style ={'input_type':'password'})
-    
-    class Meta :
-        model = User
-        fields = ['email','username','first_name','last_name','password','password2']
-        extra_kwargs = {
-            'password':{'write_only':True}
-        }
-    
-    def validate(self, attrs):
-        if attrs['password'] != attrs['password2']:
-            raise serializers.ValidationError({'password2':'password dont match'})
-        return super().validate(attrs)
-    
-    def create (self, validated_data):
-        validated_data.pop('password2')
-        return User.objects.create_user(**validated_data)
-    
-
-# ---------------------------------(login)-------------------------------------
-
-
-class userLoginSerializer(serializers.ModelSerializer):
-    username = serializers.CharField(max_length=255)
-
-    class Meta:
-        model = User
-        fields = ["username", "password", "is_admin"]
-
-# ---------------------------------(user-profile)-------------------------------------
-
-class userProfileSerializer (serializers.ModelSerializer):
-    class Meta :
-        model = User
-        fields = ['id','email','username','is_admin','first_name','last_name','image']
-
-#---------------------------------(update)----------------------------------------------
-class updateuserprofileserializer (serializers.ModelSerializer):
-    class Meta :
-        model = User
-        fields = ['email','username','first_name','last_name','image']
-# ---------------------------------(change-password)-------------------------------------
-class ChangePasswordSerializer(serializers.ModelSerializer):
-    #make fields i want to enter it  in the form
-
-    old_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
-    new_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
-    confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
+    password2 = serializers.CharField(style={"input_type": "password"})
 
     class Meta:
         model = User
@@ -90,6 +44,75 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
         return User.objects.create_user(**validated_data)
 
 
+# ---------------------------------(login)-------------------------------------
+
+
+class userLoginSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(max_length=255)
+
+    class Meta:
+        model = User
+        fields = ["username", "password", "is_admin"]
+
+
+# ---------------------------------(user-profile)-------------------------------------
+
+
+class userProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            "id",
+            "email",
+            "username",
+            "is_admin",
+            "first_name",
+            "last_name",
+            "image",
+        ]
+
+
+# ---------------------------------(update)----------------------------------------------
+class updateuserprofileserializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["email", "username", "first_name", "last_name", "image"]
+
+
+# ---------------------------------(change-password)-------------------------------------
+class ChangePasswordSerializer(serializers.ModelSerializer):
+    # make fields i want to enter it  in the form
+
+    old_password = serializers.CharField(
+        style={"input_type": "password"}, write_only=True
+    )
+    new_password = serializers.CharField(
+        style={"input_type": "password"}, write_only=True
+    )
+    confirm_password = serializers.CharField(
+        style={"input_type": "password"}, write_only=True
+    )
+
+    class Meta:
+        model = User
+        fields = [
+            "email",
+            "username",
+            "first_name",
+            "last_name",
+            "password",
+            "password2",
+        ]
+        extra_kwargs = {"password": {"write_only": True}}
+
+    def validate(self, attrs):
+        if attrs["password"] != attrs["password2"]:
+            raise serializers.ValidationError({"password2": "password dont match"})
+        return super().validate(attrs)
+
+    def create(self, validated_data):
+        validated_data.pop("password2")
+        return User.objects.create_user(**validated_data)
 
     # try:
     #     user = User.objects.get(username = username)
@@ -104,7 +127,15 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
 class userProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ["id", "email", "username", "is_admin", "first_name", "last_name","image"]
+        fields = [
+            "id",
+            "email",
+            "username",
+            "is_admin",
+            "first_name",
+            "last_name",
+            "image",
+        ]
 
 
 # ---------------------------------(change-password)-------------------------------------
@@ -154,7 +185,6 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
 # ---------------------------------(reset-password-email)-------------------------------------
 
 
-
 class ResetPasswordEmailSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(max_length=255)
 
@@ -179,10 +209,9 @@ class ResetPasswordEmailSerializer(serializers.ModelSerializer):
         print(f"Password reset link: {link}")
 
         # Render email template
-        body = render_to_string('account/email.html', {
-            'reset_link': link,
-            'user': user
-        })
+        body = render_to_string(
+            "account/email.html", {"reset_link": link, "user": user}
+        )
 
         # Send the email
         data = {
@@ -193,6 +222,7 @@ class ResetPasswordEmailSerializer(serializers.ModelSerializer):
         Util.send_email(data)
 
         return attrs
+
 
 # ----------------------------(reset_password_serializer)---------------------------------------
 
@@ -237,6 +267,7 @@ class ResetPasswordSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 {"token": "Token is invalid or has expired"}
             )
+
 
 # ---------------------------------(addadmin)-------------------------------------
 
@@ -302,9 +333,8 @@ class UserSerializer(serializers.ModelSerializer):
 
 class ListSerializer(serializers.ModelSerializer):
     class Meta:
-        model=User
-        fields=['id','username','first_name','last_name','image','is_admin']
-
+        model = User
+        fields = ["id", "username", "first_name", "last_name", "image", "is_admin"]
 
 
 # ---------------------------------------(delete_account)------------------------------------------------------------

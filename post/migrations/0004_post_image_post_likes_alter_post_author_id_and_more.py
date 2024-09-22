@@ -8,29 +8,38 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('post', '0003_rename_author_post_author_id_post_author_name'),
+        ("post", "0003_rename_author_post_author_id_post_author_name"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='post',
-            name='image',
-            field=models.ImageField(blank=True, default=0, null=True, upload_to=''),
+            model_name="post",
+            name="image",
+            field=models.ImageField(blank=True, default=0, null=True, upload_to=""),
         ),
         migrations.AddField(
-            model_name='post',
-            name='likes',
-            field=models.ManyToManyField(blank=True, default=False, related_name='liked_posts', to=settings.AUTH_USER_MODEL),
+            model_name="post",
+            name="likes",
+            field=models.ManyToManyField(
+                blank=True,
+                default=False,
+                related_name="liked_posts",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='author_id',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='Posts', to=settings.AUTH_USER_MODEL),
+            model_name="post",
+            name="author_id",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="Posts",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='author_name',
+            model_name="post",
+            name="author_name",
             field=models.CharField(max_length=35),
         ),
     ]

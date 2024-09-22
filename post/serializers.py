@@ -1,24 +1,58 @@
 from rest_framework import serializers
-from . models import Post
+from .models import Post, Post_comment
 from .utils import Util
+
 
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['id','title', 'content', 'author_id','author_name','created_at','image']
-    
-    # if image is not provided, set it to default image
-    def validate(self, data):
-        if 'image' not in self.initial_data:
-            data['image'] = "0"
-        return data
-      
+        fields = [
+            "id",
+            "title",
+            "content",
+            "author_id",
+            "author_name",
+            "author_image",
+            "created_at",
+        ]
+
+
 class ShowPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['id','title', 'content','author_id' ,'author_name','created_at','image','likes']
-        
+        fields = [
+            "id",
+            "title",
+            "content",
+            "author_name",
+            "author_image",
+            "created_at",
+            "likes",
+        ]
+
+    # if image is not provided, set it to default image
+    def validate(self, data):
+        if "image" not in self.initial_data:
+            data["image"] = "0"  # media/0
+        return data
+
+
 class UpdatePostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['id','title', 'content','author_name','image']
+        fields = ["id", "title", "content", "author_name", "author_image"]
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post_comment
+        fields = [
+            "id",
+            "content",
+            "post_id",
+            "post_title",
+            "author_id",
+            "author_name",
+            "created_at",
+            "likes",
+        ]

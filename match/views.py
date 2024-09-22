@@ -56,11 +56,15 @@ def retrieve_one_match(request, pk):
         try:
             match = Match.objects.get(pk=pk)
             serializer = serializers.match(match)
-            if match.no_tickets==0:
-                match.avilable =  False
+            if match.no_tickets == 0:
+                match.avilable = False
 
-                return Response({"msg": "This match is not available because all tickets have been sold out"},
-                                 status=status.HTTP_404_NOT_FOUND)
+                return Response(
+                    {
+                        "msg": "This match is not available because all tickets have been sold out"
+                    },
+                    status=status.HTTP_404_NOT_FOUND,
+                )
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Match.DoesNotExist:
             return Response({"msg": "Not found"}, status=status.HTTP_404_NOT_FOUND)
