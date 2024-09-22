@@ -1,6 +1,7 @@
 from tokenize import TokenError
 from rest_framework import serializers
-from .models import User
+import urllib
+from .models import Profile, User
 from django.contrib.auth import get_user_model
 from django.contrib.auth.password_validation import validate_password
 from django.utils.encoding import smart_str, force_bytes, DjangoUnicodeDecodeError
@@ -8,7 +9,8 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from .utils import Util
 from django.conf import settings
-
+from django.template.loader import render_to_string
+from .models import User  # Adjust to your User model
 # make instance (object) from the class User
 user = User()
 
@@ -152,6 +154,7 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
 # ---------------------------------(reset-password-email)-------------------------------------
 
 
+
 class ResetPasswordEmailSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(max_length=255)
 
@@ -167,15 +170,24 @@ class ResetPasswordEmailSerializer(serializers.ModelSerializer):
         user = User.objects.get(email=email)
         uid = urlsafe_base64_encode(force_bytes(user.id))
         token = PasswordResetTokenGenerator().make_token(user)
-        link = f"http://127.0.0.1:8000/api/user/reset/{uid}/{token}"
+        user_confrim = Profile.objects.get(user=user)
+        user_confrim.reset_password_token = token
+        user_confrim.save()
+        link = f"{self.context['request'].scheme}://{self.context['request'].get_host()}/account/resetpasswordPage/{uid}/{token}"
 
         # Log the link for debugging (can be removed in production)
         print(f"Password reset link: {link}")
 
+        # Render email template
+        body = render_to_string('account/email.html', {
+            'reset_link': link,
+            'user': user
+        })
+
         # Send the email
         data = {
             "subject": "Reset your password",
-            "body": f"Click the following link to reset your password: {link}",
+            "body": body,  # Rendered HTML content
             "to_email": user.email,
         }
         Util.send_email(data)
