@@ -8,28 +8,58 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('post', '0005_alter_post_author_name_alter_post_title'),
+        ("post", "0005_alter_post_author_name_alter_post_title"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='post',
-            name='author_image',
-            field=models.ImageField(default='images/24/9/12/profile.png', upload_to=''),
+            model_name="post",
+            name="author_image",
+            field=models.ImageField(default="images/24/9/12/profile.png", upload_to=""),
         ),
         migrations.CreateModel(
-            name='Post_comment',
+            name="Post_comment",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('content', models.TextField()),
-                ('post_title', models.CharField(max_length=100)),
-                ('author_name', models.CharField(max_length=255)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('update_at', models.DateTimeField(auto_now=True)),
-                ('author_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='author_comment', to=settings.AUTH_USER_MODEL)),
-                ('likes', models.ManyToManyField(blank=True, default=False, related_name='commens_likes', to=settings.AUTH_USER_MODEL)),
-                ('post_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='post_id', to='post.post')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("content", models.TextField()),
+                ("post_title", models.CharField(max_length=100)),
+                ("author_name", models.CharField(max_length=255)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("update_at", models.DateTimeField(auto_now=True)),
+                (
+                    "author_id",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="author_comment",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "likes",
+                    models.ManyToManyField(
+                        blank=True,
+                        default=False,
+                        related_name="commens_likes",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "post_id",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="post_id",
+                        to="post.post",
+                    ),
+                ),
             ],
         ),
     ]
