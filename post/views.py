@@ -20,6 +20,7 @@ class CreatePosts(APIView):
         data = request.data.copy()
         data['author_id'] = request.user.id
         data['author_name'] = request.user.username
+        data['author_image'] = request.user.image
         serializer = PostSerializer(data=data, context={"request": request})
         if serializer.is_valid():
             serializer.save()
