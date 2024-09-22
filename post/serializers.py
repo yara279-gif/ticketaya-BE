@@ -5,12 +5,12 @@ from .utils import Util
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['id','title', 'content', 'author_id','author_name','author_image','created_at','image']
+        fields = ['id','title', 'content', 'author_id','author_name','author_image','created_at']
         
 class ShowPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['id','title', 'content','author_name','author_image','created_at','image','likes']
+        fields = ['id','title', 'content','author_name','author_image','created_at','likes']
     
     # if image is not provided, set it to default image
     def validate(self, data):
@@ -18,15 +18,11 @@ class ShowPostSerializer(serializers.ModelSerializer):
             data['image'] = "0" # media/0
         return data
       
-class ShowPostSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields = ['id','title', 'content','author_id' ,'author_name','created_at','image','likes']
         
 class UpdatePostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['id','title', 'content','author_name','author_image','image']
+        fields = ['id','title', 'content','author_name','author_image']
         
 class CommentSerializer (serializers.ModelSerializer):
     class Meta:

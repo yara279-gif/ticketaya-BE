@@ -74,7 +74,7 @@ def login(request):
 
     if request.method == "POST":
         renderer_class = [userrenderer]
-        serializer = serializers.userLoginSerializer(data=request.data)
+        serializer = serializers.userLoginSerializer(data=request.data, context={"request": request})
         if serializer.is_valid(raise_exception=True):
             username = serializer.data.get("username")
             password = serializer.data.get("password")
@@ -105,7 +105,7 @@ def userprofile(request):
     if request.method == "GET":
         renderer_class = [userrenderer]
         permission_classes = [IsAuthOrReadOnly]
-        serializer = serializers.userProfileSerializer(request.user)
+        serializer = serializers.userProfileSerializer(request.user, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -194,7 +194,7 @@ class retrieveeuser(APIView):
         
         user = User.objects.filter(id=id).first()
         if not user is None:
-            serializer = UserSerializer(user)
+            serializer = UserSerializer(user, context={"request": request})
             return Response(serializer.data)
         return Response({"message": "user not found"})
 
@@ -212,7 +212,7 @@ class searchuser(APIView):
 
         user = User.objects.filter(username__contains=username)
         if user.exists():
-            serializer = UserSerializer(user, many=True)
+            serializer = UserSerializer(user, many=True, context={"request": request})
             return Response(serializer.data)
         return Response({"message": "user not found"})
 
@@ -264,7 +264,7 @@ class listusers(APIView):
         if not user:
             return Response( {"message":"There is no users"})
 
-        serializer=ListSerializer(user,many=True)
+        serializer=ListSerializer(user,many=True, context={"request": request})
         return Response(serializer.data)
 
 
@@ -306,18 +306,18 @@ def update_profile (request):
     renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
     if  request.method == "GET":
-        serializer = serializers.updateuserprofileserializer(request.user)
+        serializer = serializers.updateuserprofileserializer(request.user, context={"request": request})
         
         return Response(serializer.data, status=status.HTTP_200_OK)
     elif request.method == "PUT":
         count =0
-        existing_data = serializers.updateuserprofileserializer(request.user).data
+        existing_data = serializers.updateuserprofileserializer(request.user, context={"request": request}).data
         y=existing_data.values()
         y=list(y)
         print (type(y))
         print (y)
         
-        serializer = serializers.updateuserprofileserializer(request.user, data=request.data)
+        serializer = serializers.updateuserprofileserializer(request.user, data=request.data, context={"request": request})
         if serializer.is_valid():
             serializer.save()
             x=serializer.data.values()
