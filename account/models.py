@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
 
+
 # Create your models here.
 class UserManager(BaseUserManager):
     def create_user(
@@ -40,7 +41,7 @@ class UserManager(BaseUserManager):
             last_name=last_name,
             is_admin=False,
         )
-        #user.is_admin = True
+        # user.is_admin = True
         user.save(using=self._db)
         return user
 
@@ -54,7 +55,9 @@ class User(AbstractBaseUser):
     username = models.CharField(max_length=255, unique=True)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='images/%y/%m/%d',default='images/24/9/12/profile.png')
+    image = models.ImageField(
+        upload_to="images/%y/%m/%d", default="images/24/9/12/profile.png"
+    )
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False, null=True, blank=True)
 

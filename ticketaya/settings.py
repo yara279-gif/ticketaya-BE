@@ -32,7 +32,6 @@ from rest_framework.permissions import (
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -57,12 +56,12 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "corsheaders",
-    'post',
+    "post",
     "rest_framework_simplejwt.token_blacklist",
     "match",
     "account",
     "reservation",
-    'party',
+    "party",
 ]
 
 REST_FRAMEWORK = {
@@ -168,11 +167,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "account/static")]
 
 # List of directories where Django will look for additional static files
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Your static files directory
+    os.path.join(BASE_DIR, "static"),  # Your static files directory
 ]
 
 # Directory where collected static files will be placed for deployment
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

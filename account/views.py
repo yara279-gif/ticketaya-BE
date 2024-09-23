@@ -16,13 +16,19 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.exceptions import ValidationError
-from .serializers import ListSerializer, UserSerializer,AdminSerializer,userProfileSerializer
+from .serializers import (
+    ListSerializer,
+    UserSerializer,
+    AdminSerializer,
+    userProfileSerializer,
+)
 from .models import User
 from django.template.loader import render_to_string
 
 # ----------------
 from django.core.mail import message, send_mail, EmailMessage
 from ticketaya.settings import EMAIL_HOST_USER
+
 
 # Create your views here.
 # ----------------------(jwt_tokens)-------------------------------------------------
@@ -47,9 +53,7 @@ def register(request):
         if serializer.is_valid(raise_exception=True):
             user = serializer.save()
             # Render email template
-            body = render_to_string('account/wellcome_mail.html', {
-                'user': user
-            })
+            body = render_to_string("account/wellcome_mail.html", {"user": user})
 
             # Send the email
             data = {
@@ -74,13 +78,15 @@ def login(request):
 
     if request.method == "POST":
         renderer_class = [userrenderer]
-        serializer = serializers.userLoginSerializer(data=request.data)
+        serializer = serializers.userLoginSerializer(
+            data=request.data, context={"request": request}
+        )
         if serializer.is_valid(raise_exception=True):
             username = serializer.data.get("username")
             password = serializer.data.get("password")
             # usr = serializer.data.get('user')
             user = authenticate(username=username, password=password)
-            
+
             if user is not None:
                 is_admin = user.is_admin
                 token = get_tokens_for_user(user)
@@ -105,7 +111,9 @@ def userprofile(request):
     if request.method == "GET":
         renderer_class = [userrenderer]
         permission_classes = [IsAuthOrReadOnly]
-        serializer = serializers.userProfileSerializer(request.user)
+        serializer = serializers.userProfileSerializer(
+            request.user, context={"request": request}
+        )
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -124,8 +132,6 @@ def change_password(request):
             {"msg": "Password changed successfully"}, status=status.HTTP_200_OK
         )
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 
 
 # ----------------------------------------------------------------------------------
@@ -147,9 +153,7 @@ class addadmin(APIView):
         if serializer.is_valid():
             user = serializer.save()
             # Render email template
-            body = render_to_string('account/admin_mail.html', {
-                'user': user
-            })
+            body = render_to_string("account/admin_mail.html", {"user": user})
 
             # Send the email
             data = {
@@ -163,6 +167,7 @@ class addadmin(APIView):
 
 
 # -------------------------------------------------------------------------------------
+
 
 # ----------------------(adduser)-------------------------------------------------
 class adduser(APIView):
@@ -182,19 +187,20 @@ class adduser(APIView):
 
 # ----------------------------------------------------------------------------------
 
+
 # ----------------------(retrieveuser)-------------------------------------------------
 class retrieveeuser(APIView):
     renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
 
-    def get(self, request,id):
+    def get(self, request, id):
         serializerr = userProfileSerializer(request.user)
         if serializerr.data["is_admin"] == False:
             return Response({"message": "Don't have access"})
-        
+
         user = User.objects.filter(id=id).first()
         if not user is None:
-            serializer = UserSerializer(user)
+            serializer = UserSerializer(user, context={"request": request})
             return Response(serializer.data)
         return Response({"message": "user not found"})
 
@@ -205,14 +211,14 @@ class searchuser(APIView):
     renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
 
-    def get(self, request,username):
+    def get(self, request, username):
         serializerr = userProfileSerializer(request.user)
         if serializerr.data["is_admin"] == False:
             return Response({"message": "Don't have access"})
 
         user = User.objects.filter(username__contains=username)
         if user.exists():
-            serializer = UserSerializer(user, many=True)
+            serializer = UserSerializer(user, many=True, context={"request": request})
             return Response(serializer.data)
         return Response({"message": "user not found"})
 
@@ -223,7 +229,7 @@ class deleteuser(APIView):
     renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
 
-    def post(self,request,id):
+    def post(self, request, id):
         serializerr = userProfileSerializer(request.user)
         if serializerr.data["is_admin"] == False:
             return Response({"message": "Don't have access"})
@@ -240,31 +246,34 @@ class updateuser(APIView):
     renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
 
-    def patch(self,request,id):
+    def patch(self, request, id):
         serializerr = userProfileSerializer(request.user)
         if serializerr.data["is_admin"] == False:
             return Response({"message": "Don't have access"})
         user = User.objects.filter(id=id).first()
         if user:
-            serializer=UserSerializer()
-            serializer.update(user,request.data)
-            return Response( {"message":"updated succesfully"})
-        return Response( {"message":"user not found"})
-#----------------------------------------------------------------------------------   
+            serializer = UserSerializer()
+            serializer.update(user, request.data)
+            return Response({"message": "updated succesfully"})
+        return Response({"message": "user not found"})
+
+
+# ----------------------------------------------------------------------------------
 # ----------------------(listuser)-------------------------------------------------
 class listusers(APIView):
-    renderer_class =  [userrenderer]
+    renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
-    def get(self,request):
-        serializerr=userProfileSerializer(request.user)
-        if serializerr.data['is_admin'] == False:
-                return Response({"message":"Don't have access"})
-    
-        user=User.objects.all()
-        if not user:
-            return Response( {"message":"There is no users"})
 
-        serializer=ListSerializer(user,many=True)
+    def get(self, request):
+        serializerr = userProfileSerializer(request.user)
+        if serializerr.data["is_admin"] == False:
+            return Response({"message": "Don't have access"})
+
+        user = User.objects.all()
+        if not user:
+            return Response({"message": "There is no users"})
+
+        serializer = ListSerializer(user, many=True, context={"request": request})
         return Response(serializer.data)
 
 
@@ -299,31 +308,39 @@ def delete_account(request):
         return Response(
             {"msg": "Failed to delete account"}, status=status.HTTP_400_BAD_REQUEST
         )
-#------------------------------------------------------------------------------------------
+
+
+# ------------------------------------------------------------------------------------------
 # -------------------------------(user_update_profile)-------------------------------------------
-@api_view(["GET","PUT"])
-def update_profile (request):
+@api_view(["GET", "PUT"])
+def update_profile(request):
     renderer_class = [userrenderer]
     permission_classes = [IsAuthenticated]
-    if  request.method == "GET":
-        serializer = serializers.updateuserprofileserializer(request.user)
-        
+    if request.method == "GET":
+        serializer = serializers.updateuserprofileserializer(
+            request.user, context={"request": request}
+        )
+
         return Response(serializer.data, status=status.HTTP_200_OK)
     elif request.method == "PUT":
-        count =0
-        existing_data = serializers.updateuserprofileserializer(request.user).data
-        y=existing_data.values()
-        y=list(y)
-        print (type(y))
-        print (y)
-        
-        serializer = serializers.updateuserprofileserializer(request.user, data=request.data)
+        count = 0
+        existing_data = serializers.updateuserprofileserializer(
+            request.user, context={"request": request}
+        ).data
+        y = existing_data.values()
+        y = list(y)
+        print(type(y))
+        print(y)
+
+        serializer = serializers.updateuserprofileserializer(
+            request.user, data=request.data, context={"request": request}
+        )
         if serializer.is_valid():
             serializer.save()
-            x=serializer.data.values()
+            x = serializer.data.values()
             keys = serializer.data.keys()
-            keys= list(keys)
-            x=list(x)
+            keys = list(keys)
+            x = list(x)
             print(type(x))
             print(x)
             ls = []
@@ -331,14 +348,17 @@ def update_profile (request):
                 if y[i] == x[i]:
                     continue
                 else:
-                    ls.append(f'{keys[i]} updated successfully')
-                    count+=1
-            if count ==0:  
-                return Response({"msg": "No changes made"}, status=status.HTTP_406_NOT_ACCEPTABLE)
-            return Response({'msg':ls}, status=status.HTTP_200_OK)
+                    ls.append(f"{keys[i]} updated successfully")
+                    count += 1
+            if count == 0:
+                return Response(
+                    {"msg": "No changes made"}, status=status.HTTP_406_NOT_ACCEPTABLE
+                )
+            return Response({"msg": ls}, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
-#-----------------------------------------------------------------------------------------
+
+
+# -----------------------------------------------------------------------------------------
 
 
 # -------------------------------(sendResetPasswordPage)-------------------------------------------
@@ -346,10 +366,11 @@ def update_profile (request):
 from .models import Profile
 from django.http import HttpResponse
 
+
 @api_view(["GET"])
-def sendResetPasswordPage(request, uid ,token):
+def sendResetPasswordPage(request, uid, token):
     renderer_class = [userrenderer]
-    
+
     try:
         profile = Profile.objects.get(reset_password_token=token)
         user = profile.user
@@ -357,10 +378,12 @@ def sendResetPasswordPage(request, uid ,token):
         user = None
 
     if user is not None and profile.reset_password_token == token:
-      
-        return render(request, "account/reset_password.html", {"token": token, "uid": uid})
+
+        return render(
+            request, "account/reset_password.html", {"token": token, "uid": uid}
+        )
     else:
-       return HttpResponse('Password reset link is invalid or has expired.') 
+        return HttpResponse("Password reset link is invalid or has expired.")
 
 
 # ----------------------------------------------------------------------------------
@@ -373,18 +396,33 @@ def reset_password(request, uid, token):
     )
     try:
         if serializer.is_valid(raise_exception=True):
-            return render(request, 'account/reset_password.html', {'success_message': 'Password has been reset successfully. go to login page'})
+            return render(
+                request,
+                "account/reset_password.html",
+                {
+                    "success_message": "Password has been reset successfully. go to login page"
+                },
+            )
     except Exception as e:
-        return render(request, 'account/reset_password.html',{'error_message': 'Expired link of Rest Password \n please go to forget password page.'})
-  
-  
+        return render(
+            request,
+            "account/reset_password.html",
+            {
+                "error_message": "Expired link of Rest Password \n please go to forget password page."
+            },
+        )
+
+
 # ----------------------------------------------------------------------------------
 # ----------------------(reset_password_email_view)-------------------------------------------------
+
 
 @api_view(["POST"])
 def reset_password_email(request):
     renderer_classes = [userrenderer]
-    serializer = serializers.ResetPasswordEmailSerializer(data=request.data, context={'request': request})
+    serializer = serializers.ResetPasswordEmailSerializer(
+        data=request.data, context={"request": request}
+    )
     if serializer.is_valid(raise_exception=True):
         return Response(
             {"msg": "password resert link was send .please check your email"},

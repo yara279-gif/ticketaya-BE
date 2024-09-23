@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import (
@@ -32,13 +33,14 @@ urlpatterns = [
     # Obtain a pair of access and refresh tokens
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     # Use the refresh token to get a new access token
-    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),#url to get new access token by refresh token
-    #path("api/logout/", TokenBlacklistView.as_view(), name="token_blacklist"),
-    path('Post/',include('post.urls')),
-    path('reservation/',include('reservation.urls')),
-    path('parties/', include("party.urls")),
-
-] 
+    path(
+        "api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"
+    ),  # url to get new access token by refresh token
+    # path("api/logout/", TokenBlacklistView.as_view(), name="token_blacklist"),
+    path("Post/", include("post.urls")),
+    path("reservation/", include("reservation.urls")),
+    path("parties/", include("party.urls")),
+]
 
 
 if settings.DEBUG:
