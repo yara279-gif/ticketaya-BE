@@ -127,9 +127,9 @@ def search_about_match(request, name=None, team1=None, team2=None):
             if name:
                 match = Match.objects.filter(name__icontains=name)
             elif team1:
-                match = Match.objects.filter(team1=team1)
+                match = Match.objects.filter(team1__icontains=team1)
             else:
-                match = Match.objects.filter(team2=team2)
+                match = Match.objects.filter(team2__icontains=team2)
 
             serializer = serializers.match(match, many=True)
             if serializer.data:
