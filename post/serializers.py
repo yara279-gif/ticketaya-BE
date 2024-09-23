@@ -14,6 +14,7 @@ class PostSerializer(serializers.ModelSerializer):
             "author_name",
             "author_image",
             "created_at",
+            "image",
         ]
 
 
@@ -24,9 +25,11 @@ class ShowPostSerializer(serializers.ModelSerializer):
             "id",
             "title",
             "content",
+            "author_id",
             "author_name",
             "author_image",
             "created_at",
+            "image",
             "likes",
         ]
 
@@ -40,7 +43,7 @@ class ShowPostSerializer(serializers.ModelSerializer):
 class UpdatePostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ["id", "title", "content", "author_name", "author_image"]
+        fields = ["id", "title", "content", "author_name", "author_image", "image"]
 
 
 class CommentSerializer(serializers.ModelSerializer):

@@ -29,6 +29,7 @@ from django.template.loader import render_to_string
 from django.core.mail import message, send_mail, EmailMessage
 from ticketaya.settings import EMAIL_HOST_USER
 
+
 # Create your views here.
 # ----------------------(jwt_tokens)-------------------------------------------------
 def get_tokens_for_user(user):
@@ -167,6 +168,7 @@ class addadmin(APIView):
 
 # -------------------------------------------------------------------------------------
 
+
 # ----------------------(adduser)-------------------------------------------------
 class adduser(APIView):
     renderer_class = [userrenderer]
@@ -184,6 +186,7 @@ class adduser(APIView):
 
 
 # ----------------------------------------------------------------------------------
+
 
 # ----------------------(retrieveuser)-------------------------------------------------
 class retrieveeuser(APIView):

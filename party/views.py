@@ -102,6 +102,7 @@ class PartySearchView(APIView):
 
 # -------------------------------------------------------------------------------------
 
+
 # -------------------------------(BuyParty Ticket)------------------------------------------------------
 class Buyticket(APIView):
     renderer_class = [userrenderer]

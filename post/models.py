@@ -9,6 +9,7 @@ class Post(models.Model):
     author_name = models.CharField(max_length=255)
     author_image = models.ImageField(default="images/24/9/12/profile.png")
     created_at = models.DateTimeField(auto_now_add=True)
+    image = models.ImageField(default=0)
     likes = models.ManyToManyField(
         User, related_name="liked_posts", blank=True, default=False
     )
