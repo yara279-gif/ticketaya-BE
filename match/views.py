@@ -27,7 +27,7 @@ def addmatch(request):
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             return Response(
-                {"msg": "added successfull"}, status=status.HTTP_201_CREATED
+                {"msg": "added successfull","data":serializer.data}, status=status.HTTP_201_CREATED
             )
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -82,11 +82,11 @@ def update_match(request, pk):
         permission_classes = [IsAuthenticated]
         try:
             match = Match.objects.get(pk=pk)
-            serializer = serializers.match(match, data=request.data)
+            serializer = serializers.match(match, data=request.data, partial=True)
             if serializer.is_valid(raise_exception=True):
                 serializer.save()
                 return Response(
-                    {"msg": "updated successfully"}, status=status.HTTP_200_OK
+                    {"msg": "updated successfully", "data":serializer.data}, status=status.HTTP_200_OK
                 )
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Match.DoesNotExist:
