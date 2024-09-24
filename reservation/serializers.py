@@ -9,7 +9,7 @@ class bookmatchserializer (serializers.ModelSerializer):
 
     class Meta:
         model = match_reservation
-        fields = ['tickets_reserved','pay_method']
+        fields = ['pk','tickets_reserved','pay_method']
     
 class matchpaymentserializer(serializers.ModelSerializer):
 

@@ -44,7 +44,7 @@ def book_match (request,pk):
 
 
 
-            return Response({'msg':['Done!',f'the price is {price}']}, status=status.HTTP_201_CREATED)
+            return Response([{'msg':f'the price is {price}'},serializer.data], status=status.HTTP_201_CREATED)
         return Response(serializer.errors,status=status.HTTP_406_NOT_ACCEPTABLE)
     else:
         return Response({"error": "Match is not available"}, status=status.HTTP_400_BAD_REQUEST)
