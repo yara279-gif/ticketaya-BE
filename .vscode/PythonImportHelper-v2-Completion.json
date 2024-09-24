@@ -408,6 +408,30 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -2633,7 +2657,7 @@
         "kind": 2,
         "importPath": "match.views",
         "description": "match.views",
-        "peekOfCode": "def addmatch(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        serializer = serializers.match(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            serializer.save()\n            return Response(\n                {\"msg\": \"added successfull\"}, status=status.HTTP_201_CREATED\n            )",
+        "peekOfCode": "def addmatch(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        serializer = serializers.match(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            serializer.save()\n            return Response(\n                {\"msg\": \"added successfull\",\"data\":serializer.data}, status=status.HTTP_201_CREATED\n            )",
         "detail": "match.views",
         "documentation": {}
     },
@@ -2660,7 +2684,7 @@
         "kind": 2,
         "importPath": "match.views",
         "description": "match.views",
-        "peekOfCode": "def update_match(request, pk):\n    if request.method == \"PATCH\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        try:\n            match = Match.objects.get(pk=pk)\n            serializer = serializers.match(match, data=request.data)\n            if serializer.is_valid(raise_exception=True):\n                serializer.save()\n                return Response(",
+        "peekOfCode": "def update_match(request, pk):\n    if request.method == \"PATCH\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        try:\n            match = Match.objects.get(pk=pk)\n            serializer = serializers.match(match, data=request.data, partial=True)\n            if serializer.is_valid(raise_exception=True):\n                serializer.save()\n                return Response(",
         "detail": "match.views",
         "documentation": {}
     },
@@ -2701,6 +2725,24 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "party.migrations.0003_party_descripition",
+        "description": "party.migrations.0003_party_descripition",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('party', '0002_party_user'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='party',\n            name='descripition',\n            field=models.CharField(max_length=1000, null=True),\n        ),",
+        "detail": "party.migrations.0003_party_descripition",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "party.migrations.0004_rename_descripition_party_description",
+        "description": "party.migrations.0004_rename_descripition_party_description",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"party\", \"0003_party_descripition\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"party\",\n            old_name=\"descripition\",\n            new_name=\"description\",\n        ),",
+        "detail": "party.migrations.0004_rename_descripition_party_description",
+        "documentation": {}
+    },
+    {
         "label": "Partydisplay",
         "kind": 6,
         "importPath": "party.admin",
@@ -2732,7 +2774,7 @@
         "kind": 6,
         "importPath": "party.models",
         "description": "party.models",
-        "peekOfCode": "class Party(models.Model):\n    name = models.CharField(max_length=100, unique=True)\n    performer = models.CharField(max_length=100)\n    location = models.CharField(max_length=100)\n    datetime = models.DateTimeField()\n    number_of_tickets = models.IntegerField()\n    price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)\n    def __str__(self):\n        return self.name\nclass Party_user(models.Model):",
+        "peekOfCode": "class Party(models.Model):\n    name = models.CharField(max_length=100, unique=True)\n    performer = models.CharField(max_length=100)\n    location = models.CharField(max_length=100)\n    datetime = models.DateTimeField()\n    number_of_tickets = models.IntegerField()\n    price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)\n    description = models.CharField(max_length = 1000, null = True)\n    def __str__(self):\n        return self.name",
         "detail": "party.models",
         "documentation": {}
     },
