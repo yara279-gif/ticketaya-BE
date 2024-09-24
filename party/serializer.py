@@ -17,6 +17,7 @@ class PartySerializer(serializers.ModelSerializer):
             "datetime",
             "number_of_tickets",
             "price",
+            "description",
         ]
 
 
