@@ -512,6 +512,54 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -565,6 +613,14 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -1403,6 +1459,14 @@
         "documentation": {}
     },
     {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -1812,10 +1876,10 @@
     },
     {
         "label": "Match",
-        "importPath": "match .models",
-        "description": "match .models",
+        "importPath": "match.models",
+        "description": "match.models",
         "isExtraImport": true,
-        "detail": "match .models",
+        "detail": "match.models",
         "documentation": {}
     },
     {
@@ -1930,7 +1994,7 @@
         "kind": 6,
         "importPath": "account.migrations.0002_alter_user_is_admin",
         "description": "account.migrations.0002_alter_user_is_admin",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='is_admin',\n            field=models.BooleanField(blank=True, default=False),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"is_admin\",\n            field=models.BooleanField(blank=True, default=False),\n        ),",
         "detail": "account.migrations.0002_alter_user_is_admin",
         "documentation": {}
     },
@@ -1948,7 +2012,7 @@
         "kind": 6,
         "importPath": "account.migrations.0002_user_image",
         "description": "account.migrations.0002_user_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='static\\x07dmin\\\\img\\\\download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"user\",\n            name=\"image\",\n            field=models.ImageField(\n                default=\"static\\x07dmin\\\\img\\\\download.png\", upload_to=\"images/%y/%m/%d\"",
         "detail": "account.migrations.0002_user_image",
         "documentation": {}
     },
@@ -1957,7 +2021,7 @@
         "kind": 6,
         "importPath": "account.migrations.0003_alter_user_image",
         "description": "account.migrations.0003_alter_user_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0002_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='static/admin/img/download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0002_user_image\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"image\",\n            field=models.ImageField(\n                default=\"static/admin/img/download.png\", upload_to=\"images/%y/%m/%d\"",
         "detail": "account.migrations.0003_alter_user_image",
         "documentation": {}
     },
@@ -1966,7 +2030,7 @@
         "kind": 6,
         "importPath": "account.migrations.0003_alter_user_is_admin",
         "description": "account.migrations.0003_alter_user_is_admin",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0002_alter_user_is_admin'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='is_admin',\n            field=models.BooleanField(blank=True, default=False, null=True),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0002_alter_user_is_admin\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"is_admin\",\n            field=models.BooleanField(blank=True, default=False, null=True),\n        ),",
         "detail": "account.migrations.0003_alter_user_is_admin",
         "documentation": {}
     },
@@ -1984,7 +2048,7 @@
         "kind": 6,
         "importPath": "account.migrations.0004_alter_user_image",
         "description": "account.migrations.0004_alter_user_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0003_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='admin/img/download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0003_alter_user_image\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"image\",\n            field=models.ImageField(\n                default=\"admin/img/download.png\", upload_to=\"images/%y/%m/%d\"",
         "detail": "account.migrations.0004_alter_user_image",
         "documentation": {}
     },
@@ -2002,7 +2066,7 @@
         "kind": 6,
         "importPath": "account.migrations.0005_alter_user_image",
         "description": "account.migrations.0005_alter_user_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0004_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='download.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0004_alter_user_image\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"image\",\n            field=models.ImageField(\n                default=\"download.png\", upload_to=\"images/%y/%m/%d\"",
         "detail": "account.migrations.0005_alter_user_image",
         "documentation": {}
     },
@@ -2011,7 +2075,7 @@
         "kind": 6,
         "importPath": "account.migrations.0006_alter_user_image",
         "description": "account.migrations.0006_alter_user_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0005_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='download.jpg', upload_to='images/%y/%m/%d'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0005_alter_user_image\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"image\",\n            field=models.ImageField(\n                default=\"download.jpg\", upload_to=\"images/%y/%m/%d\"",
         "detail": "account.migrations.0006_alter_user_image",
         "documentation": {}
     },
@@ -2020,7 +2084,7 @@
         "kind": 6,
         "importPath": "account.migrations.0007_alter_user_image",
         "description": "account.migrations.0007_alter_user_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0006_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='admin/img/download.jpg', upload_to='images/%y/%m/%d'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0006_alter_user_image\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"image\",\n            field=models.ImageField(\n                default=\"admin/img/download.jpg\", upload_to=\"images/%y/%m/%d\"",
         "detail": "account.migrations.0007_alter_user_image",
         "documentation": {}
     },
@@ -2029,7 +2093,7 @@
         "kind": 6,
         "importPath": "account.migrations.0008_alter_user_image",
         "description": "account.migrations.0008_alter_user_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0007_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='images/24/9/12/download.jpg', upload_to='images/%y/%m/%d'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0007_alter_user_image\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"image\",\n            field=models.ImageField(\n                default=\"images/24/9/12/download.jpg\", upload_to=\"images/%y/%m/%d\"",
         "detail": "account.migrations.0008_alter_user_image",
         "documentation": {}
     },
@@ -2038,7 +2102,7 @@
         "kind": 6,
         "importPath": "account.migrations.0009_alter_user_image",
         "description": "account.migrations.0009_alter_user_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0008_alter_user_image'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='image',\n            field=models.ImageField(default='images/24/9/12/profile.png', upload_to='images/%y/%m/%d'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"account\", \"0008_alter_user_image\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"image\",\n            field=models.ImageField(\n                default=\"images/24/9/12/profile.png\", upload_to=\"images/%y/%m/%d\"",
         "detail": "account.migrations.0009_alter_user_image",
         "documentation": {}
     },
@@ -2074,7 +2138,7 @@
         "kind": 6,
         "importPath": "account.admin",
         "description": "account.admin",
-        "peekOfCode": "class UserAdmin(BaseUserAdmin):\n    # The forms to add and change user instances\n    # The fields to be used in displaying the User model.\n    # These override the definitions on the base UserAdmin\n    # that reference specific fields on auth.User.\n    list_display = [\"email\",\"username\", \"first_name\",\"last_name\", \"is_admin\",\"image\"]\n    list_filter = [\"is_admin\"]\n    fieldsets = [\n        (None, {\"fields\": [\"email\", \"password\"]}),\n        (\"Personal info\", {\"fields\": [\"username\",\"first_name\",\"last_name\",\"image\"]}),",
+        "peekOfCode": "class UserAdmin(BaseUserAdmin):\n    # The forms to add and change user instances\n    # The fields to be used in displaying the User model.\n    # These override the definitions on the base UserAdmin\n    # that reference specific fields on auth.User.\n    list_display = [\"email\", \"username\", \"first_name\", \"last_name\", \"is_admin\", \"image\"]\n    list_filter = [\"is_admin\"]\n    fieldsets = [\n        (None, {\"fields\": [\"email\", \"password\"]}),\n        (\"Personal info\", {\"fields\": [\"username\", \"first_name\", \"last_name\", \"image\"]}),",
         "detail": "account.admin",
         "documentation": {}
     },
@@ -2101,7 +2165,7 @@
         "kind": 6,
         "importPath": "account.models",
         "description": "account.models",
-        "peekOfCode": "class User(AbstractBaseUser):\n    email = models.EmailField(\n        verbose_name=\"Email\",\n        max_length=255,\n        unique=True,\n    )\n    username = models.CharField(max_length=255, unique=True)\n    first_name = models.CharField(max_length=255)\n    last_name = models.CharField(max_length=255)\n    image = models.ImageField(upload_to='images/%y/%m/%d',default='images/24/9/12/profile.png')",
+        "peekOfCode": "class User(AbstractBaseUser):\n    email = models.EmailField(\n        verbose_name=\"Email\",\n        max_length=255,\n        unique=True,\n    )\n    username = models.CharField(max_length=255, unique=True)\n    first_name = models.CharField(max_length=255)\n    last_name = models.CharField(max_length=255)\n    image = models.ImageField(",
         "detail": "account.models",
         "documentation": {}
     },
@@ -2137,7 +2201,7 @@
         "kind": 6,
         "importPath": "account.serializers",
         "description": "account.serializers",
-        "peekOfCode": "class userRegisterSerializer(serializers.ModelSerializer):\n    password2 = serializers.CharField(style ={'input_type':'password'})\n    class Meta :\n        model = User\n        fields = ['email','username','first_name','last_name','password','password2']\n        extra_kwargs = {\n            'password':{'write_only':True}\n        }\n    def validate(self, attrs):\n        if attrs['password'] != attrs['password2']:",
+        "peekOfCode": "class userRegisterSerializer(serializers.ModelSerializer):\n    password2 = serializers.CharField(style={\"input_type\": \"password\"})\n    class Meta:\n        model = User\n        fields = [\n            \"email\",\n            \"username\",\n            \"first_name\",\n            \"last_name\",\n            \"password\",",
         "detail": "account.serializers",
         "documentation": {}
     },
@@ -2146,34 +2210,7 @@
         "kind": 6,
         "importPath": "account.serializers",
         "description": "account.serializers",
-        "peekOfCode": "class userLoginSerializer(serializers.ModelSerializer):\n    username = serializers.CharField(max_length=255)\n    class Meta:\n        model = User\n        fields = [\"username\", \"password\", \"is_admin\"]\n# ---------------------------------(user-profile)-------------------------------------\nclass userProfileSerializer (serializers.ModelSerializer):\n    class Meta :\n        model = User\n        fields = ['id','email','username','is_admin','first_name','last_name','image']",
-        "detail": "account.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "userProfileSerialize",
-        "kind": 6,
-        "importPath": "account.serializers",
-        "description": "account.serializers",
-        "peekOfCode": "class userProfileSerializer (serializers.ModelSerializer):\n    class Meta :\n        model = User\n        fields = ['id','email','username','is_admin','first_name','last_name','image']\n#---------------------------------(update)----------------------------------------------\nclass updateuserprofileserializer (serializers.ModelSerializer):\n    class Meta :\n        model = User\n        fields = ['email','username','first_name','last_name','image']\n# ---------------------------------(change-password)-------------------------------------",
-        "detail": "account.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "updateuserprofileserialize",
-        "kind": 6,
-        "importPath": "account.serializers",
-        "description": "account.serializers",
-        "peekOfCode": "class updateuserprofileserializer (serializers.ModelSerializer):\n    class Meta :\n        model = User\n        fields = ['email','username','first_name','last_name','image']\n# ---------------------------------(change-password)-------------------------------------\nclass ChangePasswordSerializer(serializers.ModelSerializer):\n    #make fields i want to enter it  in the form\n    old_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    new_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)",
-        "detail": "account.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "ChangePasswordSerializer",
-        "kind": 6,
-        "importPath": "account.serializers",
-        "description": "account.serializers",
-        "peekOfCode": "class ChangePasswordSerializer(serializers.ModelSerializer):\n    #make fields i want to enter it  in the form\n    old_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    new_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)\n    class Meta:\n        model = User\n        fields = [\n            \"email\",\n            \"username\",",
+        "peekOfCode": "class userLoginSerializer(serializers.ModelSerializer):\n    username = serializers.CharField(max_length=255)\n    class Meta:\n        model = User\n        fields = [\"username\", \"password\", \"is_admin\"]\n# ---------------------------------(user-profile)-------------------------------------\nclass userProfileSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = [",
         "detail": "account.serializers",
         "documentation": {}
     },
@@ -2182,7 +2219,34 @@
         "kind": 6,
         "importPath": "account.serializers",
         "description": "account.serializers",
-        "peekOfCode": "class userProfileSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = [\"id\", \"email\", \"username\", \"is_admin\", \"first_name\", \"last_name\",\"image\"]\n# ---------------------------------(change-password)-------------------------------------\nclass ChangePasswordSerializer(serializers.ModelSerializer):\n    # make fields i want to enter it  in the form\n    old_password = serializers.CharField(\n        style={\"input_type\": \"password\"}, write_only=True\n    )",
+        "peekOfCode": "class userProfileSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = [\n            \"id\",\n            \"email\",\n            \"username\",\n            \"is_admin\",\n            \"first_name\",\n            \"last_name\",",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "updateuserprofileserializer",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class updateuserprofileserializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = [\"email\", \"username\", \"first_name\", \"last_name\", \"image\"]\n# ---------------------------------(change-password)-------------------------------------\nclass ChangePasswordSerializer(serializers.ModelSerializer):\n    # make fields i want to enter it  in the form\n    old_password = serializers.CharField(\n        style={\"input_type\": \"password\"}, write_only=True\n    )",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ChangePasswordSerializer",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class ChangePasswordSerializer(serializers.ModelSerializer):\n    # make fields i want to enter it  in the form\n    old_password = serializers.CharField(\n        style={\"input_type\": \"password\"}, write_only=True\n    )\n    new_password = serializers.CharField(\n        style={\"input_type\": \"password\"}, write_only=True\n    )\n    confirm_password = serializers.CharField(\n        style={\"input_type\": \"password\"}, write_only=True",
+        "detail": "account.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "userProfileSerializer",
+        "kind": 6,
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "peekOfCode": "class userProfileSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = [\n            \"id\",\n            \"email\",\n            \"username\",\n            \"is_admin\",\n            \"first_name\",\n            \"last_name\",",
         "detail": "account.serializers",
         "documentation": {}
     },
@@ -2236,7 +2300,7 @@
         "kind": 6,
         "importPath": "account.serializers",
         "description": "account.serializers",
-        "peekOfCode": "class ListSerializer(serializers.ModelSerializer):\n    class Meta:\n        model=User\n        fields=['id','username','first_name','last_name','image','is_admin']\n# ---------------------------------------(delete_account)------------------------------------------------------------\n# class delete_account (serializers.ModelSerializer):\n#     class Meta :\n#         model = User\n#         fields = '__all__'\n# ---------------------------------------(logout)------------------------------------------------------------",
+        "peekOfCode": "class ListSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = [\"id\", \"username\", \"first_name\", \"last_name\", \"image\", \"is_admin\"]\n# ---------------------------------------(delete_account)------------------------------------------------------------\n# class delete_account (serializers.ModelSerializer):\n#     class Meta :\n#         model = User\n#         fields = '__all__'\n# ---------------------------------------(logout)------------------------------------------------------------",
         "detail": "account.serializers",
         "documentation": {}
     },
@@ -2245,7 +2309,7 @@
         "kind": 5,
         "importPath": "account.serializers",
         "description": "account.serializers",
-        "peekOfCode": "user = User()\n# ---------------------------------(register)-------------------------------------\nclass userRegisterSerializer(serializers.ModelSerializer):\n    password2 = serializers.CharField(style ={'input_type':'password'})\n    class Meta :\n        model = User\n        fields = ['email','username','first_name','last_name','password','password2']\n        extra_kwargs = {\n            'password':{'write_only':True}\n        }",
+        "peekOfCode": "user = User()\n# ---------------------------------(register)-------------------------------------\nclass userRegisterSerializer(serializers.ModelSerializer):\n    password2 = serializers.CharField(style={\"input_type\": \"password\"})\n    class Meta:\n        model = User\n        fields = [\n            \"email\",\n            \"username\",\n            \"first_name\",",
         "detail": "account.serializers",
         "documentation": {}
     },
@@ -2254,8 +2318,17 @@
         "kind": 2,
         "importPath": "account.signals",
         "description": "account.signals",
-        "peekOfCode": "def create_or_save_user_profile(sender, instance, created, **kwargs):\n    if created:  # Only create a profile when a new user is created\n        Profile.objects.create(user=instance)  # Assuming Profile has a OneToOne field to User\n    else:  # Save the existing profile if the user is being updated\n        instance.profile.save()",
+        "peekOfCode": "def create_or_save_user_profile(sender, instance, created, **kwargs):\n    if created:  # Only create a profile when a new user is created\n        Profile.objects.create(\n            user=instance\n        )  # Assuming Profile has a OneToOne field to User\n    else:  # Save the existing profile if the user is being updated\n        instance.profile.save()",
         "detail": "account.signals",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "account.urls",
+        "description": "account.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"register/\", register, name=\"register\"),\n    path(\"login/\", login, name=\"login\"),\n    path(\"logout/\", user_logout, name=\"logout\"),\n    path(\"profile/\", userprofile, name=\"profile\"),\n    # admin urls user management\n    path(\"addadmin/\", addadmin.as_view()),\n    path(\"adduser/\", adduser.as_view()),\n    path(\"retrieveuser/<int:id>/\", retrieveeuser.as_view()),\n    path(\"searchuser/<str:username>/\", searchuser.as_view()),",
+        "detail": "account.urls",
         "documentation": {}
     },
     {
@@ -2263,7 +2336,7 @@
         "kind": 6,
         "importPath": "account.utils",
         "description": "account.utils",
-        "peekOfCode": "class Util:\n    @staticmethod\n    def send_email(data):\n        # Render the HTML content for the email\n        html_content = data[\"body\"]\n        plain_content = strip_tags(html_content)  # Create a plain-text version by stripping HTML tags\n        email = EmailMultiAlternatives(\n            subject=data[\"subject\"],\n            body=plain_content,  # Plain text content\n            from_email=settings.DEFAULT_FROM_EMAIL,",
+        "peekOfCode": "class Util:\n    @staticmethod\n    def send_email(data):\n        # Render the HTML content for the email\n        html_content = data[\"body\"]\n        plain_content = strip_tags(\n            html_content\n        )  # Create a plain-text version by stripping HTML tags\n        email = EmailMultiAlternatives(\n            subject=data[\"subject\"],",
         "detail": "account.utils",
         "documentation": {}
     },
@@ -2290,7 +2363,7 @@
         "kind": 6,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "class retrieveeuser(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def get(self, request,id):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.filter(id=id).first()\n        if not user is None:\n            serializer = UserSerializer(user)",
+        "peekOfCode": "class retrieveeuser(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def get(self, request, id):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.filter(id=id).first()\n        if not user is None:\n            serializer = UserSerializer(user, context={\"request\": request})",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2299,7 +2372,7 @@
         "kind": 6,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "class searchuser(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def get(self, request,username):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.filter(username__contains=username)\n        if user.exists():\n            serializer = UserSerializer(user, many=True)",
+        "peekOfCode": "class searchuser(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def get(self, request, username):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.filter(username__contains=username)\n        if user.exists():\n            serializer = UserSerializer(user, many=True, context={\"request\": request})",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2308,7 +2381,7 @@
         "kind": 6,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "class deleteuser(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def post(self,request,id):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.filter(id=id).first()\n        if user:\n            user.delete()",
+        "peekOfCode": "class deleteuser(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def post(self, request, id):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.filter(id=id).first()\n        if user:\n            user.delete()",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2317,7 +2390,7 @@
         "kind": 6,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "class updateuser(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def patch(self,request,id):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.filter(id=id).first()\n        if user:\n            serializer=UserSerializer()",
+        "peekOfCode": "class updateuser(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def patch(self, request, id):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.filter(id=id).first()\n        if user:\n            serializer = UserSerializer()",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2326,7 +2399,7 @@
         "kind": 6,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "class listusers(APIView):\n    renderer_class =  [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def get(self,request):\n        serializerr=userProfileSerializer(request.user)\n        if serializerr.data['is_admin'] == False:\n                return Response({\"message\":\"Don't have access\"})\n        user=User.objects.all()\n        if not user:\n            return Response( {\"message\":\"There is no users\"})",
+        "peekOfCode": "class listusers(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def get(self, request):\n        serializerr = userProfileSerializer(request.user)\n        if serializerr.data[\"is_admin\"] == False:\n            return Response({\"message\": \"Don't have access\"})\n        user = User.objects.all()\n        if not user:\n            return Response({\"message\": \"There is no users\"})",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2344,7 +2417,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def register(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        serializer = serializers.userRegisterSerializer(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            user = serializer.save()\n            # Render email template\n            body = render_to_string('account/wellcome_mail.html', {\n                'user': user\n            })",
+        "peekOfCode": "def register(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        serializer = serializers.userRegisterSerializer(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            user = serializer.save()\n            # Render email template\n            body = render_to_string(\"account/wellcome_mail.html\", {\"user\": user})\n            # Send the email\n            data = {",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2353,7 +2426,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def login(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        serializer = serializers.userLoginSerializer(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            username = serializer.data.get(\"username\")\n            password = serializer.data.get(\"password\")\n            # usr = serializer.data.get('user')\n            user = authenticate(username=username, password=password)\n            if user is not None:",
+        "peekOfCode": "def login(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        serializer = serializers.userLoginSerializer(\n            data=request.data, context={\"request\": request}\n        )\n        if serializer.is_valid(raise_exception=True):\n            username = serializer.data.get(\"username\")\n            password = serializer.data.get(\"password\")\n            # usr = serializer.data.get('user')",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2362,7 +2435,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def userprofile(request):\n    if request.method == \"GET\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthOrReadOnly]\n        serializer = serializers.userProfileSerializer(request.user)\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# ----------------------(change_password_view)-------------------------------------------------\n@api_view([\"POST\"])\ndef change_password(request):\n    serializer = serializers.ChangePasswordSerializer(",
+        "peekOfCode": "def userprofile(request):\n    if request.method == \"GET\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthOrReadOnly]\n        serializer = serializers.userProfileSerializer(\n            request.user, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# ----------------------(change_password_view)-------------------------------------------------\n@api_view([\"POST\"])",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2394,11 +2467,11 @@
         "documentation": {}
     },
     {
-        "label": "update_profil",
+        "label": "update_profile",
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def update_profile (request):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    if  request.method == \"GET\":\n        serializer = serializers.updateuserprofileserializer(request.user)\n        return Response(serializer.data, status=status.HTTP_200_OK)\n    elif request.method == \"PUT\":\n        count =0\n        existing_data = serializers.updateuserprofileserializer(request.user).data\n        y=existing_data.values()",
+        "peekOfCode": "def update_profile(request):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    if request.method == \"GET\":\n        serializer = serializers.updateuserprofileserializer(\n            request.user, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)\n    elif request.method == \"PUT\":\n        count = 0",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2407,7 +2480,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def sendResetPasswordPage(request, uid ,token):\n    renderer_class = [userrenderer]\n    try:\n        profile = Profile.objects.get(reset_password_token=token)\n        user = profile.user\n    except Profile.DoesNotExist:\n        user = None\n    if user is not None and profile.reset_password_token == token:\n        return render(request, \"account/reset_password.html\", {\"token\": token, \"uid\": uid})\n    else:",
+        "peekOfCode": "def sendResetPasswordPage(request, uid, token):\n    renderer_class = [userrenderer]\n    try:\n        profile = Profile.objects.get(reset_password_token=token)\n        user = profile.user\n    except Profile.DoesNotExist:\n        user = None\n    if user is not None and profile.reset_password_token == token:\n        return render(\n            request, \"account/reset_password.html\", {\"token\": token, \"uid\": uid}",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2416,7 +2489,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def reset_password(request, uid, token):\n    renderer_class = [userrenderer]\n    serializer = serializers.ResetPasswordSerializer(\n        data=request.data, context={\"uid\": uid, \"token\": token}\n    )\n    try:\n        if serializer.is_valid(raise_exception=True):\n            return render(request, 'account/reset_password.html', {'success_message': 'Password has been reset successfully. go to login page'})\n    except Exception as e:\n        return render(request, 'account/reset_password.html',{'error_message': 'Expired link of Rest Password \\n please go to forget password page.'})",
+        "peekOfCode": "def reset_password(request, uid, token):\n    renderer_class = [userrenderer]\n    serializer = serializers.ResetPasswordSerializer(\n        data=request.data, context={\"uid\": uid, \"token\": token}\n    )\n    try:\n        if serializer.is_valid(raise_exception=True):\n            return render(\n                request,\n                \"account/reset_password.html\",",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2425,7 +2498,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def reset_password_email(request):\n    renderer_classes = [userrenderer]\n    serializer = serializers.ResetPasswordEmailSerializer(data=request.data, context={'request': request})\n    if serializer.is_valid(raise_exception=True):\n        return Response(\n            {\"msg\": \"password resert link was send .please check your email\"},\n            status=status.HTTP_200_OK,\n        )\n    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)",
+        "peekOfCode": "def reset_password_email(request):\n    renderer_classes = [userrenderer]\n    serializer = serializers.ResetPasswordEmailSerializer(\n        data=request.data, context={\"request\": request}\n    )\n    if serializer.is_valid(raise_exception=True):\n        return Response(\n            {\"msg\": \"password resert link was send .please check your email\"},\n            status=status.HTTP_200_OK,\n        )",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2506,7 +2579,7 @@
         "kind": 6,
         "importPath": "match.models",
         "description": "match.models",
-        "peekOfCode": "class Match(models.Model):\n    # attributes\n    name = models.CharField(max_length=255, unique=True)\n    team1 = models.CharField(max_length=255)\n    team2 = models.CharField(max_length=255)\n    date = models.DateField(auto_now_add=False)\n    time = models.TimeField(auto_now_add=False)\n    stadium = models.CharField(max_length=255)\n    no_tickets =  models.IntegerField(default=0)\n    ticket_price = models.DecimalField(max_digits=7,decimal_places=2,default=0)",
+        "peekOfCode": "class Match(models.Model):\n    # attributes\n    name = models.CharField(max_length=255, unique=True)\n    team1 = models.CharField(max_length=255)\n    team2 = models.CharField(max_length=255)\n    date = models.DateField(auto_now_add=False)\n    time = models.TimeField(auto_now_add=False)\n    stadium = models.CharField(max_length=255)\n    no_tickets = models.IntegerField(default=0)\n    ticket_price = models.DecimalField(max_digits=7, decimal_places=2, default=0)",
         "detail": "match.models",
         "documentation": {}
     },
@@ -2578,7 +2651,7 @@
         "kind": 2,
         "importPath": "match.views",
         "description": "match.views",
-        "peekOfCode": "def retrieve_one_match(request, pk):\n    if request.method == \"GET\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        try:\n            match = Match.objects.get(pk=pk)\n            serializer = serializers.match(match)\n            if match.no_tickets==0:\n                match.avilable =  False\n                return Response({\"msg\": \"This match is not available because all tickets have been sold out\"},",
+        "peekOfCode": "def retrieve_one_match(request, pk):\n    if request.method == \"GET\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        try:\n            match = Match.objects.get(pk=pk)\n            serializer = serializers.match(match)\n            if match.no_tickets == 0:\n                match.avilable = False\n                return Response(",
         "detail": "match.views",
         "documentation": {}
     },
@@ -2614,7 +2687,7 @@
         "kind": 6,
         "importPath": "party.migrations.0001_initial",
         "description": "party.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Party',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Party\",\n            fields=[\n                (",
         "detail": "party.migrations.0001_initial",
         "documentation": {}
     },
@@ -2632,7 +2705,7 @@
         "kind": 6,
         "importPath": "party.admin",
         "description": "party.admin",
-        "peekOfCode": "class Partydisplay(admin.ModelAdmin):\n    list_display=[\n        'name',\n    'performer',\n    'location',\n    'datetime',\n    'number_of_tickets',\n    'price'\n    ]\nclass display(admin.ModelAdmin):",
+        "peekOfCode": "class Partydisplay(admin.ModelAdmin):\n    list_display = [\n        \"name\",\n        \"performer\",\n        \"location\",\n        \"datetime\",\n        \"number_of_tickets\",\n        \"price\",\n    ]\nclass display(admin.ModelAdmin):",
         "detail": "party.admin",
         "documentation": {}
     },
@@ -2641,7 +2714,7 @@
         "kind": 6,
         "importPath": "party.admin",
         "description": "party.admin",
-        "peekOfCode": "class display(admin.ModelAdmin):\n    list_display=[\n    'party',\n    'user',\n    'total'\n    ]   \nadmin.site.register(Party,Partydisplay)\nadmin.site.register(Party_user,display)",
+        "peekOfCode": "class display(admin.ModelAdmin):\n    list_display = [\"party\", \"user\", \"total\"]\nadmin.site.register(Party, Partydisplay)\nadmin.site.register(Party_user, display)",
         "detail": "party.admin",
         "documentation": {}
     },
@@ -2650,7 +2723,7 @@
         "kind": 6,
         "importPath": "party.apps",
         "description": "party.apps",
-        "peekOfCode": "class PartyConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'party'",
+        "peekOfCode": "class PartyConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"party\"",
         "detail": "party.apps",
         "documentation": {}
     },
@@ -2659,7 +2732,7 @@
         "kind": 6,
         "importPath": "party.models",
         "description": "party.models",
-        "peekOfCode": "class Party(models.Model):\n    name = models.CharField(max_length=100,unique=True)\n    performer = models.CharField(max_length=100)\n    location = models.CharField(max_length=100)\n    datetime = models.DateTimeField()\n    number_of_tickets = models.IntegerField()\n    price=models.DecimalField(max_digits=10,decimal_places=2,null=True,blank=True)\n    def __str__(self):\n        return self.name\nclass Party_user(models.Model):",
+        "peekOfCode": "class Party(models.Model):\n    name = models.CharField(max_length=100, unique=True)\n    performer = models.CharField(max_length=100)\n    location = models.CharField(max_length=100)\n    datetime = models.DateTimeField()\n    number_of_tickets = models.IntegerField()\n    price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)\n    def __str__(self):\n        return self.name\nclass Party_user(models.Model):",
         "detail": "party.models",
         "documentation": {}
     },
@@ -2668,7 +2741,7 @@
         "kind": 6,
         "importPath": "party.models",
         "description": "party.models",
-        "peekOfCode": "class Party_user(models.Model):\n    party=models.ForeignKey(Party,on_delete=models.CASCADE)\n    user=models.ForeignKey(User,on_delete=models.CASCADE)\n    total=models.DecimalField(max_digits=10,decimal_places=2,default=0)",
+        "peekOfCode": "class Party_user(models.Model):\n    party = models.ForeignKey(Party, on_delete=models.CASCADE)\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    total = models.DecimalField(max_digits=10, decimal_places=2, default=0)",
         "detail": "party.models",
         "documentation": {}
     },
@@ -2677,7 +2750,7 @@
         "kind": 6,
         "importPath": "party.permissions",
         "description": "party.permissions",
-        "peekOfCode": "class IsAdminPermission(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user and request.user.is_authenticated and getattr(request.user, 'isadmin', True)",
+        "peekOfCode": "class IsAdminPermission(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return (\n            request.user\n            and request.user.is_authenticated\n            and getattr(request.user, \"isadmin\", True)\n        )",
         "detail": "party.permissions",
         "documentation": {}
     },
@@ -2686,7 +2759,7 @@
         "kind": 6,
         "importPath": "party.serializer",
         "description": "party.serializer",
-        "peekOfCode": "class PartySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Party\n        fields = [\"id\", \"name\", \"performer\", \"location\", \"datetime\", \"number_of_tickets\",\"price\"]\nclass User_partySerializer(serializers.ModelSerializer):\n    class Meta:\n        model=Party_user\n        fields=['party','user','total']\nclass show(serializers.Serializer):\n    username=serializers.CharField( )",
+        "peekOfCode": "class PartySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Party\n        fields = [\n            \"id\",\n            \"name\",\n            \"performer\",\n            \"location\",\n            \"datetime\",\n            \"number_of_tickets\",",
         "detail": "party.serializer",
         "documentation": {}
     },
@@ -2695,7 +2768,7 @@
         "kind": 6,
         "importPath": "party.serializer",
         "description": "party.serializer",
-        "peekOfCode": "class User_partySerializer(serializers.ModelSerializer):\n    class Meta:\n        model=Party_user\n        fields=['party','user','total']\nclass show(serializers.Serializer):\n    username=serializers.CharField( )\n    name=serializers.CharField( )\n    total=serializers.DecimalField(max_digits=10,decimal_places=2)",
+        "peekOfCode": "class User_partySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Party_user\n        fields = [\"party\", \"user\", \"total\"]\nclass show(serializers.Serializer):\n    username = serializers.CharField()\n    name = serializers.CharField()\n    total = serializers.DecimalField(max_digits=10, decimal_places=2)",
         "detail": "party.serializer",
         "documentation": {}
     },
@@ -2704,7 +2777,7 @@
         "kind": 6,
         "importPath": "party.serializer",
         "description": "party.serializer",
-        "peekOfCode": "class show(serializers.Serializer):\n    username=serializers.CharField( )\n    name=serializers.CharField( )\n    total=serializers.DecimalField(max_digits=10,decimal_places=2)",
+        "peekOfCode": "class show(serializers.Serializer):\n    username = serializers.CharField()\n    name = serializers.CharField()\n    total = serializers.DecimalField(max_digits=10, decimal_places=2)",
         "detail": "party.serializer",
         "documentation": {}
     },
@@ -2713,7 +2786,7 @@
         "kind": 5,
         "importPath": "party.urls",
         "description": "party.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.PartyListView.as_view(), name='party-list'),\n    path('create', views.PartyCreateView.as_view(), name='party-create'),\n    path('<int:pk>', views.PartyRetrieveView.as_view(), name='party-retrieve'),\n    path('<int:pk>/update', views.PartyUpdateView.as_view(), name='party-update'),\n    path('<int:pk>/delete', views.PartyDeleteView.as_view(), name='party-delete'),\n    path('search', views.PartySearchView.as_view(), name='party-search'),\n    path('buyticket/', Buyticket.as_view()),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.PartyListView.as_view(), name=\"party-list\"),\n    path(\"create\", views.PartyCreateView.as_view(), name=\"party-create\"),\n    path(\"<int:pk>\", views.PartyRetrieveView.as_view(), name=\"party-retrieve\"),\n    path(\"<int:pk>/update\", views.PartyUpdateView.as_view(), name=\"party-update\"),\n    path(\"<int:pk>/delete\", views.PartyDeleteView.as_view(), name=\"party-delete\"),\n    path(\"search\", views.PartySearchView.as_view(), name=\"party-search\"),\n    path(\"buyticket/\", Buyticket.as_view()),\n]",
         "detail": "party.urls",
         "documentation": {}
     },
@@ -2731,7 +2804,7 @@
         "kind": 6,
         "importPath": "party.views",
         "description": "party.views",
-        "peekOfCode": "class PartyDeleteView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def delete(self, request, pk, *args, **kwargs):\n        party = get_object_or_404(Party, pk=pk)\n        party.delete()\n        return Response(status=status.HTTP_204_NO_CONTENT)    \n# -------------------------------(Create_Party)------------------------------------------------------\nclass PartyCreateView(APIView):\n    authentication_classes = [JWTAuthentication]",
+        "peekOfCode": "class PartyDeleteView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def delete(self, request, pk, *args, **kwargs):\n        party = get_object_or_404(Party, pk=pk)\n        party.delete()\n        return Response(status=status.HTTP_204_NO_CONTENT)\n# -------------------------------(Create_Party)------------------------------------------------------\nclass PartyCreateView(APIView):\n    authentication_classes = [JWTAuthentication]",
         "detail": "party.views",
         "documentation": {}
     },
@@ -2758,7 +2831,7 @@
         "kind": 6,
         "importPath": "party.views",
         "description": "party.views",
-        "peekOfCode": "class PartyUpdateView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def patch(self, request, pk, *args, **kwargs):\n        party = get_object_or_404(Party, pk=pk)\n        serializer = PartySerializer(party, data=request.data, partial=True)  # Partial update\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=status.HTTP_200_OK)\n        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)",
+        "peekOfCode": "class PartyUpdateView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def patch(self, request, pk, *args, **kwargs):\n        party = get_object_or_404(Party, pk=pk)\n        serializer = PartySerializer(\n            party, data=request.data, partial=True\n        )  # Partial update\n        if serializer.is_valid():\n            serializer.save()",
         "detail": "party.views",
         "documentation": {}
     },
@@ -2767,7 +2840,7 @@
         "kind": 6,
         "importPath": "party.views",
         "description": "party.views",
-        "peekOfCode": "class PartySearchView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def get(self, request, *args, **kwargs):\n        search_query = request.query_params.get('name', '')\n        parties = Party.objects.filter(name__icontains=search_query)\n        serializer = PartySerializer(parties, many=True)\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# -------------------------------------------------------------------------------------\n# -------------------------------(BuyParty Ticket)------------------------------------------------------",
+        "peekOfCode": "class PartySearchView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def get(self, request, *args, **kwargs):\n        search_query = request.query_params.get(\"name\", \"\")\n        parties = Party.objects.filter(name__icontains=search_query)\n        serializer = PartySerializer(parties, many=True)\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# -------------------------------------------------------------------------------------\n# -------------------------------(BuyParty Ticket)------------------------------------------------------",
         "detail": "party.views",
         "documentation": {}
     },
@@ -2776,7 +2849,7 @@
         "kind": 6,
         "importPath": "party.views",
         "description": "party.views",
-        "peekOfCode": "class Buyticket(APIView): \n    renderer_class =  [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def patch(self,request):\n        party=Party.objects.filter(name=request.data['name']).first()\n        if party.number_of_tickets == 0:\n            return Response({\"message\":\"SoldOut\"})\n        if party.number_of_tickets < int(request.data['number_of_tickets']):\n            return Response({\"message\":\"Not available quantity\"})\n        total=Decimal(request.data['number_of_tickets'])*party.price",
+        "peekOfCode": "class Buyticket(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def patch(self, request):\n        party = Party.objects.filter(name=request.data[\"name\"]).first()\n        if party.number_of_tickets == 0:\n            return Response({\"message\": \"SoldOut\"})\n        if party.number_of_tickets < int(request.data[\"number_of_tickets\"]):\n            return Response({\"message\": \"Not available quantity\"})\n        total = Decimal(request.data[\"number_of_tickets\"]) * party.price",
         "detail": "party.views",
         "documentation": {}
     },
@@ -2785,7 +2858,7 @@
         "kind": 6,
         "importPath": "post.migrations.0001_initial",
         "description": "post.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Blog',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Blog\",\n            fields=[\n                (",
         "detail": "post.migrations.0001_initial",
         "documentation": {}
     },
@@ -2794,7 +2867,7 @@
         "kind": 6,
         "importPath": "post.migrations.0002_post_delete_blog",
         "description": "post.migrations.0002_post_delete_blog",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('post', '0001_initial'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Post',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"post\", \"0001_initial\"),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Post\",\n            fields=[\n                (",
         "detail": "post.migrations.0002_post_delete_blog",
         "documentation": {}
     },
@@ -2803,7 +2876,7 @@
         "kind": 6,
         "importPath": "post.migrations.0003_rename_author_post_author_id_post_author_name",
         "description": "post.migrations.0003_rename_author_post_author_id_post_author_name",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('post', '0002_post_delete_blog'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='post',\n            old_name='author',\n            new_name='author_id',\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"post\", \"0002_post_delete_blog\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"post\",\n            old_name=\"author\",\n            new_name=\"author_id\",\n        ),",
         "detail": "post.migrations.0003_rename_author_post_author_id_post_author_name",
         "documentation": {}
     },
@@ -2812,7 +2885,7 @@
         "kind": 6,
         "importPath": "post.migrations.0004_post_image_post_likes_alter_post_author_id_and_more",
         "description": "post.migrations.0004_post_image_post_likes_alter_post_author_id_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('post', '0003_rename_author_post_author_id_post_author_name'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='post',\n            name='image',\n            field=models.ImageField(blank=True, default=0, null=True, upload_to=''),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"post\", \"0003_rename_author_post_author_id_post_author_name\"),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"post\",\n            name=\"image\",\n            field=models.ImageField(blank=True, default=0, null=True, upload_to=\"\"),",
         "detail": "post.migrations.0004_post_image_post_likes_alter_post_author_id_and_more",
         "documentation": {}
     },
@@ -2835,29 +2908,74 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "post.migrations.0006_post_author_image_post_comment",
+        "description": "post.migrations.0006_post_author_image_post_comment",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"post\", \"0005_alter_post_author_name_alter_post_title\"),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"post\",\n            name=\"author_image\",\n            field=models.ImageField(default=\"images/24/9/12/profile.png\", upload_to=\"\"),",
+        "detail": "post.migrations.0006_post_author_image_post_comment",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "post.migrations.0007_merge_20240923_0016",
+        "description": "post.migrations.0007_merge_20240923_0016",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"post\", \"0006_alter_post_image\"),\n        (\"post\", \"0006_post_author_image_post_comment\"),\n    ]\n    operations = []",
+        "detail": "post.migrations.0007_merge_20240923_0016",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "post.migrations.0008_remove_post_image",
+        "description": "post.migrations.0008_remove_post_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"post\", \"0007_merge_20240923_0016\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"post\",\n            name=\"image\",\n        ),\n    ]",
+        "detail": "post.migrations.0008_remove_post_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "post.migrations.0009_post_image",
+        "description": "post.migrations.0009_post_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"post\", \"0008_remove_post_image\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"post\",\n            name=\"image\",\n            field=models.ImageField(default=0, upload_to=\"\"),\n        ),",
+        "detail": "post.migrations.0009_post_image",
+        "documentation": {}
+    },
+    {
         "label": "PostConfig",
         "kind": 6,
         "importPath": "post.apps",
         "description": "post.apps",
-        "peekOfCode": "class PostConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'post'",
+        "peekOfCode": "class PostConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"post\"",
         "detail": "post.apps",
         "documentation": {}
     },
     {
-        "label": "Pos",
+        "label": "Post",
         "kind": 6,
         "importPath": "post.models",
         "description": "post.models",
-        "peekOfCode": "class Post (models.Model):\n    title = models.CharField(max_length=100)\n    content = models.TextField ()\n    author_id = models.ForeignKey(User, related_name= \"Posts\", on_delete=models.CASCADE)\n    author_name = models.CharField(max_length=255)\n    created_at = models.DateTimeField(auto_now_add=True)  \n    image = models.ImageField(default=0 )\n    likes = models.ManyToManyField(User, related_name=\"liked_posts\", blank=True , default=False)\n    def __str__(self):\n        return self.title",
+        "peekOfCode": "class Post(models.Model):\n    title = models.CharField(max_length=100)\n    content = models.TextField()\n    author_id = models.ForeignKey(User, related_name=\"Posts\", on_delete=models.CASCADE)\n    author_name = models.CharField(max_length=255)\n    author_image = models.ImageField(default=\"images/24/9/12/profile.png\")\n    created_at = models.DateTimeField(auto_now_add=True)\n    image = models.ImageField(default=0)\n    likes = models.ManyToManyField(\n        User, related_name=\"liked_posts\", blank=True, default=False",
         "detail": "post.models",
         "documentation": {}
     },
     {
-        "label": "IsAuthOrReadOnl",
+        "label": "Post_comment",
+        "kind": 6,
+        "importPath": "post.models",
+        "description": "post.models",
+        "peekOfCode": "class Post_comment(models.Model):\n    content = models.TextField()\n    post_id = models.ForeignKey(Post, related_name=\"post_id\", on_delete=models.CASCADE)\n    post_title = models.CharField(max_length=100)\n    author_id = models.ForeignKey(\n        User, related_name=\"author_comment\", on_delete=models.CASCADE\n    )\n    author_name = models.CharField(max_length=255)\n    created_at = models.DateTimeField(auto_now_add=True)\n    update_at = models.DateTimeField(auto_now=True)",
+        "detail": "post.models",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthOrReadOnly",
         "kind": 6,
         "importPath": "post.permissions",
         "description": "post.permissions",
-        "peekOfCode": "class IsAuthOrReadOnly (permissions.BasePermission):\n    def has_permission(self, request, view):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        return request.user and request.user.is_authenticated \n    def has_object_permission(self, request, view, obj):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        return obj.author == request.user",
+        "peekOfCode": "class IsAuthOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        return request.user and request.user.is_authenticated\n    def has_object_permission(self, request, view, obj):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        return obj.author == request.user",
         "detail": "post.permissions",
         "documentation": {}
     },
@@ -2866,7 +2984,7 @@
         "kind": 6,
         "importPath": "post.renderers",
         "description": "post.renderers",
-        "peekOfCode": "class UserRenderer(renderers.JSONRenderer):\n    charset = 'utf-8'\n    def render(self, data, media_type=None, renderer_context=None):\n        response = ''\n        if 'ErrorDetail' in str(data):\n            response = json.dumps({'errors': data})\n        else:\n            response = json.dumps(data)\n        return response",
+        "peekOfCode": "class UserRenderer(renderers.JSONRenderer):\n    charset = \"utf-8\"\n    def render(self, data, media_type=None, renderer_context=None):\n        response = \"\"\n        if \"ErrorDetail\" in str(data):\n            response = json.dumps({\"errors\": data})\n        else:\n            response = json.dumps(data)\n        return response",
         "detail": "post.renderers",
         "documentation": {}
     },
@@ -2875,7 +2993,7 @@
         "kind": 6,
         "importPath": "post.serializers",
         "description": "post.serializers",
-        "peekOfCode": "class PostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = ['id','title', 'content', 'author_id','author_name','created_at','image']\n    # if image is not provided, set it to default image\n    def validate(self, data):\n        if 'image' not in self.initial_data:\n            data['image'] = \"0\"\n        return data\nclass ShowPostSerializer(serializers.ModelSerializer):",
+        "peekOfCode": "class PostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = [\n            \"id\",\n            \"title\",\n            \"content\",\n            \"author_id\",\n            \"author_name\",\n            \"author_image\",",
         "detail": "post.serializers",
         "documentation": {}
     },
@@ -2884,7 +3002,7 @@
         "kind": 6,
         "importPath": "post.serializers",
         "description": "post.serializers",
-        "peekOfCode": "class ShowPostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = ['id','title', 'content','author_id' ,'author_name','created_at','image','likes']\nclass UpdatePostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = ['id','title', 'content','author_name','image']",
+        "peekOfCode": "class ShowPostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = [\n            \"id\",\n            \"title\",\n            \"content\",\n            \"author_id\",\n            \"author_name\",\n            \"author_image\",",
         "detail": "post.serializers",
         "documentation": {}
     },
@@ -2893,8 +3011,26 @@
         "kind": 6,
         "importPath": "post.serializers",
         "description": "post.serializers",
-        "peekOfCode": "class UpdatePostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = ['id','title', 'content','author_name','image']",
+        "peekOfCode": "class UpdatePostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = [\"id\", \"title\", \"content\", \"author_name\", \"author_image\", \"image\"]\nclass CommentSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post_comment\n        fields = [\n            \"id\",\n            \"content\",",
         "detail": "post.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CommentSerializer",
+        "kind": 6,
+        "importPath": "post.serializers",
+        "description": "post.serializers",
+        "peekOfCode": "class CommentSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post_comment\n        fields = [\n            \"id\",\n            \"content\",\n            \"post_id\",\n            \"post_title\",\n            \"author_id\",\n            \"author_name\",",
+        "detail": "post.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "post.urls",
+        "description": "post.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"create/\", CreatePosts.as_view(), name=\"createPost\"),\n    path(\"show/\", ShowPosts.as_view(), name=\"showPosts\"),\n    path(\"myposts/\", ListMyPosts.as_view(), name=\"listmyposts\"),\n    path(\"Update/<int:pk>\", PostDetail.as_view(), name=\"PostDetail\"),\n    path(\"likes/<int:pk>\", DoLike.as_view(), name=\"likes\"),\n    path(\"comment/<int:post_pk>\", CreateComment.as_view(), name=\"CreateComment\"),\n    path(\n        \"<int:post_pk>/commentdetail/<int:comment_pk>\",\n        CommentDetail.as_view(),",
+        "detail": "post.urls",
         "documentation": {}
     },
     {
@@ -2902,7 +3038,7 @@
         "kind": 6,
         "importPath": "post.utils",
         "description": "post.utils",
-        "peekOfCode": "class Util:\n    @staticmethod\n    def send_email(data):\n        email = EmailMessage(\n            subject=data['subject'],\n            body=data['body'],\n            from_email=settings.DEFAULT_FROM_EMAIL,\n            to=[data['to_email']]\n        )\n        try:",
+        "peekOfCode": "class Util:\n    @staticmethod\n    def send_email(data):\n        email = EmailMessage(\n            subject=data[\"subject\"],\n            body=data[\"body\"],\n            from_email=settings.DEFAULT_FROM_EMAIL,\n            to=[data[\"to_email\"]],\n        )\n        try:",
         "detail": "post.utils",
         "documentation": {}
     },
@@ -2911,7 +3047,7 @@
         "kind": 6,
         "importPath": "post.views",
         "description": "post.views",
-        "peekOfCode": "class CreatePosts(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def post(self, request):\n        data = request.data.copy()\n        data['author_id'] = request.user.id\n        data['author_name'] = request.user.username\n        serializer = PostSerializer(data=data, context={\"request\": request})\n        if serializer.is_valid():\n            serializer.save()",
+        "peekOfCode": "class CreatePosts(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def post(self, request):\n        data = request.data.copy()\n        data[\"author_id\"] = request.user.id\n        data[\"author_name\"] = request.user.username\n        data[\"author_image\"] = request.user.image\n        serializer = PostSerializer(data=data, context={\"request\": request})\n        if serializer.is_valid():",
         "detail": "post.views",
         "documentation": {}
     },
@@ -2920,7 +3056,16 @@
         "kind": 6,
         "importPath": "post.views",
         "description": "post.views",
-        "peekOfCode": "class ShowPosts(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def get(self, request):\n        posts = Post.objects.all() \n        serializer = ShowPostSerializer(posts, many=True, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# ----------------------(PostDetail)-------------------------------------------------\nclass PostDetail(APIView):\n    renderer_classes = [UserRenderer]",
+        "peekOfCode": "class ShowPosts(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def get(self, request):\n        posts = Post.objects.all()\n        serializer = ShowPostSerializer(posts, many=True, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# ----------------------(ListMyPosts)-------------------------------------------------\nclass ListMyPosts(APIView):\n    renderer_classes = [UserRenderer]",
+        "detail": "post.views",
+        "documentation": {}
+    },
+    {
+        "label": "ListMyPosts",
+        "kind": 6,
+        "importPath": "post.views",
+        "description": "post.views",
+        "peekOfCode": "class ListMyPosts(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def get(self, request):\n        posts = Post.objects.filter(author_id=request.user.id)\n        serializer = ShowPostSerializer(posts, many=True, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# ----------------------(PostDetail)-------------------------------------------------\nclass PostDetail(APIView):\n    renderer_classes = [UserRenderer]",
         "detail": "post.views",
         "documentation": {}
     },
@@ -2929,7 +3074,7 @@
         "kind": 6,
         "importPath": "post.views",
         "description": "post.views",
-        "peekOfCode": "class PostDetail(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def get_object(self, pk):\n        try:\n            return Post.objects.get(pk=pk)\n        except Post.DoesNotExist:\n            raise Http404\n    def get(self, request, pk):\n        post = self.get_object(pk) ",
+        "peekOfCode": "class PostDetail(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def get_object(self, pk):\n        try:\n            return Post.objects.get(pk=pk)\n        except Post.DoesNotExist:\n            raise Http404\n    def get(self, request, pk):\n        post = self.get_object(pk)",
         "detail": "post.views",
         "documentation": {}
     },
@@ -2938,7 +3083,43 @@
         "kind": 6,
         "importPath": "post.views",
         "description": "post.views",
-        "peekOfCode": "class DoLike(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def get_object(self, pk):\n        try:\n            return Post.objects.get(pk=pk)\n        except Post.DoesNotExist:\n            raise Http404\n    def post(self, request ,pk):\n        post = self.get_object(pk)",
+        "peekOfCode": "class DoLike(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def get_object(self, pk):\n        try:\n            return Post.objects.get(pk=pk)\n        except Post.DoesNotExist:\n            raise Http404\n    def post(self, request, pk):\n        post = self.get_object(pk)",
+        "detail": "post.views",
+        "documentation": {}
+    },
+    {
+        "label": "CreateComment",
+        "kind": 6,
+        "importPath": "post.views",
+        "description": "post.views",
+        "peekOfCode": "class CreateComment(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def post(self, request, post_pk):\n        data = request.data.copy()\n        data[\"author_id\"] = request.user.id\n        data[\"author_name\"] = request.user.username\n        try:\n            post = Post.objects.get(pk=post_pk)\n            data[\"post_id\"] = post.id",
+        "detail": "post.views",
+        "documentation": {}
+    },
+    {
+        "label": "CommentDetail",
+        "kind": 6,
+        "importPath": "post.views",
+        "description": "post.views",
+        "peekOfCode": "class CommentDetail(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def get_object(self, comment_pk):\n        try:\n            return Post_comment.objects.get(pk=comment_pk)\n        except Post_comment.DoesNotExist:\n            raise Http404\n    def get(self, request, post_pk, comment_pk):\n        try:",
+        "detail": "post.views",
+        "documentation": {}
+    },
+    {
+        "label": "ListPostComments",
+        "kind": 6,
+        "importPath": "post.views",
+        "description": "post.views",
+        "peekOfCode": "class ListPostComments(APIView):\n    renderer_classes = [UserRenderer]\n    permission_classes = [IsAuthOrReadOnly]\n    def get(self, request, post_id):\n        comments = Post_comment.objects.filter(post_id=post_id)\n        serializer = CommentSerializer(\n            comments, many=True, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# ----------------------(LikeComment)-------------------------------------------------",
+        "detail": "post.views",
+        "documentation": {}
+    },
+    {
+        "label": "LikeComment",
+        "kind": 6,
+        "importPath": "post.views",
+        "description": "post.views",
+        "peekOfCode": "class LikeComment(APIView):\n    def get_object(self, comment_pk):\n        try:\n            return Post_comment.objects.get(pk=comment_pk)\n        except Post_comment.DoesNotExist:\n            raise Http404\n    def post(self, request, comment_pk):\n        comment = self.get_object(comment_pk)\n        user = request.user\n        if user in comment.likes.all():",
         "detail": "post.views",
         "documentation": {}
     },
@@ -2979,11 +3160,11 @@
         "documentation": {}
     },
     {
-        "label": "match_reservatio",
+        "label": "match_reservation",
         "kind": 6,
         "importPath": "reservation.models",
         "description": "reservation.models",
-        "peekOfCode": "class match_reservation (models.Model):\n    match_id = models.ForeignKey(Match,on_delete = models.CASCADE)\n    user_id = models.ForeignKey(User,on_delete = models.CASCADE)\n    tickets_reserved = models.IntegerField()",
+        "peekOfCode": "class match_reservation(models.Model):\n    match_id = models.ForeignKey(Match, on_delete=models.CASCADE)\n    user_id = models.ForeignKey(User, on_delete=models.CASCADE)\n    tickets_reserved = models.IntegerField()",
         "detail": "reservation.models",
         "documentation": {}
     },
@@ -3006,20 +3187,29 @@
         "documentation": {}
     },
     {
-        "label": "bookmatchserialize",
+        "label": "bookmatchserializer",
         "kind": 6,
         "importPath": "reservation.serializers",
         "description": "reservation.serializers",
-        "peekOfCode": "class bookmatchserializer (serializers.ModelSerializer):\n    # price =  serializers.defaultdict(max_digits=7,decimal_places=2)\n    class Meta:\n        model = match_reservation\n        fields = ['tickets_reserved']",
+        "peekOfCode": "class bookmatchserializer(serializers.ModelSerializer):\n    # price =  serializers.defaultdict(max_digits=7,decimal_places=2)\n    class Meta:\n        model = match_reservation\n        fields = [\"tickets_reserved\"]",
         "detail": "reservation.serializers",
         "documentation": {}
     },
     {
-        "label": "book_matc",
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "reservation.urls",
+        "description": "reservation.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"bookticket/<pk>/\", views.book_match),\n]",
+        "detail": "reservation.urls",
+        "documentation": {}
+    },
+    {
+        "label": "book_match",
         "kind": 2,
         "importPath": "reservation.views",
         "description": "reservation.views",
-        "peekOfCode": "def book_match (request,pk):\n    renderer_classes= [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        match_id = Match.objects.get(pk=pk)\n    except  Match.DoesNotExist:\n        return Response({\"error\": \"Match not found\"}, status=status.HTTP_404_NOT_FOUND)\n    if match_id.avilable == True:\n        serializer= serializers.bookmatchserializer(data = request.data)\n        if  serializer.is_valid():",
+        "peekOfCode": "def book_match(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        match_id = Match.objects.get(pk=pk)\n    except Match.DoesNotExist:\n        return Response({\"error\": \"Match not found\"}, status=status.HTTP_404_NOT_FOUND)\n    if match_id.avilable == True:\n        serializer = serializers.bookmatchserializer(data=request.data)\n        if serializer.is_valid():",
         "detail": "reservation.views",
         "documentation": {}
     },
@@ -3190,7 +3380,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"static\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"account/static\")]\n# List of directories where Django will look for additional static files\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),  # Your static files directory",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"static\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"account/static\")]\n# List of directories where Django will look for additional static files\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, \"static\"),  # Your static files directory",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3199,7 +3389,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"static\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"account/static\")]\n# List of directories where Django will look for additional static files\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),  # Your static files directory\n]",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"static\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"account/static\")]\n# List of directories where Django will look for additional static files\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, \"static\"),  # Your static files directory\n]",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3208,7 +3398,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "STATIC_URL = \"static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"static\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"account/static\")]\n# List of directories where Django will look for additional static files\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),  # Your static files directory\n]\n# Directory where collected static files will be placed for deployment\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type",
+        "peekOfCode": "STATIC_URL = \"static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"static\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"account/static\")]\n# List of directories where Django will look for additional static files\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, \"static\"),  # Your static files directory\n]\n# Directory where collected static files will be placed for deployment\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\n# Default primary key field type",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3217,7 +3407,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, \"static\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"account/static\")]\n# List of directories where Django will look for additional static files\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),  # Your static files directory\n]\n# Directory where collected static files will be placed for deployment\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, \"static\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"account/static\")]\n# List of directories where Django will look for additional static files\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, \"static\"),  # Your static files directory\n]\n# Directory where collected static files will be placed for deployment\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3226,7 +3416,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, \"account/static\")]\n# List of directories where Django will look for additional static files\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),  # Your static files directory\n]\n# Directory where collected static files will be placed for deployment\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, \"account/static\")]\n# List of directories where Django will look for additional static files\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, \"static\"),  # Your static files directory\n]\n# Directory where collected static files will be placed for deployment\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3235,7 +3425,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),  # Your static files directory\n]\n# Directory where collected static files will be placed for deployment\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# URL and directory for media files\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")",
+        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, \"static\"),  # Your static files directory\n]\n# Directory where collected static files will be placed for deployment\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# URL and directory for media files\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3244,7 +3434,7 @@
         "kind": 5,
         "importPath": "ticketaya.settings",
         "description": "ticketaya.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# URL and directory for media files\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nMEDIA_URL = \"/media/\"\nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=5),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=15),",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# URL and directory for media files\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nMEDIA_URL = \"/media/\"\nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=5),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=15),",
         "detail": "ticketaya.settings",
         "documentation": {}
     },
@@ -3379,7 +3569,7 @@
         "kind": 5,
         "importPath": "ticketaya.urls",
         "description": "ticketaya.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api_auth/\", include(\"rest_framework.urls\")),\n    path(\"account/\", include(\"account.urls\")),\n    path(\"match/\", include(\"match.urls\")),\n    # Obtain a pair of access and refresh tokens\n    path(\"api/token/\", TokenObtainPairView.as_view(), name=\"token_obtain_pair\"),\n    # Use the refresh token to get a new access token\n    path(\"api/token/refresh/\", TokenRefreshView.as_view(), name=\"token_refresh\"),#url to get new access token by refresh token\n    #path(\"api/logout/\", TokenBlacklistView.as_view(), name=\"token_blacklist\"),",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api_auth/\", include(\"rest_framework.urls\")),\n    path(\"account/\", include(\"account.urls\")),\n    path(\"match/\", include(\"match.urls\")),\n    # Obtain a pair of access and refresh tokens\n    path(\"api/token/\", TokenObtainPairView.as_view(), name=\"token_obtain_pair\"),\n    # Use the refresh token to get a new access token\n    path(\n        \"api/token/refresh/\", TokenRefreshView.as_view(), name=\"token_refresh\"",
         "detail": "ticketaya.urls",
         "documentation": {}
     },
