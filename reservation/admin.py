@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import match_reservation,online_match_payment
+from .models import match_reservation, online_match_payment
 
 
 # Register your models here.

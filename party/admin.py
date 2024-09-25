@@ -12,11 +12,12 @@ class Partydisplay(admin.ModelAdmin):
         "number_of_tickets",
         "price",
     ]
+
     def price(self, obj):
         return obj.price  # Ensure 'price' exists in the Party model
 
     # Ensure 'price' is allowed to be sorted, if needed
-    price.admin_order_field = 'price'
+    price.admin_order_field = "price"
 
 
 class display(admin.ModelAdmin):

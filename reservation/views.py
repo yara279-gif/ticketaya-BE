@@ -11,7 +11,7 @@ from .permissions import IsAuthOrReadOnly
 from rest_framework.views import APIView
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.exceptions import ValidationError
-from .models import match_reservation,online_match_payment
+from .models import match_reservation, online_match_payment
 from match.models import Match
 from match.views import update_match
 
@@ -51,7 +51,10 @@ def book_match(request, pk):
             # serializer.data.get("price")=  match_id.price * serializer.data.get("tickets_reserved")
             price = match_id.ticket_price * serializer.data.get("tickets_reserved")
 
-            return Response([{'msg':f'the price is {price}'},serializer.data], status=status.HTTP_201_CREATED)
+            return Response(
+                [{"msg": f"the price is {price}"}, serializer.data],
+                status=status.HTTP_201_CREATED,
+            )
 
         return Response(serializer.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
     else:
@@ -59,21 +62,27 @@ def book_match(request, pk):
             {"error": "Match is not available"}, status=status.HTTP_400_BAD_REQUEST
         )
 
-    
-    
+
 @api_view(["POST"])
-def  cancel_reservation (request,pk):
-    renderer_classes= [userrenderer]
+def cancel_reservation(request, pk):
+    renderer_classes = [userrenderer]
     permission_classes = [IsAuthenticated]
     try:
         reservation = match_reservation.objects.get(pk=pk)
     except match_reservation.DoesNotExist:
-        return Response({"error": "Reservation not found"}, status=status.HTTP_404_NOT_FOUND)
+        return Response(
+            {"error": "Reservation not found"}, status=status.HTTP_404_NOT_FOUND
+        )
     if reservation.user_id == request.user:
         reservation.delete()
         return Response({"msg": "Reservation cancelled"}, status=status.HTTP_200_OK)
     else:
-        return Response({"error": "You are not the owner of this reservation"}, status=status.HTTP_400_BAD_REQUEST)
+        return Response(
+            {"error": "You are not the owner of this reservation"},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+
 # @api_view(["POST"])
 # def match_payment (request,pk):
 #     renderer_classes= [userrenderer]
@@ -84,7 +93,7 @@ def  cancel_reservation (request,pk):
 #         reservation = match_reservation.objects.get(pk=pk)
 #     except match_reservation.DoesNotExist:
 #         return Response({"error": "Reservation not found"}, status=status.HTTP_404_NOT_ACCEPTABLE)
-    
+
 #     #check if the reservation is valid
 #     if reservation.user_id == request.user:
 #         #check if the payment is valid
@@ -97,26 +106,29 @@ def  cancel_reservation (request,pk):
 #             return Response({"error": "Payment is already done"}, status=status.HTTP_400_BAD_REQUEST)
 #     else:
 #         return Response({"error": "You are not the owner of this reservation"}, status=status.HTTP_400_BAD_REQUEST)
-        
-@api_view(['POST'])
-def  match_payment (request,pk):
+
+
+@api_view(["POST"])
+def match_payment(request, pk):
     renderer_classes = [userrenderer]
     permission_classes = [IsAuthenticated]
     try:
-        reservation_id = match_reservation.objects.get(pk = pk)
+        reservation_id = match_reservation.objects.get(pk=pk)
         match = reservation_id.match_id
     except match_reservation.DoesNotExist:
-        return Response({"error": "You already paid for this match"}, status=status.HTTP_404_NOT_FOUND)
-    
+        return Response(
+            {"error": "You already paid for this match"},
+            status=status.HTTP_404_NOT_FOUND,
+        )
+
     serializer = serializers.matchpaymentserializer(data=request.data)
     if serializer.is_valid():
-        serializer.save(reservation_id=reservation_id)  # Saving the reservation in the payment
+        serializer.save(
+            reservation_id=reservation_id
+        )  # Saving the reservation in the payment
         reservation_id.delete()
         return Response({"msg": "Payment successful"}, status=status.HTTP_200_OK)
     else:
         match.no_tickets += reservation_id.tickets_reserved
         match.save()
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
-    
-            
