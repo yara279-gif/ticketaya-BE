@@ -2747,7 +2747,7 @@
         "kind": 6,
         "importPath": "party.admin",
         "description": "party.admin",
-        "peekOfCode": "class Partydisplay(admin.ModelAdmin):\n    list_display = [\n        \"name\",\n        \"performer\",\n        \"location\",\n        \"datetime\",\n        \"number_of_tickets\",\n        \"price\",\n    ]\nclass display(admin.ModelAdmin):",
+        "peekOfCode": "class Partydisplay(admin.ModelAdmin):\n    list_display = [\n        \"name\",\n        \"performer\",\n        \"location\",\n        \"datetime\",\n        \"number_of_tickets\",\n        \"price\",\n    ]\n    def price(self, obj):",
         "detail": "party.admin",
         "documentation": {}
     },
