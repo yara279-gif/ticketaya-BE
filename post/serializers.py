@@ -16,7 +16,12 @@ class PostSerializer(serializers.ModelSerializer):
             "created_at",
             "image",
         ]
-
+    
+    # if image is not provided, set it to default image
+    def validate(self, data):
+        if 'image' not in self.initial_data:
+            data['image'] = "0"
+        return data
 
 class ShowPostSerializer(serializers.ModelSerializer):
     class Meta:

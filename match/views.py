@@ -23,7 +23,7 @@ def addmatch(request):
     if request.method == "POST":
         renderer_class = [userrenderer]
         permission_classes = [IsAuthenticated]
-        serializer = serializers.match(data=request.data)
+        serializer = serializers.match(data=request.data, context={"request": request})
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             return Response(
@@ -42,7 +42,7 @@ def retrieve_all_match(request):
         permission_classes = [IsAuthenticated]
         match = Match.objects.all()
 
-        serializer = serializers.match(match, many=True)
+        serializer = serializers.match(match, many=True, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
     return Response({"msg": "not allowed"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
@@ -55,7 +55,7 @@ def retrieve_one_match(request, pk):
         permission_classes = [IsAuthenticated]
         try:
             match = Match.objects.get(pk=pk)
-            serializer = serializers.match(match)
+            serializer = serializers.match(match, context={"request": request})
             if match.no_tickets == 0:
                 match.avilable = False
 
@@ -82,7 +82,7 @@ def update_match(request, pk):
         permission_classes = [IsAuthenticated]
         try:
             match = Match.objects.get(pk=pk)
-            serializer = serializers.match(match, data=request.data, partial=True)
+            serializer = serializers.match(match, data=request.data, partial=True, context={"request": request})
             if serializer.is_valid(raise_exception=True):
                 serializer.save()
                 return Response(
@@ -131,11 +131,11 @@ def search_about_match(request, name=None, team1=None, team2=None):
             if name:
                 match = Match.objects.filter(name__icontains=name)
             elif team1:
-                match = Match.objects.filter(team1=team1)
+                match = Match.objects.filter(team1__icontains=team1)
             else:
-                match = Match.objects.filter(team2=team2)
+                match = Match.objects.filter(team2__icontains=team2)
 
-            serializer = serializers.match(match, many=True)
+            serializer = serializers.match(match, many=True, context={"request": request})
             if serializer.data:
                 return Response(serializer.data, status=status.HTTP_200_OK)
             else:

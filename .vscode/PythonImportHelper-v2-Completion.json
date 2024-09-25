@@ -368,6 +368,54 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -528,38 +576,6 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -609,6 +625,22 @@
     },
     {
         "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -2590,6 +2622,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "match.migrations.0008_match_image",
+        "description": "match.migrations.0008_match_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"match\", \"0007_alter_match_avilable\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"match\",\n            name=\"image\",\n            field=models.ImageField(\n                blank=True, null=True, upload_to=\"matches/%y/%m/%d\"",
+        "detail": "match.migrations.0008_match_image",
+        "documentation": {}
+    },
+    {
         "label": "MatchConfig",
         "kind": 6,
         "importPath": "match.apps",
@@ -2657,7 +2698,7 @@
         "kind": 2,
         "importPath": "match.views",
         "description": "match.views",
-        "peekOfCode": "def addmatch(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        serializer = serializers.match(data=request.data)\n        if serializer.is_valid(raise_exception=True):\n            serializer.save()\n            return Response(\n                {\"msg\": \"added successfull\",\"data\":serializer.data}, status=status.HTTP_201_CREATED\n            )",
+        "peekOfCode": "def addmatch(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        serializer = serializers.match(data=request.data, context={\"request\": request})\n        if serializer.is_valid(raise_exception=True):\n            serializer.save()\n            return Response(\n                {\"msg\": \"added successfull\",\"data\":serializer.data}, status=status.HTTP_201_CREATED\n            )",
         "detail": "match.views",
         "documentation": {}
     },
@@ -2666,7 +2707,7 @@
         "kind": 2,
         "importPath": "match.views",
         "description": "match.views",
-        "peekOfCode": "def retrieve_all_match(request):\n    if request.method == \"GET\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        match = Match.objects.all()\n        serializer = serializers.match(match, many=True)\n        return Response(serializer.data, status=status.HTTP_200_OK)\n    return Response({\"msg\": \"not allowed\"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)\n# ++++++++++++++++++++++++++++++++++++(retrive_one_match)+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n@api_view([\"GET\"])",
+        "peekOfCode": "def retrieve_all_match(request):\n    if request.method == \"GET\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        match = Match.objects.all()\n        serializer = serializers.match(match, many=True, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)\n    return Response({\"msg\": \"not allowed\"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)\n# ++++++++++++++++++++++++++++++++++++(retrive_one_match)+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n@api_view([\"GET\"])",
         "detail": "match.views",
         "documentation": {}
     },
@@ -2675,7 +2716,7 @@
         "kind": 2,
         "importPath": "match.views",
         "description": "match.views",
-        "peekOfCode": "def retrieve_one_match(request, pk):\n    if request.method == \"GET\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        try:\n            match = Match.objects.get(pk=pk)\n            serializer = serializers.match(match)\n            if match.no_tickets == 0:\n                match.avilable = False\n                return Response(",
+        "peekOfCode": "def retrieve_one_match(request, pk):\n    if request.method == \"GET\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        try:\n            match = Match.objects.get(pk=pk)\n            serializer = serializers.match(match, context={\"request\": request})\n            if match.no_tickets == 0:\n                match.avilable = False\n                return Response(",
         "detail": "match.views",
         "documentation": {}
     },
@@ -2684,7 +2725,7 @@
         "kind": 2,
         "importPath": "match.views",
         "description": "match.views",
-        "peekOfCode": "def update_match(request, pk):\n    if request.method == \"PATCH\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        try:\n            match = Match.objects.get(pk=pk)\n            serializer = serializers.match(match, data=request.data, partial=True)\n            if serializer.is_valid(raise_exception=True):\n                serializer.save()\n                return Response(",
+        "peekOfCode": "def update_match(request, pk):\n    if request.method == \"PATCH\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        try:\n            match = Match.objects.get(pk=pk)\n            serializer = serializers.match(match, data=request.data, partial=True, context={\"request\": request})\n            if serializer.is_valid(raise_exception=True):\n                serializer.save()\n                return Response(",
         "detail": "match.views",
         "documentation": {}
     },
@@ -3193,6 +3234,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "reservation.migrations.0004_match_reservation_pay_method_online_match_payment",
+        "description": "reservation.migrations.0004_match_reservation_pay_method_online_match_payment",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"reservation\", \"0003_initial\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"match_reservation\",\n            name=\"pay_method\",\n            field=models.CharField(\n                choices=[(\"offline\", \"Cash\"), (\"online\", \"visa_card\")],",
+        "detail": "reservation.migrations.0004_match_reservation_pay_method_online_match_payment",
+        "documentation": {}
+    },
+    {
         "label": "ReservationsConfig",
         "kind": 6,
         "importPath": "reservation.apps",
@@ -3206,7 +3256,16 @@
         "kind": 6,
         "importPath": "reservation.models",
         "description": "reservation.models",
-        "peekOfCode": "class match_reservation(models.Model):\n    match_id = models.ForeignKey(Match, on_delete=models.CASCADE)\n    user_id = models.ForeignKey(User, on_delete=models.CASCADE)\n    tickets_reserved = models.IntegerField()",
+        "peekOfCode": "class match_reservation(models.Model):\n    match_id = models.ForeignKey(Match, on_delete=models.CASCADE)\n    user_id = models.ForeignKey(User, on_delete=models.CASCADE)\n    tickets_reserved = models.IntegerField()\n    pay_method_choices = (\n        ('offline', 'Cash'),\n        ('online', 'visa_card'),\n    )\n    pay_method = models.CharField(max_length=30, choices = pay_method_choices,default='Cash')\nclass online_match_payment (models.Model):",
+        "detail": "reservation.models",
+        "documentation": {}
+    },
+    {
+        "label": "online_match_paymen",
+        "kind": 6,
+        "importPath": "reservation.models",
+        "description": "reservation.models",
+        "peekOfCode": "class online_match_payment (models.Model):\n    reservation_id =  models.ForeignKey(match_reservation,on_delete = models.CASCADE)\n    visa_card = models.CharField(max_length=16)\n    PAYMENT_STATUS_PENDING = 'P'\n    PAYMENT_STATUS_COMPLETE = 'c'\n    PAYMENT_STATUS_FAILD = 'F'\n    PAYMENT_STATUS_CHOICES = (\n        (PAYMENT_STATUS_PENDING, 'Pending'),\n        (PAYMENT_STATUS_COMPLETE, 'Complete'),\n        (PAYMENT_STATUS_FAILD, 'Failed'),)",
         "detail": "reservation.models",
         "documentation": {}
     },
@@ -3233,7 +3292,16 @@
         "kind": 6,
         "importPath": "reservation.serializers",
         "description": "reservation.serializers",
-        "peekOfCode": "class bookmatchserializer(serializers.ModelSerializer):\n    # price =  serializers.defaultdict(max_digits=7,decimal_places=2)\n    class Meta:\n        model = match_reservation\n        fields = [\"tickets_reserved\"]",
+        "peekOfCode": "class bookmatchserializer(serializers.ModelSerializer):\n    # price =  serializers.defaultdict(max_digits=7,decimal_places=2)\n    class Meta:\n        model = match_reservation\n        fields = ['pk','tickets_reserved','pay_method']\nclass matchpaymentserializer(serializers.ModelSerializer):\n    class Meta:\n        model = online_match_payment\n        fields = ['visa_card', 'payment_status']\n    def validate(self, attrs):",
+        "detail": "reservation.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "matchpaymentserializer",
+        "kind": 6,
+        "importPath": "reservation.serializers",
+        "description": "reservation.serializers",
+        "peekOfCode": "class matchpaymentserializer(serializers.ModelSerializer):\n    class Meta:\n        model = online_match_payment\n        fields = ['visa_card', 'payment_status']\n    def validate(self, attrs):\n        visa_card = attrs.get(\"visa_card\")\n        payment_status = attrs.get(\"payment_status\")\n        # Check if visa_card is 16 digits\n        if not (visa_card and len(visa_card) == 16 and visa_card.isdigit()):\n            attrs['payment_status'] =\"Failed\"",
         "detail": "reservation.serializers",
         "documentation": {}
     },
@@ -3242,7 +3310,7 @@
         "kind": 5,
         "importPath": "reservation.urls",
         "description": "reservation.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"bookticket/<pk>/\", views.book_match),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"bookticket/<pk>/\", views.book_match),\n    path('matchpayment/<int:pk>/',views.match_payment),\n]",
         "detail": "reservation.urls",
         "documentation": {}
     },
@@ -3252,6 +3320,32 @@
         "importPath": "reservation.views",
         "description": "reservation.views",
         "peekOfCode": "def book_match(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        match_id = Match.objects.get(pk=pk)\n    except Match.DoesNotExist:\n        return Response({\"error\": \"Match not found\"}, status=status.HTTP_404_NOT_FOUND)\n    if match_id.avilable == True:\n        serializer = serializers.bookmatchserializer(data=request.data)\n        if serializer.is_valid():",
+        "detail": "reservation.views",
+        "documentation": {}
+    },
+    {
+        "label": {
+            "name": "",
+            "kind": 2,
+            "peekOfCode": "def  cancel_reservation (request,pk):\n    renderer_classes= [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        reservation = match_reservation.objects.get(pk=pk)\n    except match_reservation.DoesNotExist:\n        return Response({\"error\": \"Reservation not found\"}, status=status.HTTP_404_NOT_FOUND)\n    if reservation.user_id == request.user:\n        reservation.delete()\n        return Response({\"msg\": \"Reservation cancelled\"}, status=status.HTTP_200_OK)"
+        },
+        "kind": 2,
+        "importPath": "reservation.views",
+        "description": "reservation.views",
+        "peekOfCode": "def  cancel_reservation (request,pk):\n    renderer_classes= [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        reservation = match_reservation.objects.get(pk=pk)\n    except match_reservation.DoesNotExist:\n        return Response({\"error\": \"Reservation not found\"}, status=status.HTTP_404_NOT_FOUND)\n    if reservation.user_id == request.user:\n        reservation.delete()\n        return Response({\"msg\": \"Reservation cancelled\"}, status=status.HTTP_200_OK)",
+        "detail": "reservation.views",
+        "documentation": {}
+    },
+    {
+        "label": {
+            "name": "",
+            "kind": 2,
+            "peekOfCode": "def  match_payment (request,pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        reservation_id = match_reservation.objects.get(pk = pk)\n        match = reservation_id.match_id\n    except match_reservation.DoesNotExist:\n        return Response({\"error\": \"You already paid for this match\"}, status=status.HTTP_404_NOT_FOUND)\n    serializer = serializers.matchpaymentserializer(data=request.data)\n    if serializer.is_valid():"
+        },
+        "kind": 2,
+        "importPath": "reservation.views",
+        "description": "reservation.views",
+        "peekOfCode": "def  match_payment (request,pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        reservation_id = match_reservation.objects.get(pk = pk)\n        match = reservation_id.match_id\n    except match_reservation.DoesNotExist:\n        return Response({\"error\": \"You already paid for this match\"}, status=status.HTTP_404_NOT_FOUND)\n    serializer = serializers.matchpaymentserializer(data=request.data)\n    if serializer.is_valid():",
         "detail": "reservation.views",
         "documentation": {}
     },
