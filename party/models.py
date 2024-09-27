@@ -8,9 +8,16 @@ class Party(models.Model):
     datetime = models.DateTimeField()
     number_of_tickets = models.IntegerField()
     price=models.DecimalField(max_digits=10,decimal_places=2,null=True,blank=True)
+    available=models.BooleanField(default=False)
+    image = models.ImageField(upload_to='images/%y/%m/%d',default='images/24/9/12/party.jpeg')
     def __str__(self):
         return self.name
 class Party_user(models.Model):
     party=models.ForeignKey(Party,on_delete=models.CASCADE)
     user=models.ForeignKey(User,on_delete=models.CASCADE)
     total=models.DecimalField(max_digits=10,decimal_places=2,default=0)
+    card_cvv=models.CharField(max_length=3)
+    month=models.CharField(max_length=2)
+    year=models.CharField(max_length=2)
+    
+    

@@ -8,13 +8,15 @@ class Partydisplay(admin.ModelAdmin):
     'location',
     'datetime',
     'number_of_tickets',
-    'price'
+    'price',
+    'available'
     ]
 class display(admin.ModelAdmin):
     list_display=[
     'party',
     'user',
-    'total'
+    'total',
+    'card_cvv'
     ]   
 
 admin.site.register(Party,Partydisplay)

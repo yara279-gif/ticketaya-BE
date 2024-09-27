@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import get_object_or_404
-from .models import Party
+from .models import Party, Party_user
 from .serializer import PartySerializer,User_partySerializer,show
 from .permissions import IsAdminPermission
 from rest_framework.permissions import IsAuthenticated
@@ -12,6 +12,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from account.renderers import userrenderer
 from rest_framework.permissions import IsAuthenticated
 from decimal import Decimal
+from datetime import datetime
 
 
 # -------------------------------(List_Parties)------------------------------------------------------
@@ -93,17 +94,41 @@ class Buyticket(APIView):
     renderer_class =  [userrenderer]
     permission_classes = [IsAuthenticated]
     def patch(self,request):
+        date=datetime.now()
+        totalyear=date.year
+        year=totalyear%100
+        month=date.month
         party=Party.objects.filter(name=request.data['name']).first()
-        if party.number_of_tickets == 0:
+        #--------------------------------------------------
+        if party.available == False:
             return Response({"message":"SoldOut"})
+    
+        if not (request.data['cvv'].isdigit() and (len(request.data["cvv"]) == 3)) :
+            return Response({"message":"incorrect cvv"})
+        
+        if int (request.data['expiry_month'])>12 or int (request.data['expiry_month'])<1:
+            return Response({"message":"invalid month"})
+        
+        if int(request.data['expiry_year'])<year:
+            return Response({"message":"Expired"})
+        
+        if int(request.data['expiry_year'])==year  :
+            if int(request.data['expiry_month'])<month :
+                return Response({"message":"Expired"})
+            
         if party.number_of_tickets < int(request.data['number_of_tickets']):
             return Response({"message":"Not available quantity"})
+        
+        #---------------------------------------------------------
         total=Decimal(request.data['number_of_tickets'])*party.price
         party.number_of_tickets-=int(request.data['number_of_tickets'])
         data={
             "party":party.id,
             "user":request.user.id,
-            "total":total
+            "total":total,
+            "card_cvv":request.data["cvv"],
+            "month":request.data["expiry_month"],
+            "year":request.data["expiry_year"],
         }
         data2={
             "number_of_tickets":party.number_of_tickets,
