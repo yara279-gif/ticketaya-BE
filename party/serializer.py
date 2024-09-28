@@ -18,6 +18,7 @@ class PartySerializer(serializers.ModelSerializer):
             "number_of_tickets",
             "price",
             "description",
+            "image",
         ]
 
 

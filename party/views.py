@@ -23,7 +23,7 @@ class PartyListView(APIView):
 
     def get(self, request, *args, **kwargs):
         parties = Party.objects.all()
-        serializer = PartySerializer(parties, many=True)
+        serializer = PartySerializer(parties, many=True, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -48,7 +48,7 @@ class PartyCreateView(APIView):
     permission_classes = [IsAdminPermission]
 
     def post(self, request, *args, **kwargs):
-        serializer = PartySerializer(data=request.data)
+        serializer = PartySerializer(data=request.data, context={"request": request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -64,7 +64,7 @@ class PartyRetrieveView(APIView):
 
     def get(self, request, pk, *args, **kwargs):
         party = get_object_or_404(Party, pk=pk)
-        serializer = PartySerializer(party)
+        serializer = PartySerializer(party , context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -78,7 +78,7 @@ class PartyUpdateView(APIView):
     def patch(self, request, pk, *args, **kwargs):
         party = get_object_or_404(Party, pk=pk)
         serializer = PartySerializer(
-            party, data=request.data, partial=True
+            party, data=request.data, partial=True, context={"request": request}
         )  # Partial update
         if serializer.is_valid():
             serializer.save()
@@ -96,7 +96,7 @@ class PartySearchView(APIView):
     def get(self, request, *args, **kwargs):
         search_query = request.query_params.get("name", "")
         parties = Party.objects.filter(name__icontains=search_query)
-        serializer = PartySerializer(parties, many=True)
+        serializer = PartySerializer(parties, many=True, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
