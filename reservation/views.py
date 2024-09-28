@@ -67,22 +67,20 @@ def book_match(request, pk):
 
                 return Response(
                     {
-                        "message": [
-                            f"the price is {price}",
-                            "The match has been booked successfully, check your email for payment details and ticket receipt date",
-                            serializer.data,
-                        ]
+                        "message": "The match has been booked successfully, check your email for payment details and ticket receipt date",
+                        "reservation": serializer.data,
                     },
                     status=status.HTTP_200_OK,
                 )
             else:
 
                 return Response(
-                    [
-                        {"msg": [f"the price is {price}"]},
-                        request.user.username,
-                        match.name,
-                    ],
+                    {
+                        "message": f"the price is {price}",
+                        "username": request.user.username,
+                        "match_name": match.name,
+                        "reservation": serializer.data,
+                    },
                     status=status.HTTP_201_CREATED,
                 )  # it shouldn't appear in reservation page but must appear in payment page
 
