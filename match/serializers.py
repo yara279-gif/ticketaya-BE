@@ -17,4 +17,4 @@ class match(serializers.ModelSerializer):
 class search_match(serializers.ModelSerializer):
     class Meta:
         model = Match
-        fields = ["name", "team1", "team2"]
+        fields = ["name", "team1", "team2",]
