@@ -10,13 +10,15 @@ class match_reservation(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     tickets_reserved = models.IntegerField()
 
-    date_of_reservation = models.DateTimeField(auto_now_add=True,null=True ,blank= True)
+    date_of_reservation = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     pay_method_choices = (
         ("offline", "cash"),
         ("online", "visa_card"),
     )
-    pay_method = models.CharField(max_length=30, choices = pay_method_choices,default='offline')
-    price = models.DecimalField(max_digits=7,decimal_places=2,null=True ,blank= True)
+    pay_method = models.CharField(
+        max_length=30, choices=pay_method_choices, default="offline"
+    )
+    price = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
 
 
 class online_match_payment(models.Model):

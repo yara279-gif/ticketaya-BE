@@ -6,7 +6,6 @@ from match.models import Match
 
 # serializer
 class bookmatchserializer(serializers.ModelSerializer):
-
     class Meta:
         model = match_reservation
         fields = ["pk", "tickets_reserved", "pay_method", "price"]
@@ -28,7 +27,7 @@ class matchpaymentserializer(serializers.ModelSerializer):
                 {"visa_card": "Visa card must be exactly 16 digits."}
             )
         else:
-            attrs['payment_status'] ="Complete"
+            attrs["payment_status"] = "Complete"
         return attrs
 
     def create(self, validated_data):
@@ -36,19 +35,26 @@ class matchpaymentserializer(serializers.ModelSerializer):
         return online_match_payment.objects.create(**validated_data)
 
 
-class listadminserializer (serializers.ModelSerializer):
+class listadminserializer(serializers.ModelSerializer):
     class Meta:
         model = match_reservation
-        fields = ['pk','tickets_reserved','pay_method','price','match_id','user_id']
-    
+        fields = [
+            "pk",
+            "tickets_reserved",
+            "pay_method",
+            "price",
+            "match_id",
+            "user_id",
+        ]
 
-class listuserserializer  (serializers.ModelSerializer):
-    class Meta:
-        model = match_reservation
-        fields = ['pk','tickets_reserved','pay_method','price','match_id']
 
-    
-class updatereservationserializer (serializers. ModelSerializer):
+class listuserserializer(serializers.ModelSerializer):
     class Meta:
         model = match_reservation
-        fields = ['pk','tickets_reserved','match_id']
+        fields = ["pk", "tickets_reserved", "pay_method", "price", "match_id"]
+
+
+class updatereservationserializer(serializers.ModelSerializer):
+    class Meta:
+        model = match_reservation
+        fields = ["pk", "tickets_reserved", "match_id"]

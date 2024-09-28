@@ -62,7 +62,10 @@ def retrieve_one_match(request, pk):
 
                 return Response(
                     {
-                        "msg": ["This match is not available because all tickets have been sold out",serializer.data]
+                        "msg": [
+                            "This match is not available because all tickets have been sold out",
+                            serializer.data,
+                        ]
                     },
                     status=status.HTTP_404_NOT_FOUND,
                 )

@@ -25,28 +25,29 @@ def book_match(request, pk):
     renderer_classes = [userrenderer]
     permission_classes = [IsAuthenticated]
     try:
-        #get the instance
+        # get the instance
         match = Match.objects.get(pk=pk)
         user = request.user
     except Match.DoesNotExist:
         return Response({"error": "Match not found"}, status=status.HTTP_404_NOT_FOUND)
-    if match.no_tickets ==0:
-      match.avilable = False
-      
+    if match.no_tickets == 0:
+        match.avilable = False
+
     if match.avilable == True:
 
-        serializer= serializers.bookmatchserializer(data = request.data)
+        serializer = serializers.bookmatchserializer(data=request.data)
         # price =0.0
 
         if serializer.is_valid():
-            price =  match.ticket_price * serializer.validated_data.get("tickets_reserved")
-            
-            
-            serializer.save(user_id = request.user,match_id = match,price = price)
-            x=match.no_tickets
-            y=serializer.data.get("tickets_reserved")
-            temp_x = x-y
-            if  temp_x <0:
+            price = match.ticket_price * serializer.validated_data.get(
+                "tickets_reserved"
+            )
+
+            serializer.save(user_id=request.user, match_id=match, price=price)
+            x = match.no_tickets
+            y = serializer.data.get("tickets_reserved")
+            temp_x = x - y
+            if temp_x < 0:
                 return Response(
                     {
                         "error": [
@@ -56,19 +57,34 @@ def book_match(request, pk):
                     },
                     status=status.HTTP_400_BAD_REQUEST,
                 )
-            if  temp_x ==0:
+            if temp_x == 0:
                 match.avilable = False
-            
-            if serializer.data.get("pay_method")=="offline":
+
+            if serializer.data.get("pay_method") == "offline":
                 # print("yara")
                 match.no_tickets = temp_x
                 match.save()
-                
-                return Response({"message": [f'the price is {price}',"The match has been booked successfully, check your email for payment details and ticket receipt date",serializer.data]}, status=status.HTTP_200_OK)
-            else :
-                
-                return Response([{'msg':[f'the price is {price}']},request.user.username,match.name], status=status.HTTP_201_CREATED)  # it shouldn't appear in reservation page but must appear in payment page
-           
+
+                return Response(
+                    {
+                        "message": [
+                            f"the price is {price}",
+                            "The match has been booked successfully, check your email for payment details and ticket receipt date",
+                            serializer.data,
+                        ]
+                    },
+                    status=status.HTTP_200_OK,
+                )
+            else:
+
+                return Response(
+                    [
+                        {"msg": [f"the price is {price}"]},
+                        request.user.username,
+                        match.name,
+                    ],
+                    status=status.HTTP_201_CREATED,
+                )  # it shouldn't appear in reservation page but must appear in payment page
 
         return Response(serializer.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
     else:
@@ -97,44 +113,56 @@ def cancel_reservation(request, pk):
         )
 
 
-#----------------------------------------------------------------------------------------------------------------
-@api_view(['GET'])
-def list_all_reservations_for_admin (request):
+# ----------------------------------------------------------------------------------------------------------------
+@api_view(["GET"])
+def list_all_reservations_for_admin(request):
     renderer_classes = [userrenderer]
     permission_classes = [IsAuthenticated]
-    
+
     if request.user.is_staff:
         reservations = match_reservation.objects.all()
         serializer = serializers.listadminserializer(reservations, many=True)
         # serializer.data.get()
         return Response(serializer.data, status=status.HTTP_200_OK)
     else:
-        return Response({"error": "You are not authorized to view this page"}, status=status.HTTP_401_UNAUTHORIZED)
-    
-@api_view (['GET'])
-def  list_all_reservations_for_user (request):
+        return Response(
+            {"error": "You are not authorized to view this page"},
+            status=status.HTTP_401_UNAUTHORIZED,
+        )
+
+
+@api_view(["GET"])
+def list_all_reservations_for_user(request):
     renderer_classes = [userrenderer]
     permission_classes = [IsAuthenticated]
-    reservations =  match_reservation.objects.filter(user_id=request.user)
-    serializer =  serializers.listuserserializer(reservations, many=True)
+    reservations = match_reservation.objects.filter(user_id=request.user)
+    serializer = serializers.listuserserializer(reservations, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
-#----------------------------------------------------------------------------------------------------------------
-@api_view(['PATCH'])
-def update_reservation (request,pk):
+
+
+# ----------------------------------------------------------------------------------------------------------------
+@api_view(["PATCH"])
+def update_reservation(request, pk):
     renderer_classes = [userrenderer]
     permission_classes = [IsAuthenticated]
     try:
         reservation = match_reservation.objects.get(pk=pk)
     except match_reservation.DoesNotExist:
-        return Response({"error": "Reservation not found"}, status=status.HTTP_404_NOT_FOUND)
+        return Response(
+            {"error": "Reservation not found"}, status=status.HTTP_404_NOT_FOUND
+        )
     if reservation.user_id == request.user:
-        serializer = serializers.updatereservationserializer(reservation, data=request.data,partial = True)
+        serializer = serializers.updatereservationserializer(
+            reservation, data=request.data, partial=True
+        )
         if serializer.is_valid():
             serializer.save()
-            return Response({"msg":['updated successfully',serializer.data]}, status=status.HTTP_200_OK)
+            return Response(
+                {"msg": ["updated successfully", serializer.data]},
+                status=status.HTTP_200_OK,
+            )
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
 
 
 # @api_view(["POST"])
@@ -174,17 +202,29 @@ def match_payment(request, pk):
             {"error": "You already paid for this match"},
             status=status.HTTP_404_NOT_FOUND,
         )
-    x=match.no_tickets
+    x = match.no_tickets
 
     serializer = serializers.matchpaymentserializer(data=request.data)
     if serializer.is_valid():
-        serializer.save(reservation_id=reservation_id  )  # Saving the reservation in the payment
+        serializer.save(
+            reservation_id=reservation_id
+        )  # Saving the reservation in the payment
         match.no_tickets -= reservation_id.tickets_reserved
-        if  match.no_tickets <0:
-            return Response({"error": ["Not enough tickets",f'you can book up to  {x} tickets only!']}, status=status.HTTP_400_BAD_REQUEST)
+        if match.no_tickets < 0:
+            return Response(
+                {
+                    "error": [
+                        "Not enough tickets",
+                        f"you can book up to  {x} tickets only!",
+                    ]
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
         if match.no_tickets == 0:
             match.avilable = False
         match.save()
         reservation_id.delete()
-        return Response({"msg": ["Payment done!",serializer.data]}, status=status.HTTP_200_OK)
+        return Response(
+            {"msg": ["Payment done!", serializer.data]}, status=status.HTTP_200_OK
+        )
     return Response(serializer.errors, status=status.HTTP_402_PAYMENT_REQUIRED)
