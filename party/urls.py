@@ -12,5 +12,4 @@ urlpatterns = [
     path("buyticket/", Buyticket.as_view()),
     path("bookticket/<pk>/", views.book_party),
     path("partypayment/<int:pk>/", views.Party_payment),
-    
 ]

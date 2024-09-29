@@ -26,6 +26,7 @@ class Party_user(models.Model):
 
 # -----------------------------(party reservation)-----------------------------
 
+
 class Party_reservation(models.Model):
     party_id = models.ForeignKey(Party, on_delete=models.CASCADE)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)

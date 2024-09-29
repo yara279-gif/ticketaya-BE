@@ -1,4 +1,3 @@
-
 from rest_framework import serializers
 
 
@@ -32,7 +31,6 @@ class show(serializers.Serializer):
     username = serializers.CharField()
     name = serializers.CharField()
     total = serializers.DecimalField(max_digits=10, decimal_places=2)
-
 
 
 # -----------------------------(party reservation)-----------------------------

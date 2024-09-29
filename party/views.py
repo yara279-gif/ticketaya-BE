@@ -64,7 +64,7 @@ class PartyRetrieveView(APIView):
 
     def get(self, request, pk, *args, **kwargs):
         party = get_object_or_404(Party, pk=pk)
-        serializer = PartySerializer(party , context={"request": request})
+        serializer = PartySerializer(party, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -146,7 +146,6 @@ from .serializer import bookpartyserializer, partypaymentserializer
 from rest_framework.decorators import api_view
 
 
-
 @api_view(["POST"])
 def book_party(request, pk):
 
@@ -167,9 +166,7 @@ def book_party(request, pk):
         # price =0.0
 
         if serializer.is_valid():
-            price = party.price * serializer.validated_data.get(
-                "tickets_reserved"
-            )
+            price = party.price * serializer.validated_data.get("tickets_reserved")
 
             serializer.save(user_id=request.user, party_id=party, price=price)
             x = party.number_of_tickets
@@ -217,7 +214,6 @@ def book_party(request, pk):
         return Response(
             {"error": "Party is not available"}, status=status.HTTP_400_BAD_REQUEST
         )
-
 
 
 @api_view(["POST"])
