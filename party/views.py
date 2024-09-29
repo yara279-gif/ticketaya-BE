@@ -137,3 +137,124 @@ class Buyticket(APIView):
             return Response(serializerrrr.data)
         else:
             return Response({"message": "couldn't buy", "errors": serializerrrr.errors})
+
+
+# ---------------------------------------(party reservation)----------------------------------------------
+
+from .models import Party_reservation
+from .serializer import bookpartyserializer, partypaymentserializer
+from rest_framework.decorators import api_view
+
+
+
+@api_view(["POST"])
+def book_party(request, pk):
+
+    renderer_classes = [userrenderer]
+    permission_classes = [IsAuthenticated]
+    try:
+        # get the instance
+        party = Party.objects.get(pk=pk)
+        user = request.user
+    except Party.DoesNotExist:
+        return Response({"error": "Party not found"}, status=status.HTTP_404_NOT_FOUND)
+    if party.number_of_tickets == 0:
+        party.avilable = False
+
+    if party.avilable == True:
+
+        serializer = bookpartyserializer(data=request.data)
+        # price =0.0
+
+        if serializer.is_valid():
+            price = party.price * serializer.validated_data.get(
+                "tickets_reserved"
+            )
+
+            serializer.save(user_id=request.user, party_id=party, price=price)
+            x = party.number_of_tickets
+            y = serializer.data.get("tickets_reserved")
+            temp_x = x - y
+            if temp_x < 0:
+                return Response(
+                    {
+                        "error": [
+                            "Not enough tickets",
+                            f"you can book up to  {x} tickets only!",
+                        ]
+                    },
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+            if temp_x == 0:
+                party.avilable = False
+
+            if serializer.data.get("pay_method") == "offline":
+                # print("yara")
+                party.number_of_tickets = temp_x
+                party.save()
+
+                return Response(
+                    {
+                        "message": "The party has been booked successfully, check your email for payment details and ticket receipt date",
+                        "reservation": serializer.data,
+                    },
+                    status=status.HTTP_200_OK,
+                )
+            else:
+
+                return Response(
+                    {
+                        "message": f"the price is {price}",
+                        "username": request.user.username,
+                        "party_name": party.name,
+                        "reservation": serializer.data,
+                    },
+                    status=status.HTTP_201_CREATED,
+                )  # it shouldn't appear in reservation page but must appear in payment page
+
+        return Response(serializer.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
+    else:
+        return Response(
+            {"error": "Party is not available"}, status=status.HTTP_400_BAD_REQUEST
+        )
+
+
+
+@api_view(["POST"])
+def Party_payment(request, pk):
+    renderer_classes = [userrenderer]
+    permission_classes = [IsAuthenticated]
+    try:
+        reservation_id = Party_reservation.objects.get(pk=pk)
+        party = reservation_id.party_id
+    except Party_reservation.DoesNotExist:
+        return Response(
+            {"error": "You already paid for this party"},
+            status=status.HTTP_404_NOT_FOUND,
+        )
+    x = party.number_of_tickets
+
+    serializer = partypaymentserializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(
+            reservation_id=reservation_id
+        )  # Saving the reservation in the payment
+        party.number_of_tickets -= reservation_id.tickets_reserved
+        if party.number_of_tickets < 0:
+            return Response(
+                {
+                    "error": [
+                        "Not enough tickets",
+                        f"you can book up to  {x} tickets only!",
+                    ]
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        if party.number_of_tickets == 0:
+            party.avilable = False
+        party.save()
+        reservation_id.delete()
+        return Response(
+            {"msg": ["Payment done!", serializer.data]}, status=status.HTTP_200_OK
+        )
+    return Response(serializer.errors, status=status.HTTP_402_PAYMENT_REQUIRED)

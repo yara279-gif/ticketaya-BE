@@ -10,4 +10,7 @@ urlpatterns = [
     path("<int:pk>/delete", views.PartyDeleteView.as_view(), name="party-delete"),
     path("search", views.PartySearchView.as_view(), name="party-search"),
     path("buyticket/", Buyticket.as_view()),
+    path("bookticket/<pk>/", views.book_party),
+    path("partypayment/<int:pk>/", views.Party_payment),
+    
 ]
