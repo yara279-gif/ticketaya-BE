@@ -48,6 +48,7 @@ class PartyCreateView(APIView):
     permission_classes = [IsAdminPermission]
 
     def post(self, request, *args, **kwargs):
+        request.data["avilable"] = True
         serializer = PartySerializer(data=request.data, context={"request": request})
         if serializer.is_valid():
             serializer.save()

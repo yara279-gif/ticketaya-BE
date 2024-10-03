@@ -23,6 +23,7 @@ def addmatch(request):
     if request.method == "POST":
         renderer_class = [userrenderer]
         permission_classes = [IsAuthenticated]
+        request.data["avilable"] = True
         serializer = serializers.match(data=request.data, context={"request": request})
         if serializer.is_valid(raise_exception=True):
             serializer.save()

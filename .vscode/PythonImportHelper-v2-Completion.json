@@ -384,6 +384,198 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -512,70 +704,6 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -593,46 +721,6 @@
     },
     {
         "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -1555,6 +1643,14 @@
         "documentation": {}
     },
     {
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
         "label": "Util",
         "importPath": "account.utils",
         "description": "account.utils",
@@ -1891,11 +1987,11 @@
         "documentation": {}
     },
     {
-        "label": "ServerHandler",
-        "importPath": "wsgiref.simple_server",
-        "description": "wsgiref.simple_server",
+        "label": "User",
+        "importPath": "account.models",
+        "description": "account.models",
         "isExtraImport": true,
-        "detail": "wsgiref.simple_server",
+        "detail": "account.models",
         "documentation": {}
     },
     {
@@ -1928,6 +2024,14 @@
         "description": "decimal",
         "isExtraImport": true,
         "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Match",
+        "importPath": "match.models",
+        "description": "match.models",
+        "isExtraImport": true,
+        "detail": "match.models",
         "documentation": {}
     },
     {
@@ -2624,10 +2728,73 @@
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "match.migrations.0008_match_image",
-        "description": "match.migrations.0008_match_image",
+        "importPath": "match.migrations.0008_match_image_alter_match_date_alter_match_time",
+        "description": "match.migrations.0008_match_image_alter_match_date_alter_match_time",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"match\", \"0007_alter_match_avilable\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"match\",\n            name=\"image\",\n            field=models.ImageField(\n                blank=True, null=True, upload_to=\"matches/%y/%m/%d\"",
-        "detail": "match.migrations.0008_match_image",
+        "detail": "match.migrations.0008_match_image_alter_match_date_alter_match_time",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "match.migrations.0009_alter_match_avilable",
+        "description": "match.migrations.0009_alter_match_avilable",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"match\", \"0008_match_image_alter_match_date_alter_match_time\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"match\",\n            name=\"avilable\",\n            field=models.BooleanField(),\n        ),",
+        "detail": "match.migrations.0009_alter_match_avilable",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "match.migrations.0010_alter_match_avilable",
+        "description": "match.migrations.0010_alter_match_avilable",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"match\", \"0009_alter_match_avilable\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"match\",\n            name=\"avilable\",\n            field=models.BooleanField(default=True),\n        ),",
+        "detail": "match.migrations.0010_alter_match_avilable",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "match.migrations.0011_alter_match_avilable",
+        "description": "match.migrations.0011_alter_match_avilable",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"match\", \"0010_alter_match_avilable\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"match\",\n            name=\"avilable\",\n            field=models.BooleanField(blank=True, default=True, null=True),\n        ),",
+        "detail": "match.migrations.0011_alter_match_avilable",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "match.migrations.0012_alter_match_avilable",
+        "description": "match.migrations.0012_alter_match_avilable",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"match\", \"0011_alter_match_avilable\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"match\",\n            name=\"avilable\",\n            field=models.BooleanField(default=True),\n        ),",
+        "detail": "match.migrations.0012_alter_match_avilable",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "match.migrations.0013_alter_match_avilable",
+        "description": "match.migrations.0013_alter_match_avilable",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"match\", \"0012_alter_match_avilable\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"match\",\n            name=\"avilable\",\n            field=models.BooleanField(blank=True, default=True, null=True),\n        ),",
+        "detail": "match.migrations.0013_alter_match_avilable",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "match.migrations.0014_alter_match_avilable",
+        "description": "match.migrations.0014_alter_match_avilable",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"match\", \"0013_alter_match_avilable\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"match\",\n            name=\"avilable\",\n            field=models.BooleanField(default=True),\n        ),",
+        "detail": "match.migrations.0014_alter_match_avilable",
+        "documentation": {}
+    },
+    {
+        "label": "matchadmin",
+        "kind": 6,
+        "importPath": "match.admin",
+        "description": "match.admin",
+        "peekOfCode": "class matchadmin(admin.ModelAdmin):\n    list_display = [\n        \"name\",\n        \"team1\",\n        \"team2\",\n        \"date\",\n        \"time\",\n        \"stadium\",\n        \"image\",\n        \"no_tickets\",",
+        "detail": "match.admin",
         "documentation": {}
     },
     {
@@ -2644,7 +2811,7 @@
         "kind": 6,
         "importPath": "match.models",
         "description": "match.models",
-        "peekOfCode": "class Match(models.Model):\n    # attributes\n    name = models.CharField(max_length=255, unique=True)\n    team1 = models.CharField(max_length=255)\n    team2 = models.CharField(max_length=255)\n    date = models.DateField(auto_now_add=False)\n    time = models.TimeField(auto_now_add=False)\n    stadium = models.CharField(max_length=255)\n    no_tickets = models.IntegerField(default=0)\n    ticket_price = models.DecimalField(max_digits=7, decimal_places=2, default=0)",
+        "peekOfCode": "class Match(models.Model):\n    # attributes\n    name = models.CharField(max_length=255, unique=True)\n    team1 = models.CharField(max_length=255)\n    team2 = models.CharField(max_length=255)\n    # datetime =  models.DateTimeField(auto_now_add=False,blank=True,null=True)\n    date = models.DateField(auto_now_add=False, blank=True, null=True)\n    time = models.TimeField(auto_now_add=False, blank=True, null=True)\n    stadium = models.CharField(max_length=255)\n    no_tickets = models.IntegerField(default=0)",
         "detail": "match.models",
         "documentation": {}
     },
@@ -2671,7 +2838,7 @@
         "kind": 6,
         "importPath": "match.serializers",
         "description": "match.serializers",
-        "peekOfCode": "class match(serializers.ModelSerializer):\n    class Meta:\n        model = Match\n        fields = \"__all__\"\nclass search_match(serializers.ModelSerializer):\n    class Meta:\n        model = Match\n        fields = [\"name\", \"team1\", \"team2\"]",
+        "peekOfCode": "class match(serializers.ModelSerializer):\n    class Meta:\n        model = Match\n        fields = \"__all__\"\nclass search_match(serializers.ModelSerializer):\n    class Meta:\n        model = Match\n        fields = [\n            \"name\",\n            \"team1\",",
         "detail": "match.serializers",
         "documentation": {}
     },
@@ -2680,7 +2847,7 @@
         "kind": 6,
         "importPath": "match.serializers",
         "description": "match.serializers",
-        "peekOfCode": "class search_match(serializers.ModelSerializer):\n    class Meta:\n        model = Match\n        fields = [\"name\", \"team1\", \"team2\"]",
+        "peekOfCode": "class search_match(serializers.ModelSerializer):\n    class Meta:\n        model = Match\n        fields = [\n            \"name\",\n            \"team1\",\n            \"team2\",\n        ]",
         "detail": "match.serializers",
         "documentation": {}
     },
@@ -2698,7 +2865,7 @@
         "kind": 2,
         "importPath": "match.views",
         "description": "match.views",
-        "peekOfCode": "def addmatch(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        serializer = serializers.match(data=request.data, context={\"request\": request})\n        if serializer.is_valid(raise_exception=True):\n            serializer.save()\n            return Response(\n                {\"msg\": \"added successfull\", \"data\": serializer.data},\n                status=status.HTTP_201_CREATED,",
+        "peekOfCode": "def addmatch(request):\n    if request.method == \"POST\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        request.data[\"avilable\"] = True\n        serializer = serializers.match(data=request.data, context={\"request\": request})\n        if serializer.is_valid(raise_exception=True):\n            serializer.save()\n            return Response(\n                {\"msg\": \"added successfull\", \"data\": serializer.data},",
         "detail": "match.views",
         "documentation": {}
     },
@@ -2716,7 +2883,7 @@
         "kind": 2,
         "importPath": "match.views",
         "description": "match.views",
-        "peekOfCode": "def retrieve_one_match(request, pk):\n    if request.method == \"GET\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        try:\n            match = Match.objects.get(pk=pk)\n            serializer = serializers.match(match, context={\"request\": request})\n            if match.no_tickets == 0:\n                match.avilable = False\n                return Response(",
+        "peekOfCode": "def retrieve_one_match(request, pk):\n    if request.method == \"GET\":\n        renderer_class = [userrenderer]\n        permission_classes = [IsAuthenticated]\n        try:\n            match = Match.objects.get(pk=pk)\n            serializer = serializers.match(match, context={\"request\": request})\n            # if match.no_tickets == 0:\n            #     match.avilable = False\n            #     return Response(",
         "detail": "match.views",
         "documentation": {}
     },
@@ -2784,6 +2951,24 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "party.migrations.0005_party_image",
+        "description": "party.migrations.0005_party_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"party\", \"0004_rename_descripition_party_description\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"party\",\n            name=\"image\",\n            field=models.ImageField(\n                blank=True, null=True, upload_to=\"parties/%y/%m/%d\"",
+        "detail": "party.migrations.0005_party_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "party.migrations.0006_party_avilable_party_reservation_and_more",
+        "description": "party.migrations.0006_party_avilable_party_reservation_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"party\", \"0005_party_image\"),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"party\",\n            name=\"avilable\",\n            field=models.BooleanField(default=True),",
+        "detail": "party.migrations.0006_party_avilable_party_reservation_and_more",
+        "documentation": {}
+    },
+    {
         "label": "Partydisplay",
         "kind": 6,
         "importPath": "party.admin",
@@ -2815,7 +3000,7 @@
         "kind": 6,
         "importPath": "party.models",
         "description": "party.models",
-        "peekOfCode": "class Party(models.Model):\n    name = models.CharField(max_length=100, unique=True)\n    performer = models.CharField(max_length=100)\n    location = models.CharField(max_length=100)\n    datetime = models.DateTimeField()\n    number_of_tickets = models.IntegerField()\n    price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)\n    description = models.CharField(max_length=1000, null=True)\n    def __str__(self):\n        return self.name",
+        "peekOfCode": "class Party(models.Model):\n    name = models.CharField(max_length=100, unique=True)\n    performer = models.CharField(max_length=100)\n    location = models.CharField(max_length=100)\n    datetime = models.DateTimeField()\n    number_of_tickets = models.IntegerField()\n    price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)\n    description = models.CharField(max_length=1000, null=True)\n    image = models.ImageField(upload_to=\"parties/%y/%m/%d\", blank=True, null=True)\n    avilable = models.BooleanField(default=True)",
         "detail": "party.models",
         "documentation": {}
     },
@@ -2824,7 +3009,25 @@
         "kind": 6,
         "importPath": "party.models",
         "description": "party.models",
-        "peekOfCode": "class Party_user(models.Model):\n    party = models.ForeignKey(Party, on_delete=models.CASCADE)\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    total = models.DecimalField(max_digits=10, decimal_places=2, default=0)",
+        "peekOfCode": "class Party_user(models.Model):\n    party = models.ForeignKey(Party, on_delete=models.CASCADE)\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    total = models.DecimalField(max_digits=10, decimal_places=2, default=0)\n# -----------------------------(party reservation)-----------------------------\nclass Party_reservation(models.Model):\n    party_id = models.ForeignKey(Party, on_delete=models.CASCADE)\n    user_id = models.ForeignKey(User, on_delete=models.CASCADE)\n    tickets_reserved = models.IntegerField()\n    date_of_reservation = models.DateTimeField(auto_now_add=True, null=True, blank=True)",
+        "detail": "party.models",
+        "documentation": {}
+    },
+    {
+        "label": "Party_reservation",
+        "kind": 6,
+        "importPath": "party.models",
+        "description": "party.models",
+        "peekOfCode": "class Party_reservation(models.Model):\n    party_id = models.ForeignKey(Party, on_delete=models.CASCADE)\n    user_id = models.ForeignKey(User, on_delete=models.CASCADE)\n    tickets_reserved = models.IntegerField()\n    date_of_reservation = models.DateTimeField(auto_now_add=True, null=True, blank=True)\n    pay_method_choices = (\n        (\"offline\", \"cash\"),\n        (\"online\", \"visa_card\"),\n    )\n    pay_method = models.CharField(",
+        "detail": "party.models",
+        "documentation": {}
+    },
+    {
+        "label": "online_party_payment",
+        "kind": 6,
+        "importPath": "party.models",
+        "description": "party.models",
+        "peekOfCode": "class online_party_payment(models.Model):\n    reservation_id = models.ForeignKey(Party_reservation, on_delete=models.CASCADE)\n    visa_card = models.CharField(max_length=16)\n    PAYMENT_STATUS_PENDING = \"P\"\n    PAYMENT_STATUS_COMPLETE = \"c\"\n    PAYMENT_STATUS_FAILD = \"F\"\n    PAYMENT_STATUS_CHOICES = (\n        (PAYMENT_STATUS_PENDING, \"Pending\"),\n        (PAYMENT_STATUS_COMPLETE, \"Complete\"),\n        (PAYMENT_STATUS_FAILD, \"Failed\"),",
         "detail": "party.models",
         "documentation": {}
     },
@@ -2851,7 +3054,7 @@
         "kind": 6,
         "importPath": "party.serializer",
         "description": "party.serializer",
-        "peekOfCode": "class User_partySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Party_user\n        fields = [\"party\", \"user\", \"total\"]\nclass show(serializers.Serializer):\n    username = serializers.CharField()\n    name = serializers.CharField()\n    total = serializers.DecimalField(max_digits=10, decimal_places=2)",
+        "peekOfCode": "class User_partySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Party_user\n        fields = [\"party\", \"user\", \"total\"]\nclass show(serializers.Serializer):\n    username = serializers.CharField()\n    name = serializers.CharField()\n    total = serializers.DecimalField(max_digits=10, decimal_places=2)\n# -----------------------------(party reservation)-----------------------------\n# serializer",
         "detail": "party.serializer",
         "documentation": {}
     },
@@ -2860,7 +3063,25 @@
         "kind": 6,
         "importPath": "party.serializer",
         "description": "party.serializer",
-        "peekOfCode": "class show(serializers.Serializer):\n    username = serializers.CharField()\n    name = serializers.CharField()\n    total = serializers.DecimalField(max_digits=10, decimal_places=2)",
+        "peekOfCode": "class show(serializers.Serializer):\n    username = serializers.CharField()\n    name = serializers.CharField()\n    total = serializers.DecimalField(max_digits=10, decimal_places=2)\n# -----------------------------(party reservation)-----------------------------\n# serializer\nclass bookpartyserializer(serializers.ModelSerializer):\n    class Meta:\n        model = Party_reservation\n        fields = [\"pk\", \"tickets_reserved\", \"pay_method\", \"price\"]",
+        "detail": "party.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "bookpartyserializer",
+        "kind": 6,
+        "importPath": "party.serializer",
+        "description": "party.serializer",
+        "peekOfCode": "class bookpartyserializer(serializers.ModelSerializer):\n    class Meta:\n        model = Party_reservation\n        fields = [\"pk\", \"tickets_reserved\", \"pay_method\", \"price\"]\nclass partypaymentserializer(serializers.ModelSerializer):\n    class Meta:\n        model = online_party_payment\n        fields = [\"visa_card\", \"payment_status\"]\n    def validate(self, attrs):\n        visa_card = attrs.get(\"visa_card\")",
+        "detail": "party.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "partypaymentserializer",
+        "kind": 6,
+        "importPath": "party.serializer",
+        "description": "party.serializer",
+        "peekOfCode": "class partypaymentserializer(serializers.ModelSerializer):\n    class Meta:\n        model = online_party_payment\n        fields = [\"visa_card\", \"payment_status\"]\n    def validate(self, attrs):\n        visa_card = attrs.get(\"visa_card\")\n        payment_status = attrs.get(\"payment_status\")\n        # Check if visa_card is 16 digits\n        if not (visa_card and len(visa_card) == 16 and visa_card.isdigit()):\n            attrs[\"payment_status\"] = \"Failed\"",
         "detail": "party.serializer",
         "documentation": {}
     },
@@ -2869,7 +3090,7 @@
         "kind": 5,
         "importPath": "party.urls",
         "description": "party.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.PartyListView.as_view(), name=\"party-list\"),\n    path(\"create\", views.PartyCreateView.as_view(), name=\"party-create\"),\n    path(\"<int:pk>\", views.PartyRetrieveView.as_view(), name=\"party-retrieve\"),\n    path(\"<int:pk>/update\", views.PartyUpdateView.as_view(), name=\"party-update\"),\n    path(\"<int:pk>/delete\", views.PartyDeleteView.as_view(), name=\"party-delete\"),\n    path(\"search\", views.PartySearchView.as_view(), name=\"party-search\"),\n    path(\"buyticket/\", Buyticket.as_view()),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.PartyListView.as_view(), name=\"party-list\"),\n    path(\"create\", views.PartyCreateView.as_view(), name=\"party-create\"),\n    path(\"<int:pk>\", views.PartyRetrieveView.as_view(), name=\"party-retrieve\"),\n    path(\"<int:pk>/update\", views.PartyUpdateView.as_view(), name=\"party-update\"),\n    path(\"<int:pk>/delete\", views.PartyDeleteView.as_view(), name=\"party-delete\"),\n    path(\"search\", views.PartySearchView.as_view(), name=\"party-search\"),\n    path(\"buyticket/\", Buyticket.as_view()),\n    path(\"bookticket/<pk>/\", views.book_party),\n    path(\"partypayment/<int:pk>/\", views.Party_payment),",
         "detail": "party.urls",
         "documentation": {}
     },
@@ -2878,7 +3099,7 @@
         "kind": 6,
         "importPath": "party.views",
         "description": "party.views",
-        "peekOfCode": "class PartyListView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAuthenticated]\n    def get(self, request, *args, **kwargs):\n        parties = Party.objects.all()\n        serializer = PartySerializer(parties, many=True)\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# -------------------------------(Delete_Party)------------------------------------------------------\nclass PartyDeleteView(APIView):\n    authentication_classes = [JWTAuthentication]",
+        "peekOfCode": "class PartyListView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAuthenticated]\n    def get(self, request, *args, **kwargs):\n        parties = Party.objects.all()\n        serializer = PartySerializer(parties, many=True, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# -------------------------------(Delete_Party)------------------------------------------------------\nclass PartyDeleteView(APIView):\n    authentication_classes = [JWTAuthentication]",
         "detail": "party.views",
         "documentation": {}
     },
@@ -2896,7 +3117,7 @@
         "kind": 6,
         "importPath": "party.views",
         "description": "party.views",
-        "peekOfCode": "class PartyCreateView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def post(self, request, *args, **kwargs):\n        serializer = PartySerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=status.HTTP_201_CREATED)\n        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)\n# -------------------------------(Retrieve_Party)------------------------------------------------------",
+        "peekOfCode": "class PartyCreateView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def post(self, request, *args, **kwargs):\n        request.data[\"avilable\"] = True\n        serializer = PartySerializer(data=request.data, context={\"request\": request})\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=status.HTTP_201_CREATED)\n        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)",
         "detail": "party.views",
         "documentation": {}
     },
@@ -2905,7 +3126,7 @@
         "kind": 6,
         "importPath": "party.views",
         "description": "party.views",
-        "peekOfCode": "class PartyRetrieveView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def get(self, request, pk, *args, **kwargs):\n        party = get_object_or_404(Party, pk=pk)\n        serializer = PartySerializer(party)\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# -------------------------------(Update_Party)------------------------------------------------------\nclass PartyUpdateView(APIView):\n    authentication_classes = [JWTAuthentication]",
+        "peekOfCode": "class PartyRetrieveView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def get(self, request, pk, *args, **kwargs):\n        party = get_object_or_404(Party, pk=pk)\n        serializer = PartySerializer(party, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# -------------------------------(Update_Party)------------------------------------------------------\nclass PartyUpdateView(APIView):\n    authentication_classes = [JWTAuthentication]",
         "detail": "party.views",
         "documentation": {}
     },
@@ -2914,7 +3135,7 @@
         "kind": 6,
         "importPath": "party.views",
         "description": "party.views",
-        "peekOfCode": "class PartyUpdateView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def patch(self, request, pk, *args, **kwargs):\n        party = get_object_or_404(Party, pk=pk)\n        serializer = PartySerializer(\n            party, data=request.data, partial=True\n        )  # Partial update\n        if serializer.is_valid():\n            serializer.save()",
+        "peekOfCode": "class PartyUpdateView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def patch(self, request, pk, *args, **kwargs):\n        party = get_object_or_404(Party, pk=pk)\n        serializer = PartySerializer(\n            party, data=request.data, partial=True, context={\"request\": request}\n        )  # Partial update\n        if serializer.is_valid():\n            serializer.save()",
         "detail": "party.views",
         "documentation": {}
     },
@@ -2923,7 +3144,7 @@
         "kind": 6,
         "importPath": "party.views",
         "description": "party.views",
-        "peekOfCode": "class PartySearchView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def get(self, request, *args, **kwargs):\n        search_query = request.query_params.get(\"name\", \"\")\n        parties = Party.objects.filter(name__icontains=search_query)\n        serializer = PartySerializer(parties, many=True)\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# -------------------------------------------------------------------------------------\n# -------------------------------(BuyParty Ticket)------------------------------------------------------",
+        "peekOfCode": "class PartySearchView(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAdminPermission]\n    def get(self, request, *args, **kwargs):\n        search_query = request.query_params.get(\"name\", \"\")\n        parties = Party.objects.filter(name__icontains=search_query)\n        serializer = PartySerializer(parties, many=True, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# -------------------------------------------------------------------------------------\n# -------------------------------(BuyParty Ticket)------------------------------------------------------",
         "detail": "party.views",
         "documentation": {}
     },
@@ -2933,6 +3154,24 @@
         "importPath": "party.views",
         "description": "party.views",
         "peekOfCode": "class Buyticket(APIView):\n    renderer_class = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    def patch(self, request):\n        party = Party.objects.filter(name=request.data[\"name\"]).first()\n        if party.number_of_tickets == 0:\n            return Response({\"message\": \"SoldOut\"})\n        if party.number_of_tickets < int(request.data[\"number_of_tickets\"]):\n            return Response({\"message\": \"Not available quantity\"})\n        total = Decimal(request.data[\"number_of_tickets\"]) * party.price",
+        "detail": "party.views",
+        "documentation": {}
+    },
+    {
+        "label": "book_party",
+        "kind": 2,
+        "importPath": "party.views",
+        "description": "party.views",
+        "peekOfCode": "def book_party(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        # get the instance\n        party = Party.objects.get(pk=pk)\n        user = request.user\n    except Party.DoesNotExist:\n        return Response({\"error\": \"Party not found\"}, status=status.HTTP_404_NOT_FOUND)\n    if party.number_of_tickets == 0:",
+        "detail": "party.views",
+        "documentation": {}
+    },
+    {
+        "label": "Party_payment",
+        "kind": 2,
+        "importPath": "party.views",
+        "description": "party.views",
+        "peekOfCode": "def Party_payment(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        reservation_id = Party_reservation.objects.get(pk=pk)\n        party = reservation_id.party_id\n    except Party_reservation.DoesNotExist:\n        return Response(\n            {\"error\": \"You already paid for this party\"},\n            status=status.HTTP_404_NOT_FOUND,",
         "detail": "party.views",
         "documentation": {}
     },
@@ -3211,35 +3450,8 @@
         "kind": 6,
         "importPath": "reservation.migrations.0001_initial",
         "description": "reservation.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"match\", \"0005_match_ticket_price\"),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"match_reservation\",\n            fields=[",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"match\", \"0008_match_image_alter_match_date_alter_match_time\"),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"match_reservation\",\n            fields=[",
         "detail": "reservation.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "reservation.migrations.0002_delete_match_reservation",
-        "description": "reservation.migrations.0002_delete_match_reservation",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"reservation\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name=\"match_reservation\",\n        ),\n    ]",
-        "detail": "reservation.migrations.0002_delete_match_reservation",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "reservation.migrations.0003_initial",
-        "description": "reservation.migrations.0003_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"match\", \"0005_match_ticket_price\"),\n        (\"reservation\", \"0002_delete_match_reservation\"),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"match_reservation\",",
-        "detail": "reservation.migrations.0003_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "reservation.migrations.0004_match_reservation_pay_method_online_match_payment",
-        "description": "reservation.migrations.0004_match_reservation_pay_method_online_match_payment",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"reservation\", \"0003_initial\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"match_reservation\",\n            name=\"pay_method\",\n            field=models.CharField(\n                choices=[(\"offline\", \"Cash\"), (\"online\", \"visa_card\")],",
-        "detail": "reservation.migrations.0004_match_reservation_pay_method_online_match_payment",
         "documentation": {}
     },
     {
@@ -3256,7 +3468,7 @@
         "kind": 6,
         "importPath": "reservation.models",
         "description": "reservation.models",
-        "peekOfCode": "class match_reservation(models.Model):\n    match_id = models.ForeignKey(Match, on_delete=models.CASCADE)\n    user_id = models.ForeignKey(User, on_delete=models.CASCADE)\n    tickets_reserved = models.IntegerField()\n    pay_method_choices = (\n        (\"offline\", \"Cash\"),\n        (\"online\", \"visa_card\"),\n    )\n    pay_method = models.CharField(\n        max_length=30, choices=pay_method_choices, default=\"Cash\"",
+        "peekOfCode": "class match_reservation(models.Model):\n    match_id = models.ForeignKey(Match, on_delete=models.CASCADE)\n    user_id = models.ForeignKey(User, on_delete=models.CASCADE)\n    tickets_reserved = models.IntegerField()\n    date_of_reservation = models.DateTimeField(auto_now_add=True, null=True, blank=True)\n    pay_method_choices = (\n        (\"offline\", \"cash\"),\n        (\"online\", \"visa_card\"),\n    )\n    pay_method = models.CharField(",
         "detail": "reservation.models",
         "documentation": {}
     },
@@ -3292,7 +3504,7 @@
         "kind": 6,
         "importPath": "reservation.serializers",
         "description": "reservation.serializers",
-        "peekOfCode": "class bookmatchserializer(serializers.ModelSerializer):\n    # price =  serializers.defaultdict(max_digits=7,decimal_places=2)\n    class Meta:\n        model = match_reservation\n        fields = [\"pk\", \"tickets_reserved\", \"pay_method\"]\nclass matchpaymentserializer(serializers.ModelSerializer):\n    class Meta:\n        model = online_match_payment\n        fields = [\"visa_card\", \"payment_status\"]\n    def validate(self, attrs):",
+        "peekOfCode": "class bookmatchserializer(serializers.ModelSerializer):\n    class Meta:\n        model = match_reservation\n        fields = [\"pk\", \"tickets_reserved\", \"pay_method\", \"price\"]\nclass matchpaymentserializer(serializers.ModelSerializer):\n    class Meta:\n        model = online_match_payment\n        fields = [\"visa_card\", \"payment_status\"]\n    def validate(self, attrs):\n        visa_card = attrs.get(\"visa_card\")",
         "detail": "reservation.serializers",
         "documentation": {}
     },
@@ -3306,11 +3518,38 @@
         "documentation": {}
     },
     {
+        "label": "listadminserializer",
+        "kind": 6,
+        "importPath": "reservation.serializers",
+        "description": "reservation.serializers",
+        "peekOfCode": "class listadminserializer(serializers.ModelSerializer):\n    class Meta:\n        model = match_reservation\n        fields = [\n            \"pk\",\n            \"tickets_reserved\",\n            \"pay_method\",\n            \"price\",\n            \"match_id\",\n            \"user_id\",",
+        "detail": "reservation.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "listuserserializer",
+        "kind": 6,
+        "importPath": "reservation.serializers",
+        "description": "reservation.serializers",
+        "peekOfCode": "class listuserserializer(serializers.ModelSerializer):\n    class Meta:\n        model = match_reservation\n        fields = [\"pk\", \"tickets_reserved\", \"pay_method\", \"price\", \"match_id\"]\nclass updatereservationserializer(serializers.ModelSerializer):\n    class Meta:\n        model = match_reservation\n        fields = [\"pk\", \"tickets_reserved\", \"match_id\"]",
+        "detail": "reservation.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "updatereservationserializer",
+        "kind": 6,
+        "importPath": "reservation.serializers",
+        "description": "reservation.serializers",
+        "peekOfCode": "class updatereservationserializer(serializers.ModelSerializer):\n    class Meta:\n        model = match_reservation\n        fields = [\"pk\", \"tickets_reserved\", \"match_id\"]",
+        "detail": "reservation.serializers",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "reservation.urls",
         "description": "reservation.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"bookticket/<pk>/\", views.book_match),\n    path(\"matchpayment/<int:pk>/\", views.match_payment),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"bookticket/<pk>/\", views.book_match),\n    path(\"matchpayment/<int:pk>/\", views.match_payment),\n    path(\"listreservations/\", views.list_all_reservations_for_admin),\n    path(\"listuserreservations/\", views.list_all_reservations_for_user),\n    path(\"cancelreservation/<pk>/\", views.cancel_reservation),\n    path(\"updatereservation/<pk>/\", views.update_reservation),\n]",
         "detail": "reservation.urls",
         "documentation": {}
     },
@@ -3319,7 +3558,7 @@
         "kind": 2,
         "importPath": "reservation.views",
         "description": "reservation.views",
-        "peekOfCode": "def book_match(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        match_id = Match.objects.get(pk=pk)\n    except Match.DoesNotExist:\n        return Response({\"error\": \"Match not found\"}, status=status.HTTP_404_NOT_FOUND)\n    if match_id.avilable == True:\n        serializer = serializers.bookmatchserializer(data=request.data)\n        if serializer.is_valid():",
+        "peekOfCode": "def book_match(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        # get the instance\n        match = Match.objects.get(pk=pk)\n        user = request.user\n    except Match.DoesNotExist:\n        return Response({\"error\": \"Match not found\"}, status=status.HTTP_404_NOT_FOUND)\n    if match.no_tickets == 0:",
         "detail": "reservation.views",
         "documentation": {}
     },
@@ -3329,6 +3568,33 @@
         "importPath": "reservation.views",
         "description": "reservation.views",
         "peekOfCode": "def cancel_reservation(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        reservation = match_reservation.objects.get(pk=pk)\n    except match_reservation.DoesNotExist:\n        return Response(\n            {\"error\": \"Reservation not found\"}, status=status.HTTP_404_NOT_FOUND\n        )\n    if reservation.user_id == request.user:",
+        "detail": "reservation.views",
+        "documentation": {}
+    },
+    {
+        "label": "list_all_reservations_for_admin",
+        "kind": 2,
+        "importPath": "reservation.views",
+        "description": "reservation.views",
+        "peekOfCode": "def list_all_reservations_for_admin(request):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    if request.user.is_staff:\n        reservations = match_reservation.objects.all()\n        serializer = serializers.listadminserializer(reservations, many=True)\n        # serializer.data.get()\n        return Response(serializer.data, status=status.HTTP_200_OK)\n    else:\n        return Response(",
+        "detail": "reservation.views",
+        "documentation": {}
+    },
+    {
+        "label": "list_all_reservations_for_user",
+        "kind": 2,
+        "importPath": "reservation.views",
+        "description": "reservation.views",
+        "peekOfCode": "def list_all_reservations_for_user(request):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    reservations = match_reservation.objects.filter(user_id=request.user)\n    serializer = serializers.listuserserializer(reservations, many=True)\n    return Response(serializer.data, status=status.HTTP_200_OK)\n# ----------------------------------------------------------------------------------------------------------------\n@api_view([\"PATCH\"])\ndef update_reservation(request, pk):\n    renderer_classes = [userrenderer]",
+        "detail": "reservation.views",
+        "documentation": {}
+    },
+    {
+        "label": "update_reservation",
+        "kind": 2,
+        "importPath": "reservation.views",
+        "description": "reservation.views",
+        "peekOfCode": "def update_reservation(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        reservation = match_reservation.objects.get(pk=pk)\n    except match_reservation.DoesNotExist:\n        return Response(\n            {\"error\": \"Reservation not found\"}, status=status.HTTP_404_NOT_FOUND\n        )\n    if reservation.user_id == request.user:",
         "detail": "reservation.views",
         "documentation": {}
     },
