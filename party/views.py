@@ -269,7 +269,7 @@ def Party_payment(request, pk):
             party.avilable = False
         party.save()
         body = render_to_string(
-            "ticket_email\match_ticket_email.html",
+            "ticket_email\party_ticket_email.html",
             {
                 "match": party,
                 "numberOfTickets": reservation_id.tickets_reserved,
