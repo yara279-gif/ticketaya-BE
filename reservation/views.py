@@ -67,13 +67,13 @@ def book_match(request, pk):
                 match.save()
 
                 body = render_to_string(
-                  "ticket_email\offline_email.html", 
-                  {
-                    "match": match,
-                    "numberOfTickets": serializer.data.get("tickets_reserved"),
-                    "customerName": user.username,
-                    "totalPrice": price
-                  }
+                    "ticket_email\offline_email.html",
+                    {
+                        "match": match,
+                        "numberOfTickets": serializer.data.get("tickets_reserved"),
+                        "customerName": user.username,
+                        "totalPrice": price,
+                    },
                 )
 
                 # Send the email
@@ -240,13 +240,13 @@ def match_payment(request, pk):
             match.avilable = False
         match.save()
         body = render_to_string(
-          "ticket_email\match_ticket_email.html", 
-          {
-            "match": match,
-            "numberOfTickets": reservation_id.tickets_reserved,
-            "customerName": user.username,
-            "totalPrice": reservation_id.price
-          }
+            "ticket_email\match_ticket_email.html",
+            {
+                "match": match,
+                "numberOfTickets": reservation_id.tickets_reserved,
+                "customerName": user.username,
+                "totalPrice": reservation_id.price,
+            },
         )
         reservation_id.delete()
 

@@ -192,13 +192,13 @@ def book_party(request, pk):
                 party.save()
 
                 body = render_to_string(
-                  "ticket_email\party_offline.html", 
-                  {
-                    "party": party,
-                    "numberOfTickets": serializer.data.get("tickets_reserved"),
-                    "customerName": user.username,
-                    "totalPrice": price
-                  }
+                    "ticket_email\party_offline.html",
+                    {
+                        "party": party,
+                        "numberOfTickets": serializer.data.get("tickets_reserved"),
+                        "customerName": user.username,
+                        "totalPrice": price,
+                    },
                 )
 
                 # Send the email
@@ -269,13 +269,13 @@ def Party_payment(request, pk):
             party.avilable = False
         party.save()
         body = render_to_string(
-          "ticket_email\match_ticket_email.html", 
-          {
-            "match": party,
-            "numberOfTickets": reservation_id.tickets_reserved,
-            "customerName": user.username,
-            "totalPrice": reservation_id.price
-          }
+            "ticket_email\match_ticket_email.html",
+            {
+                "match": party,
+                "numberOfTickets": reservation_id.tickets_reserved,
+                "customerName": user.username,
+                "totalPrice": reservation_id.price,
+            },
         )
         reservation_id.delete()
 
