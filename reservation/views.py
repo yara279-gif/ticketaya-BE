@@ -243,7 +243,7 @@ def match_payment(request, pk):
           "ticket_email\match_ticket_email.html", 
           {
             "match": match,
-            "numberOfTickets": serializer.data.get("tickets_reserved"),
+            "numberOfTickets": reservation_id.tickets_reserved,
             "customerName": user.username,
             "totalPrice": reservation_id.price
           }
