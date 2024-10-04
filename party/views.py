@@ -1,5 +1,5 @@
-from turtle import isvisible
-from django.shortcuts import render
+from django.template.loader import render_to_string
+from account.utils import Util
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -191,6 +191,23 @@ def book_party(request, pk):
                 party.number_of_tickets = temp_x
                 party.save()
 
+                body = render_to_string(
+                  "ticket_email\party_offline.html", 
+                  {
+                    "party": party,
+                    "numberOfTickets": serializer.data.get("tickets_reserved"),
+                    "customerName": user.username,
+                    "totalPrice": price
+                  }
+                )
+
+                # Send the email
+                data = {
+                    "subject": f"Ticketaya Match Ticket Confirmation",
+                    "body": body,  # Rendered HTML content
+                    "to_email": user.email,
+                }
+                Util.send_email(data)
                 return Response(
                     {
                         "message": "The party has been booked successfully, check your email for payment details and ticket receipt date",
@@ -222,6 +239,7 @@ def Party_payment(request, pk):
     renderer_classes = [userrenderer]
     permission_classes = [IsAuthenticated]
     try:
+        user = request.user
         reservation_id = Party_reservation.objects.get(pk=pk)
         party = reservation_id.party_id
     except Party_reservation.DoesNotExist:
@@ -250,7 +268,24 @@ def Party_payment(request, pk):
         if party.number_of_tickets == 0:
             party.avilable = False
         party.save()
+        body = render_to_string(
+          "ticket_email\match_ticket_email.html", 
+          {
+            "match": party,
+            "numberOfTickets": serializer.data.get("tickets_reserved"),
+            "customerName": user.username,
+            "totalPrice": reservation_id.price
+          }
+        )
         reservation_id.delete()
+
+        # Send the email
+        data = {
+            "subject": f"Ticketaya Match Ticket Confirmation",
+            "body": body,  # Rendered HTML content
+            "to_email": user.email,
+        }
+        Util.send_email(data)
         return Response(
             {"msg": ["Payment done!", serializer.data]}, status=status.HTTP_200_OK
         )

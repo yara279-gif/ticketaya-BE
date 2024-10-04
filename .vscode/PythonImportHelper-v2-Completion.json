@@ -1161,14 +1161,6 @@
         "documentation": {}
     },
     {
-        "label": "generics",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -1336,6 +1328,22 @@
         "description": "django.contrib.auth.tokens",
         "isExtraImport": true,
         "detail": "django.contrib.auth.tokens",
+        "documentation": {}
+    },
+    {
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
+        "documentation": {}
+    },
+    {
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
         "documentation": {}
     },
     {
@@ -1587,14 +1595,6 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
         "label": "get_object_or_404",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -1611,14 +1611,6 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
         "label": "api_view",
         "importPath": "rest_framework.decorators",
         "description": "rest_framework.decorators",
@@ -1648,6 +1640,22 @@
         "description": "rest_framework.decorators",
         "isExtraImport": true,
         "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Util",
+        "importPath": "account.utils",
+        "description": "account.utils",
+        "isExtraImport": true,
+        "detail": "account.utils",
+        "documentation": {}
+    },
+    {
+        "label": "Util",
+        "importPath": "account.utils",
+        "description": "account.utils",
+        "isExtraImport": true,
+        "detail": "account.utils",
         "documentation": {}
     },
     {
@@ -1992,14 +2000,6 @@
         "description": "account.models",
         "isExtraImport": true,
         "detail": "account.models",
-        "documentation": {}
-    },
-    {
-        "label": "isvisible",
-        "importPath": "turtle",
-        "description": "turtle",
-        "isExtraImport": true,
-        "detail": "turtle",
         "documentation": {}
     },
     {
@@ -3171,7 +3171,7 @@
         "kind": 2,
         "importPath": "party.views",
         "description": "party.views",
-        "peekOfCode": "def Party_payment(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        reservation_id = Party_reservation.objects.get(pk=pk)\n        party = reservation_id.party_id\n    except Party_reservation.DoesNotExist:\n        return Response(\n            {\"error\": \"You already paid for this party\"},\n            status=status.HTTP_404_NOT_FOUND,",
+        "peekOfCode": "def Party_payment(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        user = request.user\n        reservation_id = Party_reservation.objects.get(pk=pk)\n        party = reservation_id.party_id\n    except Party_reservation.DoesNotExist:\n        return Response(\n            {\"error\": \"You already paid for this party\"},",
         "detail": "party.views",
         "documentation": {}
     },
@@ -3603,7 +3603,7 @@
         "kind": 2,
         "importPath": "reservation.views",
         "description": "reservation.views",
-        "peekOfCode": "def match_payment(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        reservation_id = match_reservation.objects.get(pk=pk)\n        match = reservation_id.match_id\n    except match_reservation.DoesNotExist:\n        return Response(\n            {\"error\": \"You already paid for this match\"},\n            status=status.HTTP_404_NOT_FOUND,",
+        "peekOfCode": "def match_payment(request, pk):\n    renderer_classes = [userrenderer]\n    permission_classes = [IsAuthenticated]\n    try:\n        user = request.user\n        reservation_id = match_reservation.objects.get(pk=pk)\n        match = reservation_id.match_id\n    except match_reservation.DoesNotExist:\n        return Response(\n            {\"error\": \"You already paid for this match\"},",
         "detail": "reservation.views",
         "documentation": {}
     },

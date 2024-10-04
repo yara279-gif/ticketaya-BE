@@ -1,6 +1,5 @@
-from django.shortcuts import render
 from rest_framework.permissions import IsAuthenticated
-from rest_framework import status, generics
+from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from . import serializers
@@ -13,6 +12,8 @@ from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.exceptions import ValidationError
 from .models import match_reservation, online_match_payment
 from match.models import Match
+from django.template.loader import render_to_string
+from account.utils import Util
 from match.views import update_match
 from account.models import User
 
@@ -65,6 +66,23 @@ def book_match(request, pk):
                 match.no_tickets = temp_x
                 match.save()
 
+                body = render_to_string(
+                  "ticket_email\offline_email.html", 
+                  {
+                    "match": match,
+                    "numberOfTickets": serializer.data.get("tickets_reserved"),
+                    "customerName": user.username,
+                    "totalPrice": price
+                  }
+                )
+
+                # Send the email
+                data = {
+                    "subject": f"Ticketaya Match Ticket Confirmation",
+                    "body": body,  # Rendered HTML content
+                    "to_email": user.email,
+                }
+                Util.send_email(data)
                 return Response(
                     {
                         "message": "The match has been booked successfully, check your email for payment details and ticket receipt date",
@@ -73,7 +91,6 @@ def book_match(request, pk):
                     status=status.HTTP_200_OK,
                 )
             else:
-
                 return Response(
                     {
                         "message": f"the price is {price}",
@@ -193,6 +210,7 @@ def match_payment(request, pk):
     renderer_classes = [userrenderer]
     permission_classes = [IsAuthenticated]
     try:
+        user = request.user
         reservation_id = match_reservation.objects.get(pk=pk)
         match = reservation_id.match_id
     except match_reservation.DoesNotExist:
@@ -221,7 +239,24 @@ def match_payment(request, pk):
         if match.no_tickets == 0:
             match.avilable = False
         match.save()
+        body = render_to_string(
+          "ticket_email\match_ticket_email.html", 
+          {
+            "match": match,
+            "numberOfTickets": serializer.data.get("tickets_reserved"),
+            "customerName": user.username,
+            "totalPrice": reservation_id.price
+          }
+        )
         reservation_id.delete()
+
+        # Send the email
+        data = {
+            "subject": f"Ticketaya Match Ticket Confirmation",
+            "body": body,  # Rendered HTML content
+            "to_email": user.email,
+        }
+        Util.send_email(data)
         return Response(
             {"msg": ["Payment done!", serializer.data]}, status=status.HTTP_200_OK
         )
